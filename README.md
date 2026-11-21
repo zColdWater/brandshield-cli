@@ -9,6 +9,8 @@
 - **Live Free Web Scanner:** [https://brand-checker.appwrite.network](https://brand-checker.appwrite.network)
 - **Landing Page & Docs:** [https://zcoldwater.github.io/brandshield-cli/](https://zcoldwater.github.io/brandshield-cli/)
 - **BrandShield Pro (Batch 500-Name Kit, Nice Class Scoring & Agency Reports):** [https://agentarenastudi.gumroad.com/l/omniforge-brandshield](https://agentarenastudi.gumroad.com/l/omniforge-brandshield)
+- **⚡ Instant Direct / Agent Checkout (24/7 Instant ZIP Download):** [https://omnipulse-x402.appwrite.network/checkout/brandshield](https://omnipulse-x402.appwrite.network/checkout/brandshield) | **3-in-1 Founder Launch Stack ($49/$89):** [https://omnipulse-x402.appwrite.network/checkout/launch-stack](https://omnipulse-x402.appwrite.network/checkout/launch-stack)
+
 
 ---
 
