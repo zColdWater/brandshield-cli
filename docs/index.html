@@ -506,12 +506,18 @@
       const grid = document.getElementById("scanGrid");
       const fullLink = document.getElementById("fullDiagLink");
 
-      fullLink.href = "https://brand-checker.appwrite.network/check?names=" + encodeURIComponent(raw) + "&tlds=com,io,ai,co,app,dev&platforms=x,github,youtube,instagram,tiktok&countries=US";
+      fullLink.href = "https://brand-checker.appwrite.network/?name=" + encodeURIComponent(raw);
       btn.disabled = true;
-      btn.textContent = "Scanning RDAP...";
+      btn.textContent = "Scanning RDAP & USPTO...";
       box.style.display = "block";
-      hdr.textContent = 'Live Instant Pre-Check for "' + raw + '" (Direct Registry RDAP + Developer & App Registries)';
+      hdr.textContent = 'Live Instant Pre-Check for "' + raw + '" (Direct Registry RDAP + Developer, App & USPTO Registries)';
       grid.innerHTML = "";
+
+      let freeApiData = null;
+      try {
+        const fc = await fetch("https://brand-checker.appwrite.network/api/free-check?name=" + encodeURIComponent(raw));
+        if (fc.ok) freeApiData = await fc.json();
+      } catch {}
 
       const checks = [];
       for (const [tld, base] of Object.entries(RDAP_MAP)) {
@@ -545,14 +551,24 @@
       })());
 
       const items = await Promise.all(checks);
+      if (freeApiData && freeApiData.risk) {
+        const sc = freeApiData.risk.score ?? (100 - (freeApiData.risk.riskScore || 0));
+        const vd = freeApiData.risk.verdict || (sc >= 70 ? "Available" : "Conflict Risk");
+        items.unshift({
+          label: "Safety Score",
+          status: sc + "/100 (" + vd + ")"
+        });
+      }
       items.push({
         label: "USPTO Trademarks",
-        status: "Open Full Report ↗",
+        status: (freeApiData && freeApiData.trademarks && freeApiData.trademarks[0] && freeApiData.trademarks[0].liveCount > 0)
+          ? (freeApiData.trademarks[0].liveCount + " Live Marks ↗")
+          : "Open Full Report ↗",
         href: fullLink.href
       });
 
       grid.innerHTML = items.map(it => {
-        const cls = (it.status === "Available" || it.status === "No Exact Match") ? "ok" : (it.status === "Taken" || it.status === "Exact App Exists") ? "bad" : "unk";
+        const cls = (it.status === "Available" || it.status === "No Exact Match" || it.status.includes("LOW") || it.status.includes("CLEAR")) ? "ok" : (it.status === "Taken" || it.status === "Exact App Exists" || it.status.includes("Live Marks") || it.status.includes("CRITICAL") || it.status.includes("HIGH")) ? "bad" : "unk";
         const val = it.href ? '<a href="' + it.href + '" target="_blank" rel="noopener">' + it.status + '</a>' : it.status;
         return '<div class="res-card"><div style="color:var(--muted);font-size:0.78rem;">' + it.label + '</div><div class="' + cls + '">' + val + '</div></div>';
       }).join("");
