@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BrandShield — Startup Name, Domain (RDAP), Handle &amp; USPTO Trademark Conflict Checker</title>
+  <meta name="description" content="Check startup and SaaS brand name availability across domains via authoritative RDAP (zero registrar front-running), 15 social/dev handles, iOS &amp; Android app stores, and USPTO federal trademarks. Free CLI &amp; web diagnostic + BrandShield Pro 500-name offline kit." />
+  <meta name="keywords" content="startup name checker, brand name availability checker, USPTO trademark conflict checker, RDAP domain lookup, check domain without front running, social handle availability, SaaS naming tool, bulk domain and trademark CLI" />
+  <link rel="canonical" href="https://zcoldwater.github.io/brandshield-cli/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="BrandShield — Vet Startup Names Across Domains, Handles &amp; USPTO Trademarks" />
+  <meta property="og:description" content="Stop typing unreleased startup names into registrar search bars. Verify RDAP domains, handles, App Store collisions &amp; USPTO trademarks in seconds." />
+  <meta property="og:url" content="https://zcoldwater.github.io/brandshield-cli/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="BrandShield — Startup Name, Domain &amp; USPTO Trademark Checker" />
+  <meta name="twitter:description" content="Zero-front-running RDAP domain lookup, social handles, app stores &amp; USPTO trademark screening for founders and naming agencies." />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "BrandShield Pro — Startup Naming, Domain & USPTO Trademark Conflict Kit",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "macOS, Windows, Linux (Node.js 22+)",
+        "url": "https://zcoldwater.github.io/brandshield-cli/",
+        "downloadUrl": "https://agentarenastudi.gumroad.com/l/omniforge-brandshield",
+        "description": "Offline zero-dependency CLI and interactive HTML workbench to batch-verify up to 500 candidate startup names across authoritative RDAP domains, 15 social/dev handles, iOS/Google Play app stores, and USPTO Nice Class trademarks.",
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "BrandShield Pro — Solo Founder Edition",
+            "price": "19.00",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "url": "https://agentarenastudi.gumroad.com/l/omniforge-brandshield"
+          },
+          {
+            "@type": "Offer",
+            "name": "BrandShield Pro — Agency & Studio Edition",
+            "price": "39.00",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "url": "https://agentarenastudi.gumroad.com/l/omniforge-brandshield"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can domain search websites front-run my unreleased startup name?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Some third-party domain brokers log or monetize search intent. BrandShield queries official registry RDAP servers directly (Verisign, Identity Digital, Google Registry, PIR) in read-only mode and never logs or stores searched names."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why check USPTO trademarks if the .com or .ai domain is available?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "An unregistered domain does not mean a name is safe to use. An active USPTO Class 9 (downloadable software/mobile apps) or Class 42 (SaaS/cloud software) mark can trigger cease-and-desist letters or App Store takedowns after launch."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is included in BrandShield Pro vs. the free open-source CLI?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The free CLI checks one name at a time. BrandShield Pro ($19 Solo / $39 Agency) is a one-time downloadable Node.js toolkit with a 500-name CSV/JSON batch runner, USPTO Nice Class phonetic/fuzzy conflict scoring, a 60-variation collision-free generator, an offline HTML comparison workbench, and white-label client reports."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #121a30;
+      --panel-2: #17213c;
+      --border: #263459;
+      --text: #f3f6fc;
+      --muted: #9fb0d1;
+      --accent: #38bdf8;
+      --accent-2: #6366f1;
+      --cta: #10b981;
+      --cta-hover: #059669;
+      --danger: #f43f5e;
+      --warn: #f59e0b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+      background: radial-gradient(circle at 50% 0%, #172554 0%, var(--bg) 52%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 22px; }
+    header {
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(11, 16, 32, 0.86);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 66px;
+      gap: 14px;
+    }
+    .brand {
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
+    }
+    .shield-dot {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      color: #081024;
+    }
+    .nav-links { display: flex; align-items: center; gap: 18px; font-size: 0.93rem; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 20px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.12s ease, background 0.15s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-cta { background: var(--cta); color: #041b13; }
+    .btn-cta:hover { background: var(--cta-hover); color: #fff; }
+    .btn-outline {
+      background: rgba(255,255,255,0.05);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .hero { padding: 68px 0 44px; text-align: center; }
+    .eyebrow {
+      display: inline-block;
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.32);
+      color: var(--accent);
+      margin-bottom: 18px;
+    }
+    h1 {
+      font-size: clamp(2.1rem, 4.6vw, 3.35rem);
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+      margin: 0 auto 18px;
+      max-width: 860px;
+    }
+    .sub {
+      font-size: 1.12rem;
+      color: var(--muted);
+      max-width: 720px;
+      margin: 0 auto 30px;
+    }
+    .scanner-box {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px;
+      max-width: 780px;
+      margin: 0 auto 24px;
+      box-shadow: 0 22px 50px rgba(0,0,0,0.42);
+      text-align: left;
+    }
+    .scan-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .scan-input {
+      flex: 1;
+      min-width: 220px;
+      padding: 13px 16px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: #0a1022;
+      color: #fff;
+      font-size: 1rem;
+    }
+    .presets {
+      margin-top: 10px;
+      font-size: 0.84rem;
+      color: var(--muted);
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .pill {
+      background: var(--panel-2);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 3px 10px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 0.8rem;
+    }
+    .pill:hover { border-color: var(--accent); }
+    #scanResult { margin-top: 18px; display: none; }
+    .res-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .res-card {
+      background: #0c1428;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 0.88rem;
+    }
+    .ok { color: var(--cta); font-weight: 700; }
+    .bad { color: var(--danger); font-weight: 700; }
+    .unk { color: var(--warn); font-weight: 700; }
+    .upsell-strip {
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: linear-gradient(90deg, rgba(16,185,129,0.14), rgba(99,102,241,0.16));
+      border: 1px solid rgba(16,185,129,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .cli-bar {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: #080d1a;
+      border: 1px solid var(--border);
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.9rem;
+      color: #cbd5e1;
+    }
+    section { padding: 52px 0; }
+    h2 { font-size: 1.85rem; letter-spacing: -0.02em; margin: 0 0 12px; text-align: center; }
+    .sec-sub { text-align: center; color: var(--muted); max-width: 660px; margin: 0 auto 34px; }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+    }
+    .card h3 { margin-top: 0; font-size: 1.15rem; }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 22px;
+      align-items: stretch;
+    }
+    .price-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .price-card.featured {
+      border: 2px solid var(--cta);
+      background: linear-gradient(180deg, #13223d 0%, var(--panel) 100%);
+      position: relative;
+    }
+    .badge-top {
+      position: absolute;
+      top: -12px;
+      right: 20px;
+      background: var(--cta);
+      color: #041b13;
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 999px;
+      text-transform: uppercase;
+    }
+    .price-num { font-size: 2.5rem; font-weight: 800; margin: 8px 0 4px; }
+    .price-note { font-size: 0.85rem; color: var(--muted); margin-bottom: 18px; }
+    ul.feat { list-style: none; padding: 0; margin: 0 0 24px; }
+    ul.feat li { padding: 6px 0; font-size: 0.94rem; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 34px 0 50px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#">
+        <span class="shield-dot">B</span>
+        <span>BrandShield</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#features">Why RDAP</a>
+        <a href="#pricing">Pro Kit ($19)</a>
+        <a href="https://github.com/zColdWater/brandshield-cli" target="_blank" rel="noopener">GitHub CLI</a>
+        <a class="btn btn-cta" href="https://agentarenastudi.gumroad.com/l/omniforge-brandshield" target="_blank" rel="noopener">Get BrandShield Pro →</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <span class="eyebrow">Zero Registrar Front-Running · Live Registry RDAP + USPTO Screening</span>
+      <h1>Vet Your Startup Name Before You Incorporate or Buy Domains</h1>
+      <p class="sub">
+        Check domain extensions via official registry RDAP, 15 developer &amp; social handles, Apple/Google Play app stores, and USPTO federal trademarks in one report.
+      </p>
+
+      <div class="scanner-box">
+        <form id="scanForm" class="scan-row">
+          <input id="brandInput" class="scan-input" type="text" placeholder="Enter a candidate startup or product name (e.g. Lumora)" maxlength="40" required />
+          <button type="submit" class="btn btn-cta" id="scanBtn">Scan Name Free</button>
+          <a class="btn btn-outline" id="fullDiagLink" href="https://brand-checker.appwrite.network" target="_blank" rel="noopener">Full USPTO Report ↗</a>
+        </form>
+        <div class="presets">
+          <span>Try an example:</span>
+          <button type="button" class="pill" onclick="runPreset('Lumora')">Lumora</button>
+          <button type="button" class="pill" onclick="runPreset('Notion')">Notion (conflict demo)</button>
+          <button type="button" class="pill" onclick="runPreset('VeloceHQ')">VeloceHQ</button>
+        </div>
+
+        <div id="scanResult">
+          <div id="scanHeader" style="font-weight:700; margin-top:6px;"></div>
+          <div id="scanGrid" class="res-grid"></div>
+          <div class="upsell-strip">
+            <div>
+              <strong>Shortlisting 20–500 names?</strong>
+              <div style="font-size:0.86rem; color:var(--muted);">Get 500-name CSV batch scanning, USPTO Nice Class 9/35/42 phonetic risk scoring, 60+ verified-free variations &amp; offline HTML workbench.</div>
+            </div>
+            <a class="btn btn-cta" href="https://agentarenastudi.gumroad.com/l/omniforge-brandshield" target="_blank" rel="noopener">Unlock BrandShield Pro ($19) →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cli-bar">
+        <span>$ npx github:zColdWater/brandshield-cli check Lumora</span>
+      </div>
+    </section>
+
+    <section id="features">
+      <h2>Why Founders &amp; Naming Studios Switch to BrandShield</h2>
+      <p class="sec-sub">Most naming mistakes happen in the gap between "the .ai domain was $70" and receiving a trademark cease-and-desist six months after launch.</p>
+      <div class="grid-3">
+        <div class="card">
+          <h3>1. Direct Registry RDAP (No Leak)</h3>
+          <p style="color:var(--muted);">Instead of routing your unreleased brand ideas through third-party broker search bars, BrandShield queries Verisign, Identity Digital, Google Registry, and PIR RDAP endpoints directly in read-only mode.</p>
+        </div>
+        <div class="card">
+          <h3>2. USPTO Nice Class Screening</h3>
+          <p style="color:var(--muted);">Surfaces identical and phonetically similar US federal word marks with serial/registration numbers, live/dead status, owners, and software/SaaS Nice Class 9, 35 &amp; 42 overlap.</p>
+        </div>
+        <div class="card">
+          <h3>3. Honest Handle &amp; App Store Matrix</h3>
+          <p style="color:var(--muted);">Checks GitHub, X, YouTube, Bluesky, npm, PyPI, Apple App Store, and Google Play—and honestly marks login-walled platforms as <em>Unconfirmed</em> instead of guessing false availability.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing">
+      <h2>One-Time Download. Zero Recurring SaaS Bloat.</h2>
+      <p class="sec-sub">Start free with the 1-name open-source CLI or web diagnostic, or buy the complete offline Node.js source kit once and run unlimited batches on your own machine.</p>
+
+      <div class="pricing-grid">
+        <div class="price-card">
+          <div>
+            <h3>Lite CLI &amp; Web Check</h3>
+            <div class="price-num">$0</div>
+            <div class="price-note">Open-source MIT · Single-name diagnostic</div>
+            <ul class="feat">
+              <li>✔ 1 candidate name per run</li>
+              <li>✔ 6 core domain extensions via RDAP</li>
+              <li>✔ Developer handles (GitHub, npm, PyPI)</li>
+              <li>✔ Exact iOS App Store &amp; USPTO lookup</li>
+              <li style="color:var(--muted);">— No CSV/JSON 500-name batch runner</li>
+              <li style="color:var(--muted);">— No Nice Class phonetic conflict score</li>
+            </ul>
+          </div>
+          <a class="btn btn-outline" href="https://brand-checker.appwrite.network" target="_blank" rel="noopener">Open Free Web Scanner ↗</a>
+        </div>
+
+        <div class="price-card featured">
+          <span class="badge-top">Most Popular for Founders</span>
+          <div>
+            <h3>BrandShield Pro — Solo</h3>
+            <div class="price-num">$19</div>
+            <div class="price-note">One-time purchase · Full offline Node 22 source ZIP</div>
+            <ul class="feat">
+              <li>✔ <strong>Batch scan up to 500 names</strong> (CSV / JSON / TXT)</li>
+              <li>✔ <strong>USPTO Nice Class 9/35/42</strong> &amp; phonetic risk score (0–100)</li>
+              <li>✔ <strong>60-variation generator</strong> pre-verified free on domains</li>
+              <li>✔ <strong>15 social &amp; dev handles</strong> + iOS &amp; Google Play</li>
+              <li>✔ <strong>Interactive local HTML workbench</strong> (sort &amp; filter shortlist)</li>
+              <li>✔ Zero API keys, zero cloud subscriptions, 100% private</li>
+            </ul>
+          </div>
+          <a class="btn btn-cta" href="https://agentarenastudi.gumroad.com/l/omniforge-brandshield" target="_blank" rel="noopener">Buy Solo Edition ($19) →</a>
+        </div>
+
+        <div class="price-card">
+          <div>
+            <h3>BrandShield Pro — Agency</h3>
+            <div class="price-num">$39</div>
+            <div class="price-note">One-time purchase · Naming studios, agencies &amp; attorneys</div>
+            <ul class="feat">
+              <li>✔ Everything in BrandShield Pro Solo</li>
+              <li>✔ <strong>White-label HTML &amp; Markdown client reports</strong></li>
+              <li>✔ Custom agency logo, studio footer &amp; executive risk matrix</li>
+              <li>✔ Multi-seat commercial studio license for client deliverables</li>
+              <li>✔ Counsel handoff packet with timestamped RDAP/USPTO citations</li>
+              <li>✔ Lifetime minor updates included</li>
+            </ul>
+          </div>
+          <a class="btn btn-outline" style="border-color:var(--cta); color:var(--cta);" href="https://agentarenastudi.gumroad.com/l/omniforge-brandshield" target="_blank" rel="noopener">Buy Agency Edition ($39) →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>
+        <a href="https://brand-checker.appwrite.network">Free Live Web Diagnostic</a> ·
+        <a href="https://github.com/zColdWater/brandshield-cli">Open-Source GitHub CLI</a> ·
+        <a href="https://agentarenastudi.gumroad.com/l/omniforge-brandshield">BrandShield Pro on Gumroad</a> ·
+        <a href="./llms.txt">llms.txt</a>
+      </p>
+      <p>Disclaimer: BrandShield is an informational screening tool, not legal advice or a formal trademark clearance opinion. Searched names are never logged, stored, or registered.</p>
+      <p>© 2026 OmniForge Studio · MIT Open-Source Lite CLI</p>
+    </div>
+  </footer>
+
+  <script>
+    const RDAP_MAP = {
+      com: "https://rdap.verisign.com/com/v1/domain/",
+      net: "https://rdap.verisign.com/net/v1/domain/",
+      org: "https://rdap.publicinterestregistry.org/rdap/domain/",
+      app: "https://pubapi.registry.google/rdap/domain/",
+      dev: "https://pubapi.registry.google/rdap/domain/"
+    };
+
+    function runPreset(val) {
+      document.getElementById("brandInput").value = val;
+      document.getElementById("scanForm").requestSubmit();
+    }
+
+    document.getElementById("scanForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const raw = document.getElementById("brandInput").value.trim();
+      if (!raw) return;
+      const slug = raw.toLowerCase().replace(/[^a-z0-9]/g, "");
+      if (!slug) return;
+
+      const btn = document.getElementById("scanBtn");
+      const box = document.getElementById("scanResult");
+      const hdr = document.getElementById("scanHeader");
+      const grid = document.getElementById("scanGrid");
+      const fullLink = document.getElementById("fullDiagLink");
+
+      fullLink.href = "https://brand-checker.appwrite.network/check?names=" + encodeURIComponent(raw) + "&tlds=com,io,ai,co,app,dev&platforms=x,github,youtube,instagram,tiktok&countries=US";
+      btn.disabled = true;
+      btn.textContent = "Scanning RDAP...";
+      box.style.display = "block";
+      hdr.textContent = 'Live Instant Pre-Check for "' + raw + '" (Direct Registry RDAP + Developer & App Registries)';
+      grid.innerHTML = "";
+
+      const checks = [];
+      for (const [tld, base] of Object.entries(RDAP_MAP)) {
+        checks.push((async () => {
+          const dom = slug + "." + tld;
+          try {
+            const r = await fetch(base + dom);
+            return { label: dom, status: r.status === 404 ? "Available" : r.ok ? "Taken" : "Check Full Report" };
+          } catch {
+            return { label: dom, status: "Check Full Report" };
+          }
+        })());
+      }
+      checks.push((async () => {
+        try {
+          const r = await fetch("https://api.github.com/users/" + slug);
+          return { label: "GitHub @" + slug, status: r.status === 404 ? "Available" : r.ok ? "Taken" : "Unconfirmed" };
+        } catch {
+          return { label: "GitHub @" + slug, status: "Unconfirmed" };
+        }
+      })());
+      checks.push((async () => {
+        try {
+          const r = await fetch("https://itunes.apple.com/search?term=" + encodeURIComponent(raw) + "&entity=software&country=us&limit=3");
+          const d = await r.json();
+          const hit = (d.results || []).find(x => String(x.trackName || "").toLowerCase() === raw.toLowerCase());
+          return { label: "iOS App Store", status: hit ? "Exact App Exists" : "No Exact Match" };
+        } catch {
+          return { label: "iOS App Store", status: "Check Full Report" };
+        }
+      })());
+
+      const items = await Promise.all(checks);
+      items.push({
+        label: "USPTO Trademarks",
+        status: "Open Full Report ↗",
+        href: fullLink.href
+      });
+
+      grid.innerHTML = items.map(it => {
+        const cls = (it.status === "Available" || it.status === "No Exact Match") ? "ok" : (it.status === "Taken" || it.status === "Exact App Exists") ? "bad" : "unk";
+        const val = it.href ? '<a href="' + it.href + '" target="_blank" rel="noopener">' + it.status + '</a>' : it.status;
+        return '<div class="res-card"><div style="color:var(--muted);font-size:0.78rem;">' + it.label + '</div><div class="' + cls + '">' + val + '</div></div>';
+      }).join("");
+
+      btn.disabled = false;
+      btn.textContent = "Scan Name Free";
+    });
+  </script>
+</body>
+</html>

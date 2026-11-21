@@ -1,0 +1,41 @@
+{
+  "name": "brandshield-cli",
+  "version": "1.0.0",
+  "description": "Zero-dependency startup name availability checker — verify domains via authoritative RDAP (no registrar front-running), social/dev handles, app stores, and USPTO federal trademarks from your terminal.",
+  "type": "module",
+  "bin": {
+    "brandshield": "./bin/brandshield.mjs"
+  },
+  "scripts": {
+    "start": "node ./bin/brandshield.mjs",
+    "test": "node ./bin/brandshield.mjs check Notion --tlds com,io,ai"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "startup",
+    "naming",
+    "brand-name-checker",
+    "domain-availability",
+    "rdap",
+    "whois",
+    "trademark-search",
+    "uspto",
+    "handle-checker",
+    "app-store",
+    "indie-hackers",
+    "saas",
+    "cli"
+  ],
+  "homepage": "https://zcoldwater.github.io/brandshield-cli/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zColdWater/brandshield-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zColdWater/brandshield-cli/issues"
+  },
+  "author": "OmniForge Studio",
+  "license": "MIT"
+}
