@@ -1,0 +1,38 @@
+name: BrandShield CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      candidate_name:
+        description: "Brand name to screen"
+        required: false
+        default: "Lumora"
+
+jobs:
+  verify-cli-and-action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Run BrandShield Action (Job Summary Demo)
+        id: brand
+        uses: ./
+        with:
+          name: ${{ github.event.inputs.candidate_name || 'Zqxvora' }}
+          tlds: "com,io,ai,co,app,dev"
+          post-summary: "true"
+          out-file: "brandshield-report.json"
+
+      - name: Verify Action Outputs & Known-Brand Detection
+        run: |
+          echo "Score=${{ steps.brand.outputs.score }} Verdict=${{ steps.brand.outputs.verdict }} TM=${{ steps.brand.outputs.tm-risk }}"
+          test -f brandshield-report.json
+          node ./bin/brandshield.mjs check Notion --tlds com,io,ai --json > notion.json
+          node -e 'const d=JSON.parse(require("fs").readFileSync("notion.json","utf8")); if(!d.domains?.length) process.exit(1); console.log("Notion check ok:", d.risk?.verdict, "score=", d.risk?.score);'

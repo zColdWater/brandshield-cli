@@ -1,0 +1,95 @@
+name: "BrandShield Name & USPTO Trademark Check"
+description: "Check startup & product names against authoritative RDAP domains, dev/social handles, App Stores, and live USPTO federal trademarks in CI."
+author: "OmniForge Studio"
+branding:
+  icon: "shield"
+  color: "green"
+
+inputs:
+  name:
+    description: "Candidate startup, product, or package name to screen (1 name per run in Free Lite)."
+    required: true
+  tlds:
+    description: "Comma-separated domain TLDs to verify via authoritative RDAP/WHOIS."
+    required: false
+    default: "com,io,ai,co,app,dev"
+  min-score:
+    description: "Optional minimum BrandShield clearance score (0-100). Fails step if score is lower."
+    required: false
+    default: "0"
+  fail-on-trademark:
+    description: "Fail the workflow step if live federal USPTO trademark conflicts are found (true/false)."
+    required: false
+    default: "false"
+  fail-on-taken-com:
+    description: "Fail the workflow step if the .com domain is already registered (true/false)."
+    required: false
+    default: "false"
+  post-summary:
+    description: "Write a formatted Markdown clearance table to the GitHub Actions Job Summary (true/false)."
+    required: false
+    default: "true"
+  out-file:
+    description: "Path to write the structured JSON diagnostic report."
+    required: false
+    default: "brandshield-report.json"
+
+outputs:
+  score:
+    description: "BrandShield clearance score (0-100, higher is cleaner)."
+    value: ${{ steps.scan.outputs.score }}
+  verdict:
+    description: "Clearance verdict: GREENLIGHT, CAUTION, HIGH_RISK, or DO_NOT_USE."
+    value: ${{ steps.scan.outputs.verdict }}
+  tm-risk:
+    description: "USPTO trademark conflict tier: CLEAR, MEDIUM, HIGH, CRITICAL, or UNCONFIRMED."
+    value: ${{ steps.scan.outputs.tm-risk }}
+  com-available:
+    description: "Whether the .com domain is unregistered (true, false, or unconfirmed)."
+    value: ${{ steps.scan.outputs.com-available }}
+  live-trademarks:
+    description: "Number of live identical or similar federal USPTO word marks matched."
+    value: ${{ steps.scan.outputs.live-trademarks }}
+  report-json:
+    description: "File path to the saved JSON diagnostic report."
+    value: ${{ steps.scan.outputs.report-json }}
+
+runs:
+  using: "composite"
+  steps:
+    - name: Run BrandShield Diagnostic
+      id: scan
+      shell: bash
+      env:
+        BS_NAME: ${{ inputs.name }}
+        BS_TLDS: ${{ inputs.tlds }}
+        BS_MIN_SCORE: ${{ inputs.min-score }}
+        BS_FAIL_TM: ${{ inputs.fail-on-trademark }}
+        BS_FAIL_COM: ${{ inputs.fail-on-taken-com }}
+        BS_POST_SUMMARY: ${{ inputs.post-summary }}
+        BS_OUT_FILE: ${{ inputs.out-file }}
+      run: |
+        ARGS=(check "$BS_NAME" --tlds "$BS_TLDS" --ci --markdown)
+        if [ -n "$BS_OUT_FILE" ]; then
+          ARGS+=(--out "$BS_OUT_FILE")
+        fi
+        if [ -n "$BS_MIN_SCORE" ] && [ "$BS_MIN_SCORE" != "0" ]; then
+          ARGS+=(--min-score "$BS_MIN_SCORE")
+        fi
+        if [ "$BS_FAIL_TM" = "true" ]; then
+          ARGS+=(--fail-on-trademark)
+        fi
+        if [ "$BS_FAIL_COM" = "true" ]; then
+          ARGS+=(--fail-on-taken-com)
+        fi
+
+        set +e
+        MD_OUT=$(node "${{ github.action_path }}/bin/brandshield.mjs" "${ARGS[@]}")
+        EXIT_CODE=$?
+        set -e
+
+        echo "$MD_OUT"
+        if [ "$BS_POST_SUMMARY" = "true" ] && [ -n "${GITHUB_STEP_SUMMARY:-}" ]; then
+          printf "%s\n" "$MD_OUT" >> "$GITHUB_STEP_SUMMARY"
+        fi
+        exit $EXIT_CODE

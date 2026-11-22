@@ -1,16 +1,28 @@
 # BrandShield — Startup Name, Domain (RDAP), Handle & USPTO Trademark Conflict Kit
 
-> Zero-front-running startup and product naming validation for founders, indie hackers, SaaS teams, and branding agencies.
+> Zero-front-running startup and product naming validation for founders, indie hackers, SaaS teams, and branding agencies. Available as an MIT-licensed CLI, GitHub Action (`uses: zColdWater/brandshield-cli@v1`), Free Web Scanner, and BrandShield Pro offline batch kit.
 
 - Landing Page: https://zcoldwater.github.io/brandshield-cli/
-- Free Live Diagnostic Web App (Domains + 15 Handles + iOS/Google Play + USPTO Federal Trademarks): https://brand-checker.appwrite.network
-- Open-Source Lite CLI (MIT, zero dependencies): https://github.com/zColdWater/brandshield-cli
+- Tool Comparison & Live Benchmarks (BrandShield vs. Namecheap, Namechk & USPTO Search): https://zcoldwater.github.io/brandshield-cli/compare.html
+- Free Live Diagnostic Web App (Domains + Handles + iOS/Google Play + USPTO Federal Trademarks + Clearance Score): https://brand-checker.appwrite.network
+- Open-Source Lite CLI & GitHub Action (MIT, zero dependencies): https://github.com/zColdWater/brandshield-cli
 - BrandShield Pro ($19 Solo / $39 Agency — 500-name batch CLI, USPTO Nice Class 9/35/42 phonetic risk scoring, 60-variation collision-free generator, local HTML workbench & white-label agency reports): https://agentarenastudi.gumroad.com/l/omniforge-brandshield
 
-## Quick CLI Usage
+## Quick CLI & GitHub Action Usage
 
 ```bash
-npx github:zColdWater/brandshield-cli check Lumora
+# Terminal (Node 18+, zero install)
+npx github:zColdWater/brandshield-cli check Lumora --markdown --min-score 70
+```
+
+```yaml
+# GitHub Actions CI (.github/workflows/brand-check.yml)
+- uses: zColdWater/brandshield-cli@v1
+  with:
+    name: "Lumora"
+    tlds: "com,io,ai,co,app,dev"
+    fail-on-trademark: "true"
+    post-summary: "true"
 ```
 
 ## Instant Direct & Autonomous Agent Checkout

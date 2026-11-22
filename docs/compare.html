@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BrandShield vs. Namecheap, Namechk &amp; USPTO Search (2026) — Startup Naming Comparison</title>
+  <meta name="description" content="Side-by-side comparison of BrandShield vs. Namecheap, GoDaddy, Namechk, and manual USPTO Trademark Search. Zero domain front-running via live RDAP, Nice Class 9/35/42 conflict scoring, and GitHub Actions CI." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://zcoldwater.github.io/brandshield-cli/compare.html" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="BrandShield vs. Namecheap, Namechk &amp; USPTO Search — Startup Naming &amp; Trademark Comparison" />
+  <meta property="og:description" content="Compare domain front-running protection, live USPTO Class 9/42 trademark conflict screening, honest social handle checks, and one-time offline CLI pricing." />
+  <meta property="og:url" content="https://zcoldwater.github.io/brandshield-cli/compare.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "BrandShield", "item": "https://zcoldwater.github.io/brandshield-cli/" },
+          { "@type": "ListItem", "position": 2, "name": "Tool Comparison & Benchmarks", "item": "https://zcoldwater.github.io/brandshield-cli/compare.html" }
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "BrandShield CLI & BrandShield Pro",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "macOS, Linux, Windows (Node.js 18+)",
+        "url": "https://zcoldwater.github.io/brandshield-cli/compare.html",
+        "softwareVersion": "1.1.0",
+        "offers": [
+          { "@type": "Offer", "name": "BrandShield Lite CLI & GitHub Action", "price": "0", "priceCurrency": "USD" },
+          { "@type": "Offer", "name": "BrandShield Pro Solo", "price": "19.00", "priceCurrency": "USD", "url": "https://agentarenastudi.gumroad.com/l/omniforge-brandshield" },
+          { "@type": "Offer", "name": "BrandShield Pro Agency", "price": "39.00", "priceCurrency": "USD", "url": "https://agentarenastudi.gumroad.com/l/omniforge-brandshield" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Why is RDAP safer than Namecheap or GoDaddy domain search bars for unreleased startup names?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Registrar search bars route queries through commercial broker intermediaries. BrandShield queries official IANA RDAP registry servers (Verisign, Identity Digital, Google Registry, PIR) directly in read-only mode and never logs, caches, or registers searched names."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is BrandShield different from Namechk or KnowEm for Instagram and TikTok handles?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Unauthenticated requests to Instagram and TikTok receive identical login walls or bot challenges whether a username is free or taken. Many legacy checkers report misleading results. BrandShield checks public APIs where authoritative (GitHub, npm, PyPI, YouTube, Bluesky, X) and explicitly marks gated walls as Unconfirmed with manual check steps."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I run BrandShield automatically inside GitHub Actions CI?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Add uses: zColdWater/brandshield-cli@v1 to any workflow to screen a product or package name across RDAP domains, handles, App Stores, and USPTO federal trademarks, posting a Markdown clearance table to the Job Summary with optional min-score or fail-on-trademark gates."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #121a30;
+      --panel-2: #17213c;
+      --border: #263459;
+      --text: #f3f6fc;
+      --muted: #9fb0d1;
+      --accent: #38bdf8;
+      --accent-2: #6366f1;
+      --cta: #10b981;
+      --cta-hover: #059669;
+      --danger: #f43f5e;
+      --warn: #f59e0b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+      background: radial-gradient(circle at 50% 0%, #172554 0%, var(--bg) 52%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 22px; }
+    header {
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+      position: sticky; top: 0; z-index: 20;
+      background: rgba(11, 16, 32, 0.88);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 66px; gap: 16px; }
+    .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 800; color: var(--text); font-size: 1.08rem; }
+    .shield-dot {
+      width: 30px; height: 30px; border-radius: 9px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      display: inline-flex; align-items: center; justify-content: center;
+      font-weight: 900; color: #051024;
+    }
+    .nav-links { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; font-size: 0.94rem; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+      padding: 10px 16px; border-radius: 10px; font-weight: 700; font-size: 0.92rem;
+      border: 1px solid transparent; cursor: pointer; text-decoration: none !important;
+      transition: transform .12s ease, background .15s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-cta { background: var(--cta); color: #041d15; }
+    .btn-cta:hover { background: var(--cta-hover); color: #fff; }
+    .btn-outline { background: transparent; border-color: var(--border); color: var(--text); }
+    .btn-outline:hover { border-color: var(--accent); }
+
+    main { padding: 42px 0 72px; }
+    .eyebrow {
+      display: inline-block; padding: 5px 12px; border-radius: 999px;
+      background: rgba(56,189,248,0.12); border: 1px solid rgba(56,189,248,0.3);
+      color: var(--accent); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.02em;
+      margin-bottom: 14px;
+    }
+    h1 { font-size: clamp(1.9rem, 3.6vw, 2.75rem); line-height: 1.15; margin: 0 0 14px; letter-spacing: -0.02em; }
+    h2 { font-size: 1.48rem; margin: 44px 0 14px; letter-spacing: -0.01em; }
+    .sub { color: var(--muted); font-size: 1.05rem; max-width: 780px; margin: 0 0 26px; }
+
+    .card {
+      background: var(--panel); border: 1px solid var(--border);
+      border-radius: 16px; padding: 22px; margin-bottom: 22px;
+    }
+    .table-wrap { overflow-x: auto; border-radius: 14px; border: 1px solid var(--border); background: var(--panel); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.92rem; min-width: 760px; }
+    th, td { padding: 13px 14px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.06); vertical-align: top; }
+    th { background: var(--panel-2); color: var(--text); font-weight: 700; }
+    tr:last-child td { border-bottom: 0; }
+    .col-bs { background: rgba(16,185,129,0.06); }
+    th.col-bs { background: rgba(16,185,129,0.16); color: #a7f3d0; }
+
+    .pill { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 0.78rem; font-weight: 700; }
+    .pill-ok { background: rgba(16,185,129,0.18); color: #6ee7b7; }
+    .pill-warn { background: rgba(245,158,11,0.18); color: #fcd34d; }
+    .pill-bad { background: rgba(244,63,94,0.18); color: #fda4af; }
+
+    .scan-row { display: flex; gap: 10px; flex-wrap: wrap; }
+    .scan-row input {
+      flex: 1; min-width: 220px; padding: 12px 14px; border-radius: 10px;
+      border: 1px solid var(--border); background: #0a1022; color: var(--text); font-size: 1rem;
+    }
+    .chips { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+    .chip {
+      background: var(--panel-2); border: 1px solid var(--border); color: var(--muted);
+      padding: 4px 11px; border-radius: 999px; font-size: 0.82rem; cursor: pointer;
+    }
+    .chip:hover { color: var(--text); border-color: var(--accent); }
+
+    pre {
+      background: #070b17; border: 1px solid var(--border); border-radius: 12px;
+      padding: 16px; overflow-x: auto; font-size: 0.86rem; line-height: 1.5; color: #dbeafe;
+    }
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 18px; }
+    .cta-banner {
+      background: linear-gradient(135deg, rgba(16,185,129,0.14), rgba(56,189,248,0.10));
+      border: 1px solid rgba(16,185,129,0.4); border-radius: 16px; padding: 24px;
+      display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap;
+      margin-top: 32px;
+    }
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.08); padding: 28px 0 42px;
+      color: var(--muted); font-size: 0.88rem; text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="./index.html">
+        <span class="shield-dot">B</span>
+        <span>BrandShield</span>
+      </a>
+      <nav class="nav-links">
+        <a href="./index.html">Home</a>
+        <a href="#matrix">Comparison Matrix</a>
+        <a href="#benchmarks">Live Benchmarks</a>
+        <a href="#github-action">GitHub Action</a>
+        <a href="https://brand-checker.appwrite.network" target="_blank" rel="noopener">Free Web App</a>
+        <a class="btn btn-cta" href="https://agentarenastudi.gumroad.com/l/omniforge-brandshield" target="_blank" rel="noopener">Get BrandShield Pro ($19) &rarr;</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <span class="eyebrow">2026 Independent Tool Comparison · Zero Registrar Front-Running</span>
+    <h1>BrandShield vs. Namecheap, Namechk &amp; USPTO Search</h1>
+    <p class="sub">
+      Why founders and indie developers stop pasting unreleased product names into commercial registrar search bars — and how authoritative RDAP + live USPTO Nice Class screening compares side by side.
+    </p>
+
+    <div class="card">
+      <h2 style="margin-top:0">Try a Live 1-Name Diagnostic Right Now</h2>
+      <p style="color:var(--muted);margin-top:0">Queries official RDAP registries, GitHub/npm/PyPI/X/YouTube/Bluesky, Apple/Google Play, and live federal USPTO trademarks in 3–8 seconds.</p>
+      <form id="cmpForm" class="scan-row">
+        <input id="cmpInput" type="text" maxlength="40" placeholder="Type a brand name (e.g. Notion, Stripe, Lumora)..." required />
+        <button id="cmpBtn" class="btn btn-cta" type="submit">Run Free Diagnostic</button>
+        <a class="btn btn-outline" href="https://brand-checker.appwrite.network" target="_blank" rel="noopener">Open Full Web App &rarr;</a>
+      </form>
+      <div class="chips">
+        <button class="chip" type="button" data-q="Notion">Test: Notion (High Risk)</button>
+        <button class="chip" type="button" data-q="Stripe">Test: Stripe (High Risk)</button>
+        <button class="chip" type="button" data-q="Zqxvora">Test: Zqxvora (Clean 100/100)</button>
+      </div>
+      <div id="cmpOut" style="margin-top:16px"></div>
+    </div>
+
+    <h2 id="matrix">1. Feature &amp; Privacy Comparison Matrix</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Capability</th>
+            <th class="col-bs">BrandShield (OSS + Pro)</th>
+            <th>Namecheap / GoDaddy Search</th>
+            <th>Namechk / KnowEm</th>
+            <th>Manual USPTO Search</th>
+            <th>Branding / IP Agency</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Domain lookup method</strong></td>
+            <td class="col-bs"><span class="pill pill-ok">Direct IANA RDAP + WHOIS</span><br />Read-only, zero broker intermediary</td>
+            <td>Commercial registrar search bar</td>
+            <td>Third-party proxy APIs</td>
+            <td>Not included</td>
+            <td>Manual broker lookup</td>
+          </tr>
+          <tr>
+            <td><strong>Zero front-running / privacy</strong></td>
+            <td class="col-bs"><span class="pill pill-ok">100% Local / No Logging</span><br />Never stores or registers queries</td>
+            <td><span class="pill pill-warn">Logged server-side</span><br />Commercial upsell pipeline</td>
+            <td><span class="pill pill-warn">Hosted web session</span></td>
+            <td><span class="pill pill-ok">Public govt portal</span></td>
+            <td>NDA required</td>
+          </tr>
+          <tr>
+            <td><strong>USPTO Federal Trademarks</strong></td>
+            <td class="col-bs"><span class="pill pill-ok">Live USPTO + Nice Class 9/35/42</span><br />Exact + phonetic match + Reg #</td>
+            <td><span class="pill pill-bad">None</span></td>
+            <td><span class="pill pill-bad">Paid add-on / link-out</span></td>
+            <td><span class="pill pill-ok">Full federal DB</span><br />Slow manual query syntax</td>
+            <td><span class="pill pill-ok">Full legal opinion</span></td>
+          </tr>
+          <tr>
+            <td><strong>Social &amp; Developer Handles</strong></td>
+            <td class="col-bs"><span class="pill pill-ok">Honest verification</span><br />GitHub, npm, PyPI, X, YT, Bluesky + honest <em>Unconfirmed</em> on IG/TikTok walls</td>
+            <td><span class="pill pill-bad">None</span></td>
+            <td><span class="pill pill-warn">Frequent false positives</span><br />Breaks on IG/TikTok login walls</td>
+            <td><span class="pill pill-bad">None</span></td>
+            <td>Manual spot check</td>
+          </tr>
+          <tr>
+            <td><strong>iOS &amp; Google Play Collisions</strong></td>
+            <td class="col-bs"><span class="pill pill-ok">Both stores (exact title)</span></td>
+            <td><span class="pill pill-bad">None</span></td>
+            <td><span class="pill pill-bad">None</span></td>
+            <td><span class="pill pill-bad">None</span></td>
+            <td>Manual</td>
+          </tr>
+          <tr>
+            <td><strong>CLI &amp; GitHub Actions CI</strong></td>
+            <td class="col-bs"><span class="pill pill-ok">Built-in (`npx` + Action)</span><br />Zero deps, JSON/Markdown, exit gates</td>
+            <td><span class="pill pill-bad">Web UI only</span></td>
+            <td><span class="pill pill-bad">Web UI only</span></td>
+            <td><span class="pill pill-bad">Browser only</span></td>
+            <td>PDF email</td>
+          </tr>
+          <tr>
+            <td><strong>Batch Screening Capacity</strong></td>
+            <td class="col-bs"><strong>1 name (Free)</strong> / <strong>500 names (Pro)</strong> + 60 verified variations</td>
+            <td>Bulk domains only (no TM/handles)</td>
+            <td>1 name at a time</td>
+            <td>1 query at a time</td>
+            <td>5–15 shortlisted names</td>
+          </tr>
+          <tr>
+            <td><strong>Price</strong></td>
+            <td class="col-bs"><strong>$0 MIT CLI</strong> · <strong>$19 Solo / $39 Agency</strong> one-time (no subscription)</td>
+            <td>Free (upsells domains)</td>
+            <td>Free limited / $100+ services</td>
+            <td>Free (manual time)</td>
+            <td>$1,500–$5,000+</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="benchmarks">2. Reproducible Live Benchmarks (Measured November 2026)</h2>
+    <p style="color:var(--muted)">Every figure below comes from live runs against authoritative Verisign/Identity Digital/Google RDAP, GitHub/npm/PyPI, Apple/Google Play, and <code>tmsearch.uspto.gov</code>.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Test Candidate</th>
+            <th>Latency</th>
+            <th>Domains (.com/.io/.ai/.co/.app/.dev)</th>
+            <th>App Stores</th>
+            <th>Live USPTO Marks</th>
+            <th>BrandShield Score &amp; Verdict</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Notion</strong></td>
+            <td>~4.1 s</td>
+            <td>0 / 6 available</td>
+            <td>3 exact collisions (iOS + Play)</td>
+            <td>38 live (11 identical, Classes 009/035/041/042)</td>
+            <td><span class="pill pill-bad">0 / 100 · DO NOT USE (CRITICAL)</span></td>
+          </tr>
+          <tr>
+            <td><strong>Stripe</strong></td>
+            <td>~3.2 s</td>
+            <td>0 / 6 available</td>
+            <td>Checked</td>
+            <td>42 live (15 identical across software/finance)</td>
+            <td><span class="pill pill-bad">6 / 100 · DO NOT USE (CRITICAL)</span></td>
+          </tr>
+          <tr>
+            <td><strong>Zqxvora</strong> (synthetic)</td>
+            <td>~7.7 s</td>
+            <td>6 / 6 available</td>
+            <td>0 collisions</td>
+            <td>0 live identical/similar marks</td>
+            <td><span class="pill pill-ok">100 / 100 · GREENLIGHT (CLEAR)</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="github-action">3. One-Click GitHub Action &amp; Terminal Integration</h2>
+    <div class="grid-2">
+      <div class="card" style="margin:0">
+        <h3 style="margin-top:0">GitHub Actions Workflow</h3>
+        <p style="color:var(--muted);font-size:0.9rem">Drop into <code>.github/workflows/brand-check.yml</code> to post an automatic clearance table to your Job Summary and optionally gate builds on USPTO conflicts:</p>
+<pre><code>- name: Screen Product Name
+  id: brand
+  uses: zColdWater/brandshield-cli@v1
+  with:
+    name: "Lumora"
+    tlds: "com,io,ai,co,app,dev"
+    min-score: "70"
+    fail-on-trademark: "true"
+    post-summary: "true"</code></pre>
+      </div>
+      <div class="card" style="margin:0">
+        <h3 style="margin-top:0">Zero-Install CLI (Node 18+)</h3>
+        <p style="color:var(--muted);font-size:0.9rem">Screen any candidate from your terminal with zero packages installed:</p>
+<pre><code># Rich terminal report + Clearance Score
+npx github:zColdWater/brandshield-cli check Lumora
+
+# GitHub Markdown table + CI threshold gate
+npx github:zColdWater/brandshield-cli check Lumora \
+  --markdown --min-score 75 --fail-on-trademark
+
+# Machine-readable JSON for pipelines
+npx github:zColdWater/brandshield-cli check Notion --json</code></pre>
+      </div>
+    </div>
+
+    <div class="cta-banner">
+      <div style="max-width:620px">
+        <strong style="font-size:1.18rem">Ready to screen 50–500 startup names offline with zero subscriptions?</strong>
+        <p style="color:var(--muted);margin:6px 0 0">
+          BrandShield Pro includes the 500-name batch CLI, 60-variation live verifier, USPTO Nice Class 9/35/42 phonetic scoring, local interactive HTML workbench &amp; white-label agency reports.
+        </p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;min-width:260px">
+        <a class="btn btn-cta" href="https://agentarenastudi.gumroad.com/l/omniforge-brandshield" target="_blank" rel="noopener">Buy BrandShield Pro ($19 Solo / $39 Agency) &rarr;</a>
+        <a class="btn btn-outline" href="https://omnipulse-x402.appwrite.network/checkout/brandshield" target="_blank" rel="noopener">&#9889; Instant Direct / Agent Checkout ($19 / $39) &rarr;</a>
+        <a class="btn btn-outline" style="border-color:var(--accent);color:var(--accent)" href="https://agentarenastudi.gumroad.com/l/omniforge-launch-stack" target="_blank" rel="noopener">3-in-1 Founder Launch Stack ($49 Solo / $89 Agency — Save $38) &rarr;</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p style="margin:0 0 8px">Read-only lookup: searched names are never stored, shared, or registered. Trademark screening is informational only and not legal advice.</p>
+      <p style="margin:0">
+        <a href="./index.html">BrandShield Home</a> ·
+        <a href="https://brand-checker.appwrite.network" target="_blank" rel="noopener">Free Live Web Scanner</a> ·
+        <a href="https://github.com/zColdWater/brandshield-cli" target="_blank" rel="noopener">GitHub CLI &amp; Action</a> ·
+        <a href="https://agentarenastudi.gumroad.com/l/omniforge-brandshield" target="_blank" rel="noopener">BrandShield Pro (Gumroad)</a> ·
+        <a href="https://omnipulse-x402.appwrite.network/checkout/launch-stack" target="_blank" rel="noopener">3-in-1 Direct Checkout</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const API = "https://brand-checker.appwrite.network/api/free-check";
+    const form = document.getElementById("cmpForm");
+    const inp = document.getElementById("cmpInput");
+    const btn = document.getElementById("cmpBtn");
+    const out = document.getElementById("cmpOut");
+    const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+    async function run(name) {
+      inp.value = name;
+      btn.disabled = true;
+      out.innerHTML = '<div style="color:var(--muted)">Running live RDAP, handle, App Store &amp; USPTO trademark check for <strong>' + esc(name) + '</strong>...</div>';
+      try {
+        const res = await fetch(API + "?name=" + encodeURIComponent(name));
+        const d = await res.json();
+        if (!res.ok || !d.ok) {
+          out.innerHTML = '<div class="pill pill-bad">' + esc(d.error || "Check failed") + '</div>';
+          return;
+        }
+        const cls = d.risk.verdict === "GREENLIGHT" ? "pill-ok" : d.risk.verdict === "CAUTION" ? "pill-warn" : "pill-bad";
+        const doms = (d.domains || []).map((x) => {
+          const c = x.status === "available" ? "pill-ok" : x.status === "taken" ? "pill-bad" : "pill-warn";
+          return '<span class="pill ' + c + '" style="margin:3px 6px 3px 0">' + esc(x.domain) + ': ' + esc(x.status) + '</span>';
+        }).join("");
+        const tm = (d.trademarks && d.trademarks[0]) || { liveCount: 0, live: [] };
+        const tmPreview = (tm.live || []).slice(0, 4).map((m) =>
+          '<div style="font-size:0.86rem;color:var(--muted);margin-top:4px">&bull; <strong style="color:var(--text)">' + esc(m.mark) + '</strong> (' + esc(m.match) + ') — ' + esc(m.registration ? "Reg #" + m.registration : "Serial #" + m.serial) + (m.classes ? " [" + esc(m.classes) + "]" : "") + '</div>'
+        ).join("") || '<div style="font-size:0.86rem;color:#6ee7b7;margin-top:4px">&check; No live identical or similar federal USPTO word marks found.</div>';
+
+        out.innerHTML =
+          '<div style="padding:14px;border-radius:12px;background:#0a1022;border:1px solid var(--border)">' +
+            '<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">' +
+              '<div><strong style="font-size:1.05rem">' + esc(d.name) + ' — Clearance Score ' + esc(d.risk.score) + '/100</strong> <span style="color:var(--muted);font-size:0.84rem">(' + esc(d.elapsedMs) + 'ms)</span></div>' +
+              '<span class="pill ' + cls + '">' + esc(d.risk.verdictLabel) + '</span>' +
+            '</div>' +
+            '<div style="margin-top:10px">' + doms + '</div>' +
+            '<div style="margin-top:12px;font-size:0.88rem"><strong>USPTO Live Marks (' + esc(tm.liveCount || 0) + '):</strong>' + tmPreview + '</div>' +
+          '</div>';
+      } catch (e) {
+        out.innerHTML = '<div class="pill pill-bad">Network error: ' + esc(e.message) + '</div>';
+      } finally {
+        btn.disabled = false;
+      }
+    }
+
+    form.addEventListener("submit", (e) => { e.preventDefault(); const v = inp.value.trim(); if (v) run(v); });
+    document.querySelectorAll(".chip").forEach((c) => c.addEventListener("click", () => run(c.dataset.q)));
+  </script>
+</body>
+</html>
