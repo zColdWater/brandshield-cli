@@ -14,8 +14,8 @@
 - **Free AI Brand Namer (60 Ideas + Live `.com/.ai/.io` RDAP):** [https://brand-checker.appwrite.network/namer](https://brand-checker.appwrite.network/namer)
 - **Landing Page & Honest Comparisons:** [https://zcoldwater.github.io/brandshield-cli/](https://zcoldwater.github.io/brandshield-cli/) · [InstantDomainSearch vs. BrandShield](https://zcoldwater.github.io/launch-audit-reports/compare/instantdomainsearch-vs-brandshield.html) · [vs. Namecheap & Namechk](https://zcoldwater.github.io/brandshield-cli/compare.html)
 - **2026 SaaS Launch Readiness Benchmarks (228 Live Public Audits):** [https://zcoldwater.github.io/launch-audit-reports/](https://zcoldwater.github.io/launch-audit-reports/)
-- **BrandShield Web Pro ($12 One-Time — Instant In-Browser Unlock, 14-Day Refund):** [Gumroad Checkout](https://omnipulse-x402.appwrite.network/go/gumroad/brandshield) · [Direct 7-Chain Checkout](https://omnipulse-x402.appwrite.network/checkout/brandshield)
-- **4-in-1 OmniForge Web Pro Suite ($29 One-Time — Unlocks VibeShield + BrandShield + CiteReady + InboxShield, Save $19):** [Gumroad Bundle](https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack) · [Direct Checkout](https://omnipulse-x402.appwrite.network/checkout/launch-stack)
+- **BrandShield Web Pro ($2 Launch Special (was $12) — Instant In-Browser Unlock, 14-Day Refund):** [Gumroad Checkout](https://omnipulse-x402.appwrite.network/go/gumroad/brandshield) · [Direct 7-Chain Checkout](https://omnipulse-x402.appwrite.network/checkout/brandshield)
+- **OmniForge Complete Suite ($5 Launch Special, was $29 — Unlocks VibeShield + InboxShield + CiteReady; BrandShield 100% Free):** [Gumroad Bundle](https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack) · [Direct Checkout](https://omnipulse-x402.appwrite.network/checkout/launch-stack)
 
 ---
 
@@ -28,20 +28,20 @@
 
 ---
 
-## Free Online Web App vs. BrandShield Web Pro (`$12` One-Time)
+## Free Online Web App vs. BrandShield v6.2 (`100% Free`)
 
 Zero software installs, zero monthly subscriptions. Unlock Web Pro right inside [brand-checker.appwrite.network](https://brand-checker.appwrite.network) with one-time payment (Card / Apple Pay / PayPal via Gumroad or 7-chain USDT/USDC) and a **14-day refund guarantee**:
 
-| Capability | Free Online Scanner & OSS CLI | BrandShield Web Pro ($12 Once) | 4-in-1 Web Pro Suite ($29 Once) |
+| Capability | Free Online Scanner & OSS CLI | BrandShield v6.2 (100% Free) | Complete Suite ($5, was $29) |
 | :--- | :---: | :---: | :---: |
 | **Live 8-TLD IANA RDAP + Detail Drawer** | Unlimited 1-by-1 | **Unlimited** | **All 4 v5.0 Web Apps Included** |
-| **USPTO Class 009/042 + App Store + Dev Handles** | Live scan + score | **Full conflict matrix + Soundex scoring** | **BrandShield + VibeShield ($9)** |
+| **USPTO Class 009/042 + App Store + Dev Handles** | Live scan + score | **Full conflict matrix + Soundex scoring** | **BrandShield + VibeShield ($2)** |
 | **AI Brand Namer (60 Candidates + Live RDAP)** | Preview top ideas | **Full 60-idea scoring matrix** | **+ CiteReady GEO ($12)** |
-| **5-Platform Brand Protection Fix Wizard** | Step 1 preview | **Full unmasked 3-step guides** | **+ InboxShield Email ($15)** |
+| **5-Platform Brand Protection Fix Wizard** | Step 1 preview | **Full unmasked 3-step guides** | **+ InboxShield Email ($2)** |
 | **Online Batch Scanner + Excel/CSV Export** | Preview 3 brands | **Up to 50 brands / batch + UTF-8 CSV** | **50-item batch CSV on all 4 apps** |
 | **Printable A4 Client Clearance PDF Report** | Summary only | **Custom-header A4 PDF (`@media print`)** | **Branded A4 PDF on all 4 apps** |
 
-**[Unlock BrandShield Web Pro ($12 Once)](https://omnipulse-x402.appwrite.network/go/gumroad/brandshield)** · **[Unlock 4-in-1 Suite ($29 Once — Save $19)](https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack)** · **[Direct Multi-Chain Checkout](https://omnipulse-x402.appwrite.network/checkout/brandshield)**
+**[Unlock BrandShield v6.2 (100% Free)](https://omnipulse-x402.appwrite.network/go/gumroad/brandshield)** · **[Complete Suite ($5, was $29)](https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack)** · **[Direct Multi-Chain Checkout](https://omnipulse-x402.appwrite.network/checkout/brandshield)**
 
 ---
 
@@ -97,10 +97,10 @@ jobs:
 | App | What It Audits Live in `<2s` | Live Free Web App | Web Pro (One-Time) |
 | :--- | :--- | :--- | :---: |
 | **VibeShield v5.0** | JS bundle secrets (38 rules), 7 security headers & read-only Supabase RLS probe | [vibe-checker.appwrite.network](https://vibe-checker.appwrite.network) | [$9 Once](https://omnipulse-x402.appwrite.network/go/gumroad/vibeshield) |
-| **BrandShield v5.0** | 8-TLD IANA RDAP, USPTO Class 009/042 trademarks, App Stores & 60-idea Namer | [brand-checker.appwrite.network](https://brand-checker.appwrite.network) | [$12 Once](https://omnipulse-x402.appwrite.network/go/gumroad/brandshield) |
-| **CiteReady v5.0** | 10 global & China AI search bots, Schema.org Entity Graph & `/llms.txt` compiler | [citeready-checker.appwrite.network](https://citeready-checker.appwrite.network) | [$12 Once](https://omnipulse-x402.appwrite.network/go/gumroad/citeready) |
+| **BrandShield v5.0** | 8-TLD IANA RDAP, USPTO Class 009/042 trademarks, App Stores & 60-idea Namer | [brand-checker.appwrite.network](https://brand-checker.appwrite.network) | [$2 (was $12)](https://omnipulse-x402.appwrite.network/go/gumroad/brandshield) |
+| **CiteReady v5.0** | 10 global & China AI search bots, Schema.org Entity Graph & `/llms.txt` compiler | [citeready-checker.appwrite.network](https://citeready-checker.appwrite.network) | [$2 (was $12)](https://omnipulse-x402.appwrite.network/go/gumroad/citeready) |
 | **InboxShield v5.0** | Recursive SPF `<=10` flattener, 24-selector DKIM, DMARC, MX & 5 DNSBLs | [inbox-checker.appwrite.network](https://inbox-checker.appwrite.network) | [$15 Once](https://omnipulse-x402.appwrite.network/go/gumroad/inboxshield) |
-| **4-in-1 Launch Stack** | Unlocks Web Pro across all 4 apps in one license key (Save `$19`) | All 4 Live Web Apps | [$29 Once](https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack) |
+| **4-in-1 Launch Stack** | Unlocks Web Pro across all 4 apps in one license key (Save `$19`) | All 4 Live Web Apps | [$5 (was $29)](https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack) |
 
 ## Privacy, Support & Legal Notice
 
