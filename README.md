@@ -2,6 +2,9 @@
 
 **Check startup & product name availability across domains (via authoritative RDAP), social/developer handles, iOS/Android app stores, and USPTO federal trademarks — from your terminal or GitHub Actions CI, without leaking ideas to domain-broker search bars.**
 
+[![BrandShield Clearance](https://brand-checker.appwrite.network/badge/brand/BrandShieldCLI.svg)](https://brand-checker.appwrite.network/report/BrandShieldCLI)
+[![Email Security](https://inbox-checker.appwrite.network/badge/inbox/stripe.com.svg)](https://inbox-checker.appwrite.network/?domain=stripe.com)
+[![AI CiteReady](https://citeready-checker.appwrite.network/badge/citeready/stripe.com.svg)](https://citeready-checker.appwrite.network/?url=https://stripe.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 [![Node.js >= 18](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)](https://nodejs.org)
 [![Zero Dependencies](https://img.shields.io/badge/dependencies-0-success.svg)](./package.json)
@@ -102,6 +105,16 @@ jobs:
 | **White-Label Client Reports (HTML/MD)** | — | Personal projects | **Agency license + custom client branding** |
 
 👉 **[Download BrandShield Pro ($19 Solo / $39 Agency) on Gumroad](https://agentarenastudi.gumroad.com/l/omniforge-brandshield)** · **[⚡ Instant Direct Checkout](https://omnipulse-x402.appwrite.network/checkout/brandshield)** · **[Compare vs. Namecheap & Namechk](https://zcoldwater.github.io/brandshield-cli/compare.html)**
+
+---
+
+## Embed a Live Brand Clearance Badge in Your README
+
+Show visitors or co-founders your live RDAP & USPTO clearance status (updates automatically every 15 minutes; supports `style=flat`, `flat-square`, `for-the-badge`, and `card`):
+
+```markdown
+[![BrandShield Clearance](https://brand-checker.appwrite.network/badge/brand/YourBrandName.svg)](https://brand-checker.appwrite.network/report/YourBrandName)
+```
 
 ---
 
