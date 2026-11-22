@@ -16,7 +16,7 @@ import fs from "node:fs";
 const DIAGNOSTIC_API = "https://brand-checker.appwrite.network";
 const PRO_URL = "https://agentarenastudi.gumroad.com/l/omniforge-brandshield";
 const DIRECT_URL = "https://omnipulse-x402.appwrite.network/checkout/brandshield";
-const STACK_URL = "https://agentarenastudi.gumroad.com/l/omniforge-launch-stack";
+const STACK_URL = "https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack";
 const STACK_DIRECT_URL = "https://omnipulse-x402.appwrite.network/checkout/launch-stack";
 const COMPARE_URL = "https://zcoldwater.github.io/brandshield-cli/compare.html";
 
