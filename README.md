@@ -12,7 +12,7 @@
 
 - **Flagship v5.0 Online Web App (Zero Signup, Search-as-You-Type):** [https://brand-checker.appwrite.network](https://brand-checker.appwrite.network)
 - **Free AI Brand Namer (60 Ideas + Live `.com/.ai/.io` RDAP):** [https://brand-checker.appwrite.network/namer](https://brand-checker.appwrite.network/namer)
-- **Landing Page & Comparison vs. InstantDomainSearch / Namechk:** [https://zcoldwater.github.io/brandshield-cli/](https://zcoldwater.github.io/brandshield-cli/) · [Compare Guide](https://zcoldwater.github.io/brandshield-cli/compare.html)
+- **Landing Page & Honest Comparisons:** [https://zcoldwater.github.io/brandshield-cli/](https://zcoldwater.github.io/brandshield-cli/) · [InstantDomainSearch vs. BrandShield](https://zcoldwater.github.io/launch-audit-reports/compare/instantdomainsearch-vs-brandshield.html) · [vs. Namecheap & Namechk](https://zcoldwater.github.io/brandshield-cli/compare.html)
 - **2026 SaaS Launch Readiness Benchmarks (228 Live Public Audits):** [https://zcoldwater.github.io/launch-audit-reports/](https://zcoldwater.github.io/launch-audit-reports/)
 - **BrandShield Web Pro ($12 One-Time — Instant In-Browser Unlock, 14-Day Refund):** [Gumroad Checkout](https://omnipulse-x402.appwrite.network/go/gumroad/brandshield) · [Direct 7-Chain Checkout](https://omnipulse-x402.appwrite.network/checkout/brandshield)
 - **4-in-1 OmniForge Web Pro Suite ($29 One-Time — Unlocks VibeShield + BrandShield + CiteReady + InboxShield, Save $19):** [Gumroad Bundle](https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack) · [Direct Checkout](https://omnipulse-x402.appwrite.network/checkout/launch-stack)
