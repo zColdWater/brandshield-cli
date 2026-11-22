@@ -1,6 +1,6 @@
-# BrandShield CLI & GitHub Action (`brandshield-cli`)
+# BrandShield — Online Startup Name, RDAP Domain & USPTO Trademark Auditor (`v5.0` Web App + OSS CLI & GitHub Action)
 
-**Check startup & product name availability across domains (via authoritative RDAP), social/developer handles, iOS/Android app stores, and USPTO federal trademarks — from your terminal or GitHub Actions CI, without leaking ideas to domain-broker search bars.**
+**Check startup & product name availability across 8 TLDs via authoritative IANA RDAP (zero domain front-running), USPTO Class 009/042 federal trademarks, iOS/Android app stores, and GitHub/npm/PyPI/X handles — free in 2 seconds directly in your browser, or in CI via `zColdWater/brandshield-cli@v1`.**
 
 [![BrandShield Clearance](https://brand-checker.appwrite.network/badge/brand/BrandShieldCLI.svg)](https://brand-checker.appwrite.network/report/BrandShieldCLI)
 [![Email Security](https://inbox-checker.appwrite.network/badge/inbox/stripe.com.svg)](https://inbox-checker.appwrite.network/?domain=stripe.com)
@@ -10,47 +10,52 @@
 [![Zero Dependencies](https://img.shields.io/badge/dependencies-0-success.svg)](./package.json)
 [![GitHub Action](https://img.shields.io/badge/GitHub%20Action-v1-2088FF.svg?logo=githubactions&logoColor=white)](./action.yml)
 
-- **Live Free Web Scanner:** [https://brand-checker.appwrite.network](https://brand-checker.appwrite.network) | **Free Startup Name Generator (60 Ideas + Live `.com/.ai/.io` RDAP):** [https://brand-checker.appwrite.network/namer](https://brand-checker.appwrite.network/namer)
-- **Landing Page & Docs:** [https://zcoldwater.github.io/brandshield-cli/](https://zcoldwater.github.io/brandshield-cli/)
-- **Comparison & Live Benchmarks (BrandShield vs. Namecheap, Namechk & USPTO):** [https://zcoldwater.github.io/brandshield-cli/compare.html](https://zcoldwater.github.io/brandshield-cli/compare.html)
-- **2026 SaaS Launch Readiness Hub (228 Live Public Audits + 10 Fix Guides):** [https://zcoldwater.github.io/launch-audit-reports/](https://zcoldwater.github.io/launch-audit-reports/)
-- **BrandShield Pro (Batch 500-Name Kit, Nice Class Scoring & Agency Reports):** [https://agentarenastudi.gumroad.com/l/omniforge-brandshield](https://agentarenastudi.gumroad.com/l/omniforge-brandshield)
-- **⚡ Instant Direct / Agent Checkout (24/7 Instant ZIP Download):** [https://omnipulse-x402.appwrite.network/checkout/brandshield](https://omnipulse-x402.appwrite.network/checkout/brandshield) | **3-in-1 Founder Launch Stack ($49/$89):** [https://omnipulse-x402.appwrite.network/checkout/launch-stack](https://omnipulse-x402.appwrite.network/checkout/launch-stack)
+- **Flagship v5.0 Online Web App (Zero Signup, Search-as-You-Type):** [https://brand-checker.appwrite.network](https://brand-checker.appwrite.network)
+- **Free AI Brand Namer (60 Ideas + Live `.com/.ai/.io` RDAP):** [https://brand-checker.appwrite.network/namer](https://brand-checker.appwrite.network/namer)
+- **Landing Page & Comparison vs. InstantDomainSearch / Namechk:** [https://zcoldwater.github.io/brandshield-cli/](https://zcoldwater.github.io/brandshield-cli/) · [Compare Guide](https://zcoldwater.github.io/brandshield-cli/compare.html)
+- **2026 SaaS Launch Readiness Benchmarks (228 Live Public Audits):** [https://zcoldwater.github.io/launch-audit-reports/](https://zcoldwater.github.io/launch-audit-reports/)
+- **BrandShield Web Pro ($12 One-Time — Instant In-Browser Unlock, 14-Day Refund):** [Gumroad Checkout](https://omnipulse-x402.appwrite.network/go/gumroad/brandshield) · [Direct 7-Chain Checkout](https://omnipulse-x402.appwrite.network/checkout/brandshield)
+- **4-in-1 OmniForge Web Pro Suite ($29 One-Time — Unlocks VibeShield + BrandShield + CiteReady + InboxShield, Save $19):** [Gumroad Bundle](https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack) · [Direct Checkout](https://omnipulse-x402.appwrite.network/checkout/launch-stack)
 
 ---
 
-## Why Founders Use BrandShield Instead of Registrar Search Bars
+## Why Founders Use BrandShield v5.0
 
-1. **Zero Domain Front-Running:** Typing unreleased startup names into third-party domain search widgets can expose queries to commercial broker pipelines. BrandShield queries **official IANA RDAP registry endpoints** directly (`verisign`, `identitydigital`, `registry.google`, `pir.org`) with read-only lookups.
-2. **USPTO Federal Trademark Reality Check:** Discovering a `.ai` domain is free means nothing if an active US Class 9 or Class 42 software trademark blocks your Stripe account, App Store listing, or seed round.
-3. **Honest Social Handle Verification:** Platforms like Instagram and TikTok serve identical login walls for free and taken handles. Instead of guessing and giving false "available" signals, BrandShield verifies public endpoints (GitHub, X, YouTube, Bluesky, npm, PyPI) and explicitly flags unauthenticated walls as `Unconfirmed`.
-4. **Deterministic Clearance Score + CI Gates:** Get an instant `0–100` clearance score (`GREENLIGHT` / `CAUTION` / `HIGH_RISK` / `DO_NOT_USE`) in your terminal or directly inside GitHub Actions Job Summaries.
+1. **Zero Domain Front-Running (Authoritative IANA RDAP):** Typing unreleased startup names into affiliate registrar widgets can leak ideas to commercial pipelines. BrandShield queries official registry RDAP servers directly (`verisign`, `identitydigital`, `registry.google`, `pir.org`) across `.com`, `.ai`, `.io`, `.dev`, `.app`, `.co`, `.org`, and `.xyz` with expandable RDAP registration details.
+2. **USPTO Class 009/042 Trademark + App Store Screening in One Screen:** Finding an open `.ai` domain means nothing if an active software trademark or iOS/Android app already owns the name. BrandShield screens public USPTO filings alongside Apple App Store, Google Play, GitHub, npm, PyPI, and X handles.
+3. **60-Candidate AI Brand Namer + 50-Brand Batch CSV + A4 PDF:** Shortlist up to 50 candidate names live in your browser, export clean UTF-8 CSV spreadsheets for Excel, follow 5-platform protection guides (Cloudflare, Aliyun, DNSPod, GoDaddy, USPTO), and print executive A4 clearance dossiers.
+4. **Open-Source CLI & GitHub Action (`@v1`):** Need terminal or CI checks? This MIT repository ships a zero-dependency Node.js CLI and reusable GitHub Action.
 
 ---
 
-## Quick Start (Zero Install via `npx`)
+## Free Online Web App vs. BrandShield Web Pro (`$12` One-Time)
+
+Zero software installs, zero monthly subscriptions. Unlock Web Pro right inside [brand-checker.appwrite.network](https://brand-checker.appwrite.network) with one-time payment (Card / Apple Pay / PayPal via Gumroad or 7-chain USDT/USDC) and a **14-day refund guarantee**:
+
+| Capability | Free Online Scanner & OSS CLI | BrandShield Web Pro ($12 Once) | 4-in-1 Web Pro Suite ($29 Once) |
+| :--- | :---: | :---: | :---: |
+| **Live 8-TLD IANA RDAP + Detail Drawer** | Unlimited 1-by-1 | **Unlimited** | **All 4 v5.0 Web Apps Included** |
+| **USPTO Class 009/042 + App Store + Dev Handles** | Live scan + score | **Full conflict matrix + Soundex scoring** | **BrandShield + VibeShield ($9)** |
+| **AI Brand Namer (60 Candidates + Live RDAP)** | Preview top ideas | **Full 60-idea scoring matrix** | **+ CiteReady GEO ($12)** |
+| **5-Platform Brand Protection Fix Wizard** | Step 1 preview | **Full unmasked 3-step guides** | **+ InboxShield Email ($15)** |
+| **Online Batch Scanner + Excel/CSV Export** | Preview 3 brands | **Up to 50 brands / batch + UTF-8 CSV** | **50-item batch CSV on all 4 apps** |
+| **Printable A4 Client Clearance PDF Report** | Summary only | **Custom-header A4 PDF (`@media print`)** | **Branded A4 PDF on all 4 apps** |
+
+**[Unlock BrandShield Web Pro ($12 Once)](https://omnipulse-x402.appwrite.network/go/gumroad/brandshield)** · **[Unlock 4-in-1 Suite ($29 Once — Save $19)](https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack)** · **[Direct Multi-Chain Checkout](https://omnipulse-x402.appwrite.network/checkout/brandshield)**
+
+---
+
+## Optional Open-Source CLI & GitHub Action (`uses: zColdWater/brandshield-cli@v1`)
 
 Requires **Node.js 18+** (zero `npm` dependencies):
 
 ```bash
-# Check a candidate startup or SaaS name
+# Check a candidate startup or SaaS name from your terminal
 npx github:zColdWater/brandshield-cli check Lumora
 
-# Custom domain extensions
-npx github:zColdWater/brandshield-cli check BrightPath --tlds com,io,ai,dev,app,co
-
-# GitHub-Flavored Markdown table + CI exit-code gates
-npx github:zColdWater/brandshield-cli check Lumora --markdown --min-score 70 --fail-on-trademark
-
-# Machine-readable JSON output for scripts
-npx github:zColdWater/brandshield-cli check Notion --json --out report.json
+# Custom domain extensions & Markdown CI gate
+npx github:zColdWater/brandshield-cli check Lumora --tlds com,io,ai,dev,app,co --markdown --min-score 70 --fail-on-trademark
 ```
-
----
-
-## One-Click GitHub Action (`uses: zColdWater/brandshield-cli@v1`)
-
-Add automated brand & USPTO trademark clearance directly to product launch checklists or naming-PR workflows. Runs in ~3–8 seconds on any Ubuntu/macOS runner with zero `npm install` overhead and renders a full Markdown table in the **GitHub Actions Job Summary**:
 
 ```yaml
 name: Brand Name Clearance
@@ -72,45 +77,14 @@ jobs:
         with:
           name: ${{ github.event.inputs.name }}
           tlds: "com,io,ai,co,app,dev"
-          min-score: "70"           # Optional: fail if score < 70/100
-          fail-on-trademark: "true" # Optional: fail on live USPTO conflict
-          fail-on-taken-com: "false"
-          post-summary: "true"      # Writes formatted Markdown table to Job Summary
-          out-file: "brandshield-report.json"
-
-      - name: Print Outputs
-        run: |
-          echo "Score: ${{ steps.brand.outputs.score }}/100"
-          echo "Verdict: ${{ steps.brand.outputs.verdict }}"
-          echo "USPTO Risk: ${{ steps.brand.outputs.tm-risk }}"
-          echo ".com Available: ${{ steps.brand.outputs.com-available }}"
-          echo "Live Trademarks: ${{ steps.brand.outputs.live-trademarks }}"
+          min-score: "70"
+          fail-on-trademark: "true"
+          post-summary: "true"
 ```
 
 ---
 
-## Free Lite CLI vs. BrandShield Pro
-
-`brandshield-cli` (this repository) is our free, MIT-licensed **1-name diagnostic CLI & GitHub Action**. When you are shortlisting dozens of candidates for a startup, SaaS launch, or branding client, upgrade to **[BrandShield Pro](https://agentarenastudi.gumroad.com/l/omniforge-brandshield)** (instant ZIP download, 100% local Node.js source code, no subscriptions):
-
-| Capability | BrandShield Lite (Free OSS) | BrandShield Pro Solo ($19) | BrandShield Pro Agency ($39) |
-| :--- | :---: | :---: | :---: |
-| **Live RDAP / WHOIS Domain Check** | 1 name / run | Up to **500 names / batch** (CSV/JSON) | Up to **500 names / batch** + custom TLDs |
-| **Social & Developer Handles (15)** | Quick check | Full parallel matrix + rate-limit pacing | Full parallel matrix + exportable links |
-| **Apple App Store & Google Play** | Exact match | Exact + prefix collision scan | Exact + prefix collision scan |
-| **USPTO Trademark Screening** | Live scan + score | **Nice Class 9/35/42 + phonetic/fuzzy matrix** | **Nice Class + phonetic score + counsel brief** |
-| **60-Variation Name Generator** | — | **Included** (auto-verified free on domains) | **Included** (60+ prefixes/suffixes/compounds) |
-| **Offline HTML Comparison Workbench** | — | **Included** (sortable local UI, 0 cloud lock-in) | **Included** |
-| **GitHub Actions CI Support** | **Included (`@v1`)** | **Included** | **Included + agency white-label reports** |
-| **White-Label Client Reports (HTML/MD)** | — | Personal projects | **Agency license + custom client branding** |
-
-👉 **[Download BrandShield Pro ($19 Solo / $39 Agency) on Gumroad](https://agentarenastudi.gumroad.com/l/omniforge-brandshield)** · **[⚡ Instant Direct Checkout](https://omnipulse-x402.appwrite.network/checkout/brandshield)** · **[Compare vs. Namecheap & Namechk](https://zcoldwater.github.io/brandshield-cli/compare.html)**
-
----
-
-## Embed a Live Brand Clearance Badge in Your README
-
-Show visitors or co-founders your live RDAP & USPTO clearance status (updates automatically every 15 minutes; supports `style=flat`, `flat-square`, `for-the-badge`, and `card`):
+## Embed a Live Brand Clearance Badge
 
 ```markdown
 [![BrandShield Clearance](https://brand-checker.appwrite.network/badge/brand/YourBrandName.svg)](https://brand-checker.appwrite.network/report/YourBrandName)
@@ -118,11 +92,22 @@ Show visitors or co-founders your live RDAP & USPTO clearance status (updates au
 
 ---
 
-## Privacy & Legal Notice
+## OmniForge v5.0 Pre-Launch Web Pro Suite
+
+| App | What It Audits Live in `<2s` | Live Free Web App | Web Pro (One-Time) |
+| :--- | :--- | :--- | :---: |
+| **VibeShield v5.0** | JS bundle secrets (38 rules), 7 security headers & read-only Supabase RLS probe | [vibe-checker.appwrite.network](https://vibe-checker.appwrite.network) | [$9 Once](https://omnipulse-x402.appwrite.network/go/gumroad/vibeshield) |
+| **BrandShield v5.0** | 8-TLD IANA RDAP, USPTO Class 009/042 trademarks, App Stores & 60-idea Namer | [brand-checker.appwrite.network](https://brand-checker.appwrite.network) | [$12 Once](https://omnipulse-x402.appwrite.network/go/gumroad/brandshield) |
+| **CiteReady v5.0** | 10 global & China AI search bots, Schema.org Entity Graph & `/llms.txt` compiler | [citeready-checker.appwrite.network](https://citeready-checker.appwrite.network) | [$12 Once](https://omnipulse-x402.appwrite.network/go/gumroad/citeready) |
+| **InboxShield v5.0** | Recursive SPF `<=10` flattener, 24-selector DKIM, DMARC, MX & 5 DNSBLs | [inbox-checker.appwrite.network](https://inbox-checker.appwrite.network) | [$15 Once](https://omnipulse-x402.appwrite.network/go/gumroad/inboxshield) |
+| **4-in-1 Launch Stack** | Unlocks Web Pro across all 4 apps in one license key (Save `$19`) | All 4 Live Web Apps | [$29 Once](https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack) |
+
+## Privacy, Support & Legal Notice
 
 - **Read-only guarantee:** BrandShield never registers, reserves, caches, logs, or resells any name, domain, or handle you check.
-- **Not legal advice:** USPTO trademark search results are an informational screening tool to eliminate obvious collisions early, not a formal legal clearance opinion from a trademark attorney.
+- **Not legal advice:** Preliminary public USPTO trademark screening helps eliminate obvious collisions early and is not formal legal counsel from a trademark attorney.
+- **Support & Refunds:** OmniForge · Agent Arena Studio — `agentarenastudio@proton.me` · [@agentarenastudi](https://x.com/agentarenastudi) · [Support Portal](https://omnipulse-x402.appwrite.network/support) · [14-Day Refund Policy](https://omnipulse-x402.appwrite.network/refund-policy)
 
 ## License
 
-MIT © OmniForge Studio
+MIT © OmniForge · Agent Arena Studio
