@@ -10,6 +10,7 @@
 - **Live Free Web Scanner:** [https://brand-checker.appwrite.network](https://brand-checker.appwrite.network)
 - **Landing Page & Docs:** [https://zcoldwater.github.io/brandshield-cli/](https://zcoldwater.github.io/brandshield-cli/)
 - **Comparison & Live Benchmarks (BrandShield vs. Namecheap, Namechk & USPTO):** [https://zcoldwater.github.io/brandshield-cli/compare.html](https://zcoldwater.github.io/brandshield-cli/compare.html)
+- **2026 SaaS Launch Readiness Hub (228 Live Public Audits + 10 Fix Guides):** [https://zcoldwater.github.io/launch-audit-reports/](https://zcoldwater.github.io/launch-audit-reports/)
 - **BrandShield Pro (Batch 500-Name Kit, Nice Class Scoring & Agency Reports):** [https://agentarenastudi.gumroad.com/l/omniforge-brandshield](https://agentarenastudi.gumroad.com/l/omniforge-brandshield)
 - **⚡ Instant Direct / Agent Checkout (24/7 Instant ZIP Download):** [https://omnipulse-x402.appwrite.network/checkout/brandshield](https://omnipulse-x402.appwrite.network/checkout/brandshield) | **3-in-1 Founder Launch Stack ($49/$89):** [https://omnipulse-x402.appwrite.network/checkout/launch-stack](https://omnipulse-x402.appwrite.network/checkout/launch-stack)
 
