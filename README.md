@@ -10,7 +10,7 @@
 [![Zero Dependencies](https://img.shields.io/badge/dependencies-0-success.svg)](./package.json)
 [![GitHub Action](https://img.shields.io/badge/GitHub%20Action-v1-2088FF.svg?logo=githubactions&logoColor=white)](./action.yml)
 
-- **Live Free Web Scanner:** [https://brand-checker.appwrite.network](https://brand-checker.appwrite.network)
+- **Live Free Web Scanner:** [https://brand-checker.appwrite.network](https://brand-checker.appwrite.network) | **Free Startup Name Generator (60 Ideas + Live `.com/.ai/.io` RDAP):** [https://brand-checker.appwrite.network/namer](https://brand-checker.appwrite.network/namer)
 - **Landing Page & Docs:** [https://zcoldwater.github.io/brandshield-cli/](https://zcoldwater.github.io/brandshield-cli/)
 - **Comparison & Live Benchmarks (BrandShield vs. Namecheap, Namechk & USPTO):** [https://zcoldwater.github.io/brandshield-cli/compare.html](https://zcoldwater.github.io/brandshield-cli/compare.html)
 - **2026 SaaS Launch Readiness Hub (228 Live Public Audits + 10 Fix Guides):** [https://zcoldwater.github.io/launch-audit-reports/](https://zcoldwater.github.io/launch-audit-reports/)
