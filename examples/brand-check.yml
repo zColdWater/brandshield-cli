@@ -23,16 +23,16 @@ jobs:
 
       - name: Run BrandShield Action (Job Summary Demo)
         id: brand
-        uses: ./
+        uses: zColdWater/brandshield-cli@v1
         with:
-          name: ${{ github.event.inputs.candidate_name || 'Zqxvora' }}
+          name: ${{ github.event.inputs.candidate_name || 'Lumora' }}
           tlds: "com,io,ai,co,app,dev"
+          min-score: "70"
+          fail-on-trademark: "true"
           post-summary: "true"
           out-file: "brandshield-report.json"
 
-      - name: Verify Action Outputs & Known-Brand Detection
+      - name: Print Outputs
         run: |
-          echo "Score=${{ steps.brand.outputs.score }} Verdict=${{ steps.brand.outputs.verdict }} TM=${{ steps.brand.outputs.tm-risk }}"
+          echo "Score=${{ steps.brand.outputs.score }}/100 Verdict=${{ steps.brand.outputs.verdict }} TM=${{ steps.brand.outputs.tm-risk }}"
           test -f brandshield-report.json
-          node ./bin/brandshield.mjs check Notion --tlds com,io,ai --json > notion.json
-          node -e 'const d=JSON.parse(require("fs").readFileSync("notion.json","utf8")); if(!d.domains?.length) process.exit(1); console.log("Notion check ok:", d.risk?.verdict, "score=", d.risk?.score);'
