@@ -1,6 +1,6 @@
-# BrandShield — Online Startup Name, RDAP Domain & USPTO Trademark Auditor (`v5.0` Web App + OSS CLI & GitHub Action)
+# BrandShield v6.4 — Free 78-TLD Instant Domain, Real Aftermarket & USPTO Trademark Auditor
 
-**Check startup & product name availability across 8 TLDs via authoritative IANA RDAP (zero domain front-running), USPTO Class 009/042 federal trademarks, iOS/Android app stores, and GitHub/npm/PyPI/X handles — free in 2 seconds directly in your browser, or in CI via `zColdWater/brandshield-cli@v1`.**
+**Check startup & product name availability in under 1 second across 78+ TLDs via public Anycast DNS & authoritative IANA RDAP (zero domain front-running), live 17-rule DNS NS aftermarket detection, USPTO Class 009/042 federal trademarks, iOS/Android app stores, and GitHub/npm/PyPI/X handles — 100% free forever in your browser, via zero-install `curl /cli.sh`, or in CI via `zColdWater/brandshield-cli@v1`.**
 
 [![BrandShield Clearance](https://brand-checker.appwrite.network/badge/brand/BrandShieldCLI.svg)](https://brand-checker.appwrite.network/report/BrandShieldCLI)
 [![Email Security](https://inbox-checker.appwrite.network/badge/inbox/stripe.com.svg)](https://inbox-checker.appwrite.network/?domain=stripe.com)
@@ -10,43 +10,62 @@
 [![Zero Dependencies](https://img.shields.io/badge/dependencies-0-success.svg)](./package.json)
 [![GitHub Action](https://img.shields.io/badge/GitHub%20Action-v1-2088FF.svg?logo=githubactions&logoColor=white)](./action.yml)
 
-- **Flagship v6.3 Online Web App (100% Free Forever, 78 TLDs + USPTO):** [https://brand-checker.appwrite.network](https://brand-checker.appwrite.network)
-- **Free AI Brand Namer (60 Ideas + Live `.com/.ai/.io` RDAP):** [https://brand-checker.appwrite.network/namer](https://brand-checker.appwrite.network/namer)
-- **NEW — 2026 Top 100 AI Startups TLD Benchmark (`.ai` 41% vs `.com` 40% & Aftermarket Study):** [Interactive Report](https://zcoldwater.github.io/brandshield-cli/ai-startup-tld-benchmark-2026.html) · [Raw JSON Dataset (N=100)](https://zcoldwater.github.io/brandshield-cli/ai-startup-tld-benchmark-2026.json)
-- **Landing Page & Honest Comparisons:** [https://zcoldwater.github.io/brandshield-cli/](https://zcoldwater.github.io/brandshield-cli/) · [InstantDomainSearch vs. BrandShield](https://zcoldwater.github.io/launch-audit-reports/compare/instantdomainsearch-vs-brandshield.html) · [vs. Namecheap & Namechk](https://zcoldwater.github.io/brandshield-cli/compare.html)
-- **2026 SaaS Launch Readiness Benchmarks:** [Top 100 AI Startups TLD Study](https://zcoldwater.github.io/brandshield-cli/ai-startup-tld-benchmark-2026.html) · [60-SaaS Security Headers](https://zcoldwater.github.io/vibeshield-cli/web-security-headers-benchmark-2026.html) · [50-SaaS AI Search Readiness](https://zcoldwater.github.io/citeready-cli/ai-search-readiness-benchmark-2026.html)
-- **BrandShield Web Pro ($2 Launch Special (was $12) — Instant In-Browser Unlock, 14-Day Refund):** [Gumroad Checkout](https://omnipulse-x402.appwrite.network/go/gumroad/brandshield) · [Direct 7-Chain Checkout](https://omnipulse-x402.appwrite.network/checkout/brandshield)
-- **OmniForge Complete Suite ($5 Launch Special, was $29 — Unlocks VibeShield + InboxShield + CiteReady; BrandShield 100% Free):** [Gumroad Bundle](https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack) · [Direct Checkout](https://omnipulse-x402.appwrite.network/checkout/launch-stack)
+### Live Free Tools & Interactive Benchmarks
+
+- **Flagship v6.4 Web App (100% Free Forever — 78+ TLDs, Real NS Aftermarket, USPTO, 50-Brand CSV, A4 PDF):** [https://brand-checker.appwrite.network](https://brand-checker.appwrite.network)
+- **78-TLD Cross-Registrar Price Matrix (Cloudflare At-Cost vs. Porkbun vs. Namecheap vs. GoDaddy):** [https://brand-checker.appwrite.network/tlds](https://brand-checker.appwrite.network/tlds)
+- **Free AI Brand Namer (60 Ideas + Live `.com`/`.ai`/`.io` RDAP):** [https://brand-checker.appwrite.network/namer](https://brand-checker.appwrite.network/namer)
+- **Startup Domain Renewal & 5-Year TLD Cost Calculator:** [Interactive Calculator](https://zcoldwater.github.io/brandshield-cli/domain-renewal-5yr-calculator.html)
+- **Live Domain Hack & Prefix/Suffix Brand Generator (185+ IANA TLDs):** [Interactive Generator](https://zcoldwater.github.io/brandshield-cli/domain-hack-generator.html)
+- **2026 Top 100 AI Startups TLD Benchmark (`.ai` 41% vs `.com` 40% & Aftermarket Study):** [Interactive Report](https://zcoldwater.github.io/brandshield-cli/ai-startup-tld-benchmark-2026.html) · [Raw JSON Dataset (N=100)](https://zcoldwater.github.io/brandshield-cli/ai-startup-tld-benchmark-2026.json)
+- **Honest Comparisons:** [InstantDomainSearch vs. BrandShield](https://zcoldwater.github.io/launch-audit-reports/compare/instantdomainsearch-vs-brandshield.html) · [vs. Namecheap, Namechk & USPTO](https://zcoldwater.github.io/brandshield-cli/compare.html)
+- **OmniForge 4-in-1 Launch Audit Suite (`$5` Launch Special, was `$29` — Unlocks VibeShield + InboxShield + CiteReady Pro; BrandShield 100% Free):** [Gumroad Bundle](https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack) · [Direct Checkout](https://omnipulse-x402.appwrite.network/checkout/launch-stack)
 
 ---
 
-## Why Founders Use BrandShield v5.0
+## Zero-Install 1-Line Terminal Audit (`GET /cli.sh`)
 
-1. **Zero Domain Front-Running (Authoritative IANA RDAP):** Typing unreleased startup names into affiliate registrar widgets can leak ideas to commercial pipelines. BrandShield queries official registry RDAP servers directly (`verisign`, `identitydigital`, `registry.google`, `pir.org`) across `.com`, `.ai`, `.io`, `.dev`, `.app`, `.co`, `.org`, and `.xyz` with expandable RDAP registration details.
-2. **USPTO Class 009/042 Trademark + App Store Screening in One Screen:** Finding an open `.ai` domain means nothing if an active software trademark or iOS/Android app already owns the name. BrandShield screens public USPTO filings alongside Apple App Store, Google Play, GitHub, npm, PyPI, and X handles.
-3. **60-Candidate AI Brand Namer + 50-Brand Batch CSV + A4 PDF:** Shortlist up to 50 candidate names live in your browser, export clean UTF-8 CSV spreadsheets for Excel, follow 5-platform protection guides (Cloudflare, Aliyun, DNSPod, GoDaddy, USPTO), and print executive A4 clearance dossiers.
-4. **Open-Source CLI & GitHub Action (`@v1`):** Need terminal or CI checks? This MIT repository ships a zero-dependency Node.js CLI and reusable GitHub Action.
+Run a live RDAP + handle + USPTO brand clearance check directly from any POSIX shell with zero installs:
+
+```bash
+# Instant colored terminal report (78+ TLDs, handles, USPTO, /tlds pricing)
+curl -fsSL https://brand-checker.appwrite.network/cli.sh | sh -s -- Lumora
+
+# Machine-readable JSON output for scripts & CI pipelines
+curl -fsSL https://brand-checker.appwrite.network/cli.sh | sh -s -- --json Lumora
+
+# CI/CD clearance gate (exits code 2 if score < 75)
+curl -fsSL https://brand-checker.appwrite.network/cli.sh | sh -s -- --fail-below 75 Lumora
+```
 
 ---
 
-## Free Online Web App vs. BrandShield v6.2 (`100% Free`)
+## Why Founders Switch to BrandShield v6.4 (`100% Free Forever`)
 
-Zero software installs, zero monthly subscriptions. Unlock Web Pro right inside [brand-checker.appwrite.network](https://brand-checker.appwrite.network) with one-time payment (Card / Apple Pay / PayPal via Gumroad or 7-chain USDT/USDC) and a **14-day refund guarantee**:
+1. **78+ TLDs in Under 1 Second + Direct IANA RDAP (Zero Front-Running):** Queries public Anycast DNS (`1.1.1.1`/`8.8.8.8`) and official registry RDAP servers directly (`verisign`, `identitydigital`, `registry.google`, `pir.org`) in read-only mode — never logs, caches, or front-runs searched startup names.
+2. **Real Authoritative DNS NS Aftermarket Detection (Zero Invented Prices):** Detects active broker parking nameservers (`afternic.com`, `sedoparking.com`, `dan.com`, `atom.com`, `bodis.com`, `spaceship.net`) so you immediately see which taken domains are genuinely listed for sale, with 1-click multi-registrar price comparison (`Cloudflare At-Cost`, `Porkbun`, `Namecheap`, `GoDaddy`, `Sedo`, `Afternic`).
+3. **USPTO Class 009/042 Trademark + App Store Screening in One Screen:** Surfaces live federal word marks with serial/registration numbers and software Nice Classes alongside Apple App Store, Google Play, GitHub, npm, PyPI, and X handles.
+4. **All Pro Workflows 100% Free Forever:** 60-candidate AI Brand Namer with phonetic scoring, 50-brand online batch scanner with UTF-8 Excel/CSV export, 5-platform brand protection wizard, and custom-header printable A4 PDF clearance dossiers — zero paywall, zero login, zero monthly subscriptions.
 
-| Capability | Free Online Scanner & OSS CLI | BrandShield v6.2 (100% Free) | Complete Suite ($5, was $29) |
+---
+
+## BrandShield Free Forever vs. OmniForge Launch Audit Suite
+
+| Capability | BrandShield v6.4 (`100% Free`) | Single Audit Fix Pack (`$2` Once) | Complete Launch Suite (`$5`, was `$29`) |
 | :--- | :---: | :---: | :---: |
-| **Live 8-TLD IANA RDAP + Detail Drawer** | Unlimited 1-by-1 | **Unlimited** | **All 4 v5.0 Web Apps Included** |
-| **USPTO Class 009/042 + App Store + Dev Handles** | Live scan + score | **Full conflict matrix + Soundex scoring** | **BrandShield + VibeShield ($2)** |
-| **AI Brand Namer (60 Candidates + Live RDAP)** | Preview top ideas | **Full 60-idea scoring matrix** | **+ CiteReady GEO ($12)** |
-| **5-Platform Brand Protection Fix Wizard** | Step 1 preview | **Full unmasked 3-step guides** | **+ InboxShield Email ($2)** |
-| **Online Batch Scanner + Excel/CSV Export** | Preview 3 brands | **Up to 50 brands / batch + UTF-8 CSV** | **50-item batch CSV on all 4 apps** |
-| **Printable A4 Client Clearance PDF Report** | Summary only | **Custom-header A4 PDF (`@media print`)** | **Branded A4 PDF on all 4 apps** |
+| **Live 78+ TLD Instant Search & IANA RDAP** | **100% Free Forever** | Included Free | Included Free |
+| **Real NS Aftermarket + 78-TLD Registrar Matrix (`/tlds`)** | **100% Free Forever** | Included Free | Included Free |
+| **USPTO Class 009/042 + App Store + Dev Handles** | **100% Free Forever** | Included Free | Included Free |
+| **60-Idea Brand Namer, 50-Brand Batch CSV & A4 PDF** | **100% Free Forever** | Included Free | Included Free |
+| **VibeShield Pro Fix Pack** (JS secrets, CSP, Supabase RLS) | Free Live Audit | [$2 Once](https://omnipulse-x402.appwrite.network/go/gumroad/vibeshield) | **Included** |
+| **InboxShield Pro Fix Pack** (SPF Flattener, DKIM, DMARC) | Free Live Audit | [$2 Once](https://omnipulse-x402.appwrite.network/go/gumroad/inboxshield) | **Included** |
+| **CiteReady Pro Fix Pack** (10 AI Bots, Schema, `/llms.txt`) | Free Live Audit | [$2 Once](https://omnipulse-x402.appwrite.network/go/gumroad/citeready) | **Included** |
 
-**[Unlock BrandShield v6.2 (100% Free)](https://omnipulse-x402.appwrite.network/go/gumroad/brandshield)** · **[Complete Suite ($5, was $29)](https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack)** · **[Direct Multi-Chain Checkout](https://omnipulse-x402.appwrite.network/checkout/brandshield)**
+**[Open BrandShield v6.4 Free](https://brand-checker.appwrite.network)** · **[Complete Launch Suite ($5, was $29)](https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack)** · **[Direct Checkout](https://omnipulse-x402.appwrite.network/checkout/launch-stack)**
 
 ---
 
-## Optional Open-Source CLI & GitHub Action (`uses: zColdWater/brandshield-cli@v1`)
+## Optional Open-Source Node.js CLI & GitHub Action (`uses: zColdWater/brandshield-cli@v1`)
 
 Requires **Node.js 18+** (zero `npm` dependencies):
 
@@ -93,15 +112,15 @@ jobs:
 
 ---
 
-## OmniForge v5.0 Pre-Launch Web Pro Suite
+## OmniForge Pre-Launch Audit Suite (2026)
 
-| App | What It Audits Live in `<2s` | Live Free Web App | Web Pro (One-Time) |
+| App | What It Audits Live in `<2s` | Live Free Web App | Fix Pack (One-Time) |
 | :--- | :--- | :--- | :---: |
-| **VibeShield v5.0** | JS bundle secrets (38 rules), 7 security headers & read-only Supabase RLS probe | [vibe-checker.appwrite.network](https://vibe-checker.appwrite.network) | [$9 Once](https://omnipulse-x402.appwrite.network/go/gumroad/vibeshield) |
-| **BrandShield v5.0** | 8-TLD IANA RDAP, USPTO Class 009/042 trademarks, App Stores & 60-idea Namer | [brand-checker.appwrite.network](https://brand-checker.appwrite.network) | [$2 (was $12)](https://omnipulse-x402.appwrite.network/go/gumroad/brandshield) |
-| **CiteReady v5.0** | 10 global & China AI search bots, Schema.org Entity Graph & `/llms.txt` compiler | [citeready-checker.appwrite.network](https://citeready-checker.appwrite.network) | [$2 (was $12)](https://omnipulse-x402.appwrite.network/go/gumroad/citeready) |
-| **InboxShield v5.0** | Recursive SPF `<=10` flattener, 24-selector DKIM, DMARC, MX & 5 DNSBLs | [inbox-checker.appwrite.network](https://inbox-checker.appwrite.network) | [$15 Once](https://omnipulse-x402.appwrite.network/go/gumroad/inboxshield) |
-| **4-in-1 Launch Stack** | Unlocks Web Pro across all 4 apps in one license key (Save `$19`) | All 4 Live Web Apps | [$5 (was $29)](https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack) |
+| **BrandShield v6.4** | 78+ TLD instant RDAP, real NS aftermarket, USPTO Class 009/042 & 60-idea Namer | [brand-checker.appwrite.network](https://brand-checker.appwrite.network) | **100% Free Forever** |
+| **VibeShield v7.0** | JS bundle secrets (38 rules), 10/10 security headers & read-only Supabase RLS probe | [vibe-checker.appwrite.network](https://vibe-checker.appwrite.network) | [$2 Once (was $9)](https://omnipulse-x402.appwrite.network/go/gumroad/vibeshield) |
+| **InboxShield v6.0** | Recursive SPF `<=10` flattener, 24-selector DKIM, DMARC, MX & 5 DNSBLs | [inbox-checker.appwrite.network](https://inbox-checker.appwrite.network) | [$2 Once (was $15)](https://omnipulse-x402.appwrite.network/go/gumroad/inboxshield) |
+| **CiteReady v7.0** | 10 global & China AI search bots, Schema.org Entity Graph & `/llms.txt` compiler | [citeready-checker.appwrite.network](https://citeready-checker.appwrite.network) | [$2 Once (was $12)](https://omnipulse-x402.appwrite.network/go/gumroad/citeready) |
+| **4-in-1 Launch Stack** | Unlocks VibeShield + InboxShield + CiteReady Pro in one key (Save 83%) | All 4 Live Web Apps | [$5 Once (was $29)](https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack) |
 
 ## Privacy, Support & Legal Notice
 
