@@ -1,10 +1,13 @@
-# BrandShield v6.3 — 100% Free 78-TLD IANA RDAP, Aftermarket & USPTO Trademark Auditor
+# BrandShield v6.5 — 100% Free 78-TLD IANA RDAP, Aftermarket, Typosquatting & USPTO Trademark Auditor
 
-> Zero-front-running startup and product naming validation directly in your browser (2-second live audit across 78 TLDs, zero install, zero signup, 100% free forever) plus open-source MIT CLI & GitHub Action (`uses: zColdWater/brandshield-cli@v1`).
+> Zero-front-running startup and product naming validation directly in your browser (sub-second live audit across 78+ TLDs, 28 DNSTwist lookalikes, zero install, zero signup, 100% free forever) plus open-source MIT CLI & GitHub Action (`uses: zColdWater/brandshield-cli@v1`).
 
-- Flagship v6.4 Live Web App (100% Free Forever): https://brand-checker.appwrite.network
+- Flagship v6.5 Live Web App (100% Free Forever): https://brand-checker.appwrite.network
+- Live Startup Typosquatting & Lookalike Shield (/typos): https://brand-checker.appwrite.network/typos
 - 78-TLD Cross-Registrar Price Matrix (Cloudflare vs Porkbun vs Namecheap vs GoDaddy): https://brand-checker.appwrite.network/tlds
 - Free 60-Idea AI Brand Namer + Live RDAP: https://brand-checker.appwrite.network/namer
+- Zero-Install Terminal CLI One-Liner: https://brand-checker.appwrite.network/cli.sh
+- Startup Typosquatting & UDRP Lookalike Checker (28 Variants): https://zcoldwater.github.io/brandshield-cli/typosquatting-udrp-checker.html
 - Startup Domain Renewal & 5-Year TLD Cost Calculator: https://zcoldwater.github.io/brandshield-cli/domain-renewal-5yr-calculator.html
 - Free Domain Hack & Prefix/Suffix Brand Generator (185+ IANA TLDs): https://zcoldwater.github.io/brandshield-cli/domain-hack-generator.html
 - 2026 Top 100 AI Startups TLD Adoption (.ai 41% vs .com 40%) & Aftermarket Benchmark: https://zcoldwater.github.io/brandshield-cli/ai-startup-tld-benchmark-2026.html

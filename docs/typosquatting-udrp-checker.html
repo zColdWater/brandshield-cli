@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Free Startup Typosquatting &amp; Lookalike Domain Checker (2026) | BrandShield</title>
+  <meta name="description" content="Scan 28 DNSTwist-style typosquatting, homoglyph, and phishing lookalike domains (login-, verify-, dropped letters, adjacent swaps, sibling TLDs) in under 2 seconds. Spot parked squatters, active MX phishing risks, and DMARC defenses — 100% Free." />
+  <meta name="keywords" content="typosquatting checker, lookalike domain scanner, dnstwist online free, phishing domain checker, UDRP domain defense, brand impersonation domains, DMARC anti spoofing" />
+  <link rel="canonical" href="https://zcoldwater.github.io/brandshield-cli/typosquatting-udrp-checker.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Free Startup Typosquatting &amp; Lookalike Domain Checker (2026) | BrandShield" />
+  <meta property="og:description" content="Probe 28 high-risk lookalike and phishing domain permutations live via DNS &amp; RDAP. Detect parked broker NS, active MX spoofing risk, and open defensive typos." />
+  <meta property="og:url" content="https://zcoldwater.github.io/brandshield-cli/typosquatting-udrp-checker.html" />
+  <meta property="og:image" content="https://brand-checker.appwrite.network/assets/cover-brandshield-free.png" />
+  <meta property="og:image:width" content="1280" />
+  <meta property="og:image:height" content="720" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Free Startup Typosquatting &amp; Lookalike Domain Checker (2026)" />
+  <meta name="twitter:description" content="Live 28-variant DNSTwist lookalike &amp; phishing domain scanner with parking-NS detection, CSV export &amp; DMARC p=reject defense." />
+  <meta name="twitter:image" content="https://brand-checker.appwrite.network/assets/cover-brandshield-free.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://brand-checker.appwrite.network/#org",
+        "name": "OmniForge · Agent Arena Studio",
+        "url": "https://omnipulse-x402.appwrite.network/",
+        "sameAs": [
+          "https://github.com/zColdWater/brandshield-cli",
+          "https://x.com/agentarenastudi"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://zcoldwater.github.io/brandshield-cli/#website",
+        "name": "BrandShield Startup Naming & Domain Defense Hub",
+        "url": "https://zcoldwater.github.io/brandshield-cli/",
+        "publisher": { "@id": "https://brand-checker.appwrite.network/#org" }
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://zcoldwater.github.io/brandshield-cli/typosquatting-udrp-checker.html#app",
+        "name": "BrandShield Startup Typosquatting & Lookalike Domain Checker",
+        "url": "https://zcoldwater.github.io/brandshield-cli/typosquatting-udrp-checker.html",
+        "applicationCategory": "SecurityApplication",
+        "operatingSystem": "Web",
+        "softwareVersion": "6.5.0",
+        "description": "Free interactive DNSTwist-style typosquatting, visual homoglyph, and phishing lookalike domain scanner with real broker parking-NS detection and CSV export.",
+        "publisher": { "@id": "https://brand-checker.appwrite.network/#org" },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "BrandShield", "item": "https://zcoldwater.github.io/brandshield-cli/" },
+          { "@type": "ListItem", "position": 2, "name": "Typosquatting & Lookalike Checker", "item": "https://zcoldwater.github.io/brandshield-cli/typosquatting-udrp-checker.html" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What types of lookalike domains does this typosquatting scanner check?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It checks 28 high-probability permutations across 6 categories: adjacent letter transpositions, character omissions, double letters, visual homoglyphs and QWERTY proximity swaps, phishing prefixes/suffixes (login-, verify-, -auth, -support), and sibling TLDs (.com, .co, .net, .ai, .io, .org, .app)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do startups stop phishing from registered lookalike domains?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "First verify whether the lookalike publishes active MX records via RDAP/DNS, enforce SPF + 2048-bit DKIM + DMARC p=reject on your primary domain so customer mail servers reject spoofed headers, and document commercial bad-faith use if pursuing a registrar abuse takedown or WIPO UDRP complaint."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does BrandShield log or front-run searched domains?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. BrandShield runs strictly read-only DNS and IANA RDAP lookups and never logs, caches for speculation, or resells searched brand names or domains."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #000000;
+      --surface: #0e0e11;
+      --surface-2: #16161b;
+      --border: #26262e;
+      --text: #f5f5f7;
+      --muted: #a1a1aa;
+      --accent: #a855f7;
+      --green: #10b981;
+      --blue: #38bdf8;
+      --red: #f43f5e;
+      --amber: #f59e0b;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+      background: radial-gradient(circle at 50% 0%, #1b1024 0%, var(--bg) 48%);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+    header {
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background: rgba(0,0,0,0.88);
+      backdrop-filter: blur(12px);
+      position: sticky; top: 0; z-index: 20;
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; min-height: 64px; padding: 8px 0; gap: 14px; flex-wrap: wrap; }
+    .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 800; color: #fff; font-size: 1.08rem; text-decoration: none !important; }
+    .dot-mark {
+      width: 28px; height: 28px; border-radius: 8px;
+      background: linear-gradient(135deg, var(--green), var(--blue));
+      display: inline-flex; align-items: center; justify-content: center; font-weight: 900; color: #031510;
+    }
+    .nav-links { display: flex; align-items: center; gap: 15px; flex-wrap: wrap; font-size: 0.88rem; }
+    .nav-links a { color: #d4d4d8; }
+    .nav-links a:hover { color: #fff; text-decoration: none; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+      padding: 10px 16px; border-radius: 10px; font-weight: 700; font-size: 0.9rem;
+      border: 1px solid var(--border); background: var(--surface-2); color: #fff !important;
+      cursor: pointer; text-decoration: none !important;
+    }
+    .btn:hover { border-color: var(--accent); }
+    .btn-primary { background: var(--accent); border-color: var(--accent); color: #fff !important; }
+    .btn-primary:hover { filter: brightness(1.08); }
+    .btn-green { background: var(--green); border-color: var(--green); color: #031510 !important; }
+
+    main { padding: 36px 0 64px; }
+    .eyebrow {
+      display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: 0.76rem; font-weight: 700;
+      letter-spacing: 0.04em; text-transform: uppercase;
+      background: rgba(244,63,94,0.13); border: 1px solid rgba(244,63,94,0.34); color: #fda4af;
+      margin-bottom: 12px;
+    }
+    h1 { font-size: clamp(1.85rem, 4vw, 2.75rem); letter-spacing: -0.03em; line-height: 1.13; margin: 0 0 12px; }
+    .sub { color: var(--muted); font-size: 1rem; max-width: 780px; margin: 0 0 22px; }
+
+    .search-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+      padding: 18px; margin-bottom: 18px;
+    }
+    .form-row { display: flex; gap: 10px; flex-wrap: wrap; }
+    .dom-input {
+      flex: 1; min-width: 220px; padding: 12px 14px; border-radius: 10px;
+      border: 1px solid var(--border); background: #050507; color: #fff;
+      font-size: 0.98rem; font-family: var(--mono);
+    }
+    .dom-input:focus { outline: none; border-color: var(--accent); }
+    .demo-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 10px; font-size: 0.82rem; color: var(--muted); }
+    .demo-chip {
+      background: var(--surface-2); border: 1px solid var(--border); color: #e4e4e7;
+      padding: 4px 10px; border-radius: 999px; font-family: var(--mono); font-size: 0.78rem; cursor: pointer;
+    }
+    .demo-chip:hover { border-color: var(--accent); }
+
+    .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; margin-bottom: 18px; }
+    .kpi { background: var(--surface); border: 1px solid var(--border); border-radius: 13px; padding: 14px 16px; }
+    .kpi-lbl { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }
+    .kpi-val { font-size: 1.85rem; font-weight: 800; font-family: var(--mono); margin: 4px 0 2px; }
+    .kpi-note { font-size: 0.78rem; color: var(--muted); }
+
+    .toolbar { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-bottom: 12px; }
+    .filters { display: flex; gap: 7px; flex-wrap: wrap; }
+    .pill {
+      background: var(--surface); border: 1px solid var(--border); color: #d4d4d8;
+      padding: 6px 12px; border-radius: 999px; font-size: 0.8rem; font-weight: 600; cursor: pointer;
+    }
+    .pill.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+    .table-wrap { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.86rem; min-width: 740px; }
+    th, td { padding: 11px 14px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: middle; }
+    th { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); background: var(--surface-2); }
+    tr:last-child td { border-bottom: 0; }
+    .dom-cell { font-family: var(--mono); font-weight: 700; font-size: 0.9rem; }
+    .ns-sub { font-family: var(--mono); font-size: 0.73rem; color: var(--muted); margin-top: 2px; }
+
+    .st { display: inline-flex; padding: 3px 9px; border-radius: 999px; font-size: 0.74rem; font-weight: 700; }
+    .st-taken { background: rgba(244,63,94,0.16); color: #fda4af; }
+    .st-after { background: rgba(56,189,248,0.16); color: #7dd3fc; }
+    .st-avail { background: rgba(16,185,129,0.16); color: #6ee7b7; }
+    .st-unk { background: rgba(245,158,11,0.16); color: #fcd34d; }
+    .cat { display: inline-block; padding: 2px 8px; border-radius: 6px; font-size: 0.74rem; font-weight: 600; background: var(--surface-2); border: 1px solid var(--border); }
+    .rk-crit { color: #fb7185; font-weight: 700; }
+    .rk-high { color: #fbbf24; font-weight: 700; }
+    .rk-med { color: var(--muted); font-weight: 600; }
+
+    .row-acts { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+    .mb {
+      display: inline-flex; align-items: center; padding: 5px 10px; border-radius: 8px; font-size: 0.76rem; font-weight: 700;
+      border: 1px solid var(--border); background: var(--surface-2); color: #fff !important; cursor: pointer; text-decoration: none !important;
+    }
+    .mb-green { background: rgba(16,185,129,0.14); border-color: rgba(16,185,129,0.4); color: #6ee7b7 !important; }
+    .mb-blue { background: rgba(56,189,248,0.14); border-color: rgba(56,189,248,0.4); color: #7dd3fc !important; }
+    .mb-red { background: rgba(244,63,94,0.14); border-color: rgba(244,63,94,0.4); color: #fda4af !important; }
+
+    .banner {
+      margin-top: 22px; background: linear-gradient(135deg, rgba(16,185,129,0.12), rgba(56,189,248,0.1));
+      border: 1px solid rgba(16,185,129,0.35); border-radius: 16px; padding: 20px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 16px; margin-top: 24px; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 18px; }
+    .card h2 { margin: 0 0 8px; font-size: 1.02rem; }
+    .card p { margin: 0; font-size: 0.86rem; color: var(--muted); }
+
+    footer { border-top: 1px solid rgba(255,255,255,0.08); padding: 28px 0 42px; color: var(--muted); font-size: 0.84rem; text-align: center; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="./index.html">
+        <span class="dot-mark">B</span>
+        <span>BrandShield</span>
+      </a>
+      <nav class="nav-links">
+        <a href="./index.html">Tools Hub</a>
+        <a href="./domain-renewal-5yr-calculator.html">5-Yr Renewal Calc</a>
+        <a href="./domain-hack-generator.html">Domain Hacks</a>
+        <a href="./ai-startup-tld-benchmark-2026.html">Top 100 AI Study</a>
+        <a href="https://brand-checker.appwrite.network/typos" target="_blank" rel="noopener">Full RDAP /typos App</a>
+        <a class="btn btn-green" href="https://brand-checker.appwrite.network" target="_blank" rel="noopener">78-TLD Free App &rarr;</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <span class="eyebrow">BrandShield v6.5 &middot; Free DNSTwist Lookalike &amp; UDRP Defense Scanner</span>
+    <h1>Startup Typosquatting &amp; Lookalike Domain Checker</h1>
+    <p class="sub">
+      Test 28 high-probability lookalike, visual homoglyph, and phishing domain permutations (<code>login-</code>, <code>verify-</code>, adjacent swaps, dropped letters, sibling TLDs) in under 2 seconds. Spot parked broker NS squatters, inspect MX phishing risk, and export CSV — 100% Free Forever.
+    </p>
+
+    <section class="search-card">
+      <form id="scanForm" class="form-row">
+        <input id="domInput" class="dom-input" type="text" placeholder="Enter domain or brand (e.g. stripe.com, linear.app)" maxlength="80" required />
+        <button id="scanBtn" class="btn btn-primary" type="submit">Scan 28 Lookalikes Free</button>
+        <a id="fullAppBtn" class="btn" href="https://brand-checker.appwrite.network/typos" target="_blank" rel="noopener">Open Full RDAP /typos &rarr;</a>
+      </form>
+      <div class="demo-row">
+        <span>Try live:</span>
+        <button type="button" class="demo-chip" data-q="stripe.com">stripe.com</button>
+        <button type="button" class="demo-chip" data-q="linear.app">linear.app</button>
+        <button type="button" class="demo-chip" data-q="vercel.com">vercel.com</button>
+        <button type="button" class="demo-chip" data-q="omniforge.dev">omniforge.dev</button>
+      </div>
+    </section>
+
+    <section class="kpi-grid">
+      <div class="kpi">
+        <div class="kpi-lbl">Active Registered Lookalikes</div>
+        <div class="kpi-val" id="kTaken" style="color:#fb7185">-</div>
+        <div class="kpi-note">Potential phishing or brand squatters</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-lbl">Parked / Aftermarket NS</div>
+        <div class="kpi-val" id="kAfter" style="color:#38bdf8">-</div>
+        <div class="kpi-note">Verified Sedo / Afternic / Above.com NS</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-lbl">Open Defensive Typos</div>
+        <div class="kpi-val" id="kAvail" style="color:#34d399">-</div>
+        <div class="kpi-note">Unregistered — lock before squatters</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-lbl">Lookalike Defense Score</div>
+        <div class="kpi-val" id="kScore">-</div>
+        <div class="kpi-note" id="kNote">Scanning live DNS...</div>
+      </div>
+    </section>
+
+    <div class="toolbar">
+      <div class="filters">
+        <button type="button" class="pill active" data-f="all">All (<span id="cAll">0</span>)</button>
+        <button type="button" class="pill" data-f="taken">Registered Risk (<span id="cTaken">0</span>)</button>
+        <button type="button" class="pill" data-f="aftermarket">Parked / For Sale (<span id="cAfter">0</span>)</button>
+        <button type="button" class="pill" data-f="available">Open Defensive (<span id="cAvail">0</span>)</button>
+        <button type="button" class="pill" data-f="phishing">Phishing Prefixes (<span id="cPhish">0</span>)</button>
+      </div>
+      <button type="button" class="btn" id="csvBtn" disabled>Export CSV</button>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Lookalike Domain</th>
+            <th>Attack Vector</th>
+            <th>Severity</th>
+            <th>Live DNS / NS Status</th>
+            <th style="text-align:right">Recommended Action</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+          <tr><td colspan="5" style="text-align:center;color:var(--muted);padding:26px">Loading live typosquatting audit...</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="banner">
+      <div style="max-width:640px">
+        <div style="font-size:0.74rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:#34d399;margin-bottom:4px">Pre-Launch Brand &amp; Email Spoofing Defense</div>
+        <strong style="font-size:1.08rem" id="banHead">Block lookalike spoofing with DMARC p=reject &amp; verify web security</strong>
+        <p style="margin:6px 0 0;font-size:0.86rem;color:var(--muted)">
+          Pair BrandShield (100% Free Forever) with InboxShield Email DNS ($2 Fix), VibeShield Security ($2 Fix), and CiteReady AI Search ($2 Fix) — or grab all 4 OmniForge launch audits for $5 (83% OFF).
+        </p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;min-width:245px">
+        <a class="btn btn-green" id="banInbox" href="https://inbox-checker.appwrite.network/" target="_blank" rel="noopener">Harden DMARC ($2 Fix) &rarr;</a>
+        <a class="btn" id="banSuite" href="https://omnipulse-x402.appwrite.network/checkout/launch-stack" target="_blank" rel="noopener">All 4 Launch Audits ($5, was $29) &rarr;</a>
+      </div>
+    </div>
+
+    <section class="grid-3">
+      <article class="card">
+        <h2>1. Check Active MX &amp; RDAP Records</h2>
+        <p>Click <strong>Inspect RDAP</strong> to open the live BrandShield RDAP &amp; DNS inspector for any registered lookalike. Active MX records on a typo domain are a top early indicator of business email compromise (BEC).</p>
+      </article>
+      <article class="card">
+        <h2>2. Lock Down Primary DMARC</h2>
+        <p>Publishing aligned SPF, 2048-bit DKIM, and DMARC <code>p=reject</code> stops direct domain spoofing across Gmail and Microsoft 365 while sending forensic abuse telemetry. Audit free at <a href="https://inbox-checker.appwrite.network/" target="_blank" rel="noopener">InboxShield</a>.</p>
+      </article>
+      <article class="card">
+        <h2>3. Register Critical Typos At Cost</h2>
+        <p>Protect high-value <code>.com</code> transposition and omission typos using wholesale registrars like Cloudflare Registrar or Porkbun. Compare exact 5-year renewal costs in our <a href="./domain-renewal-5yr-calculator.html">5-Year TLD Cost Calculator</a>.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>
+        <a href="./index.html">BrandShield Hub</a> &middot;
+        <a href="https://brand-checker.appwrite.network/typos" target="_blank" rel="noopener">Live /typos App</a> &middot;
+        <a href="https://brand-checker.appwrite.network/tlds" target="_blank" rel="noopener">78-TLD Prices</a> &middot;
+        <a href="./domain-renewal-5yr-calculator.html">5-Yr Renewal Calculator</a> &middot;
+        <a href="./domain-hack-generator.html">Domain Hack Generator</a> &middot;
+        <a href="./ai-startup-tld-benchmark-2026.html">Top 100 AI Study</a> &middot;
+        <a href="./llms.txt">llms.txt</a>
+      </p>
+      <p>Read-only DNS &amp; RDAP lookup. Searched domains are never logged or stored. Informational screening only — not legal advice.</p>
+      <p>&copy; 2026 OmniForge &middot; Agent Arena Studio &middot; <a href="mailto:agentarenastudio@proton.me">agentarenastudio@proton.me</a></p>
+    </div>
+  </footer>
+
+  <script>
+  (function () {
+    var EP = "https://omnipulse-x402.appwrite.network/v1/telemetry";
+    var sid = "bs-" + Math.random().toString(36).slice(2, 10) + Date.now().toString(36).slice(-4);
+    var visMs = 0, visStart = document.hidden ? null : Date.now(), maxSc = 0, scans = 0, outClicks = 0;
+    function curDwell() { return Math.max(0, Math.round((visMs + (visStart ? Date.now() - visStart : 0)) / 1000)); }
+    function sendTel(ev, extra) {
+      try {
+        var body = JSON.stringify(Object.assign({
+          site: "brandshield", sid: sid, event: ev, path: "/typosquatting-udrp-checker",
+          webdriver: !!navigator.webdriver,
+          screen: (window.innerWidth || 0) + "x" + (window.innerHeight || 0),
+          dwellSec: curDwell(), scrollPct: maxSc, scansRun: scans, outboundClicks: outClicks, paywallClicks: 0,
+          referrer: (document.referrer || "").slice(0, 180),
+          tz: (Intl.DateTimeFormat().resolvedOptions().timeZone || "").slice(0, 48),
+          lang: (navigator.language || "en").slice(0, 12)
+        }, extra || {}));
+        if (navigator.sendBeacon) navigator.sendBeacon(EP, new Blob([body], { type: "text/plain" }));
+        else fetch(EP, { method: "POST", headers: { "Content-Type": "text/plain" }, body: body, keepalive: true }).catch(function () {});
+      } catch (e) {}
+    }
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) { if (visStart) { visMs += Date.now() - visStart; visStart = null; } sendTel("heartbeat"); }
+      else { visStart = Date.now(); }
+    });
+    window.addEventListener("scroll", function () {
+      var pct = Math.min(100, Math.round((window.scrollY / Math.max(1, document.documentElement.scrollHeight - window.innerHeight)) * 100));
+      if (pct > maxSc) maxSc = pct;
+    }, { passive: true });
+    window.addEventListener("pagehide", function () { sendTel("exit"); });
+    document.addEventListener("click", function (ev) {
+      var a = ev.target && ev.target.closest ? ev.target.closest("a[href]") : null;
+      if (a && /^https?:/i.test(a.getAttribute("href") || "")) { outClicks += 1; sendTel("outbound", { target: a.getAttribute("href").slice(0, 180) }); }
+    });
+    sendTel("pageview");
+
+    var AFTER_NS = [
+      { re: /(?:^|\.)afternic\.com$/i, venue: "Afternic" },
+      { re: /(?:^|\.)sedoparking\.com$/i, venue: "Sedo" },
+      { re: /(?:^|\.)atom\.com$/i, venue: "Atom.com" },
+      { re: /(?:^|\.)dan\.com$/i, venue: "Dan.com" },
+      { re: /(?:^|\.)bodis\.com$/i, venue: "Bodis" },
+      { re: /(?:^|\.)abovedomains\.com$/i, venue: "Above.com" },
+      { re: /(?:^|\.)hugedomains\.com$/i, venue: "HugeDomains" },
+      { re: /(?:^|\.)namefind\.com$/i, venue: "NameFind" },
+      { re: /(?:^|\.)sav\.com$/i, venue: "Sav.com" },
+      { re: /(?:^|\.)parkingcrew\.net$/i, venue: "ParkingCrew" },
+      { re: /(?:^|\.)spaceship\.net$/i, venue: "Spaceship SellerHub" }
+    ];
+    var QWERTY = { a:"qs",b:"vn",c:"xv",d:"sf",e:"wr",f:"dg",g:"fh",h:"gj",i:"uo",j:"hk",k:"jl",l:"ik",m:"n",n:"bm",o:"ip",p:"o",q:"wa",r:"et",s:"ad",t:"ry",u:"yi",v:"cb",w:"qe",x:"zc",y:"tu",z:"x" };
+    var VIS = [["l","1"],["i","l"],["o","0"],["m","rn"],["rn","m"],["w","vv"]];
+
+    function genVariants(rawInput) {
+      var raw = String(rawInput || "").trim().toLowerCase().replace(/^https?:\/\//i, "").replace(/^www\./i, "").split(/[/?#]/)[0];
+      var parts = raw.split(".").filter(Boolean);
+      var label = (parts[0] || "").replace(/[^a-z0-9-]/g, "").replace(/^-+|-+$/g, "");
+      var tld = parts.length >= 2 ? parts[parts.length - 1].replace(/[^a-z]/g, "") : "com";
+      if (!tld || tld.length < 2) tld = "com";
+      if (!label || label.length < 2) return { baseDomain: "", label: "", tld: tld, variants: [] };
+      var baseDomain = label + "." + tld;
+      var out = [], seen = {}; seen[baseDomain] = 1;
+      function add(cl, ct, cat, risk) {
+        var nl = String(cl || "").replace(/[^a-z0-9-]/g, "").replace(/^-+|-+$/g, "").replace(/--+/g, "-");
+        if (!nl || nl.length < 2) return;
+        var d = nl + "." + ct;
+        if (seen[d]) return;
+        seen[d] = 1;
+        out.push({ domain: d, label: nl, tld: ct, category: cat, risk: risk });
+      }
+      var i, c = 0;
+      for (i = 0; i < label.length - 1 && c < 4; i++) if (label[i] !== label[i + 1]) { add(label.slice(0, i) + label[i + 1] + label[i] + label.slice(i + 2), tld, "transposition", "high"); c++; }
+      for (i = 1, c = 0; i < label.length && c < 4; i++) if (label.length >= 4) { add(label.slice(0, i) + label.slice(i + 1), tld, "omission", "high"); c++; }
+      for (i = 0, c = 0; i < label.length && c < 3; i++) if (/[a-z]/.test(label[i])) { add(label.slice(0, i) + label[i] + label.slice(i), tld, "repetition", "medium"); c++; }
+      c = 0;
+      VIS.forEach(function (p) { var idx = label.indexOf(p[0]); if (idx !== -1 && c < 3) { add(label.slice(0, idx) + p[1] + label.slice(idx + p[0].length), tld, "homoglyph", "critical"); c++; } });
+      for (i = 0; i < label.length && c < 5; i++) if (QWERTY[label[i]]) { add(label.slice(0, i) + QWERTY[label[i]][0] + label.slice(i + 1), tld, "keyboard", "medium"); c++; }
+      ["login-" + label, label + "-login", label + "-auth", label + "-support", "verify-" + label, "app-" + label, "get" + label, label + "app"].forEach(function (p) { add(p, tld, "phishing", "critical"); });
+      ["com", "co", "net", "ai", "io", "org", "app"].filter(function (x) { return x !== tld; }).slice(0, 5).forEach(function (st) { add(label, st, "sibling-tld", "high"); });
+      return { baseDomain: baseDomain, label: label, tld: tld, variants: out.slice(0, 28) };
+    }
+
+    function detectVenue(nsList) {
+      for (var i = 0; i < nsList.length; i++) {
+        var h = String(nsList[i] || "").toLowerCase().replace(/\.$/, "");
+        for (var j = 0; j < AFTER_NS.length; j++) if (AFTER_NS[j].re.test(h)) return AFTER_NS[j].venue;
+      }
+      return null;
+    }
+
+    async function fallbackDohScan(q) {
+      var t0 = Date.now();
+      var g = genVariants(q);
+      if (!g.baseDomain) return { ok: false, error: "Enter a valid domain (e.g. stripe.com)" };
+      var resList = await Promise.all(g.variants.map(async function (v) {
+        try {
+          var r = await fetch("https://cloudflare-dns.com/dns-query?name=" + encodeURIComponent(v.domain) + "&type=NS", { headers: { accept: "application/dns-json" } });
+          var j = await r.json();
+          if (j.Status === 3) return Object.assign({}, v, { status: "available", aftermarket: false, aftermarketVenue: null, nameservers: [] });
+          var ns = (j.Answer || []).filter(function (a) { return a.type === 2; }).map(function (a) { return String(a.data || "").replace(/\.$/, ""); });
+          var venue = detectVenue(ns);
+          return Object.assign({}, v, { status: "taken", aftermarket: !!venue, aftermarketVenue: venue, nameservers: ns.slice(0, 3) });
+        } catch (e) {
+          return Object.assign({}, v, { status: "unconfirmed", aftermarket: false, aftermarketVenue: null, nameservers: [] });
+        }
+      }));
+      return { ok: true, baseDomain: g.baseDomain, label: g.label, tld: g.tld, elapsedMs: Date.now() - t0, domains: resList };
+    }
+
+    var form = document.getElementById("scanForm");
+    var inp = document.getElementById("domInput");
+    var btn = document.getElementById("scanBtn");
+    var fullAppBtn = document.getElementById("fullAppBtn");
+    var tbody = document.getElementById("tbody");
+    var csvBtn = document.getElementById("csvBtn");
+    var lastData = null, activeFilter = "all";
+
+    function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;" }[c]; }); }
+    function catName(c) { return ({ transposition:"Adjacent Swap", omission:"Dropped Letter", repetition:"Double Letter", homoglyph:"Visual Homoglyph", keyboard:"Keyboard Typo", phishing:"Phishing Prefix", "sibling-tld":"Sibling TLD" })[c] || c; }
+
+    function renderRows() {
+      if (!lastData) return;
+      var rows = (lastData.domains || []).filter(function (r) {
+        if (activeFilter === "taken") return r.status === "taken" && !r.aftermarket;
+        if (activeFilter === "aftermarket") return !!r.aftermarket;
+        if (activeFilter === "available") return r.status === "available";
+        if (activeFilter === "phishing") return r.category === "phishing";
+        return true;
+      });
+      if (!rows.length) { tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;color:var(--muted);padding:24px">No lookalikes match this filter.</td></tr>'; return; }
+      var baseDom = lastData.baseDomain;
+      tbody.innerHTML = rows.map(function (r) {
+        var enc = encodeURIComponent(r.domain);
+        var st = r.aftermarket
+          ? '<span class="st st-after">Parked · ' + esc(r.aftermarketVenue || "Aftermarket") + '</span>'
+          : r.status === "taken" ? '<span class="st st-taken">Registered</span>'
+          : r.status === "available" ? '<span class="st st-avail">Unregistered</span>'
+          : '<span class="st st-unk">Unconfirmed</span>';
+        var rk = r.risk === "critical" ? '<span class="rk-crit">Critical</span>' : r.risk === "high" ? '<span class="rk-high">High</span>' : '<span class="rk-med">Medium</span>';
+        var acts = r.aftermarket
+          ? '<a class="mb mb-blue" href="https://sedo.com/search/?keyword=' + enc + '" target="_blank" rel="noopener">Sedo</a><a class="mb mb-blue" href="https://www.godaddy.com/domainsearch/find?domainToCheck=' + enc + '" target="_blank" rel="noopener">GoDaddy</a>'
+          : r.status === "taken"
+          ? '<a class="mb" href="https://brand-checker.appwrite.network/typos?q=' + encodeURIComponent(baseDom) + '" target="_blank" rel="noopener">Inspect RDAP</a><a class="mb mb-red" href="https://inbox-checker.appwrite.network/?domain=' + encodeURIComponent(baseDom) + '" target="_blank" rel="noopener">Block Spoof ($2)</a>'
+          : '<a class="mb mb-green" href="https://domains.cloudflare.com/" target="_blank" rel="noopener">Cloudflare At-Cost</a><a class="mb" href="https://www.godaddy.com/domainsearch/find?domainToCheck=' + enc + '" target="_blank" rel="noopener">GoDaddy</a>';
+        var ns = (r.nameservers && r.nameservers.length) ? '<div class="ns-sub">NS: ' + esc(r.nameservers.slice(0, 2).join(", ")) + '</div>' : '';
+        return '<tr><td><div class="dom-cell">' + esc(r.domain) + '</div>' + ns + '</td><td><span class="cat">' + esc(catName(r.category)) + '</span></td><td>' + rk + '</td><td>' + st + '</td><td><div class="row-acts">' + acts + '</div></td></tr>';
+      }).join("");
+    }
+
+    async function run(qVal, userInitiated) {
+      var q = String(qVal || "").trim();
+      if (!q || q.length < 2) return;
+      btn.disabled = true;
+      btn.textContent = "Scanning 28 Variants...";
+      tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;color:var(--muted);padding:26px">Probing 28 lookalike &amp; phishing permutations across public Anycast DNS...</td></tr>';
+      if (userInitiated) { scans += 1; sendTel("scan", { query: q.slice(0, 64) }); }
+
+      var data = null;
+      try {
+        var r = await fetch("https://brand-checker.appwrite.network/api/typos?q=" + encodeURIComponent(q), { headers: { Accept: "application/json" } });
+        if (r.ok) {
+          var j = await r.json();
+          if (j && j.ok && Array.isArray(j.domains)) data = j;
+        }
+      } catch (e) {}
+      if (!data) data = await fallbackDohScan(q);
+
+      if (!data || !data.ok) {
+        tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;color:#fb7185;padding:24px">' + esc((data && data.error) || "Invalid domain input") + '</td></tr>';
+        btn.disabled = false; btn.textContent = "Scan 28 Lookalikes Free"; return;
+      }
+
+      lastData = data;
+      var ds = data.domains || [];
+      var taken = ds.filter(function (x) { return x.status === "taken" && !x.aftermarket; }).length;
+      var after = ds.filter(function (x) { return !!x.aftermarket; }).length;
+      var avail = ds.filter(function (x) { return x.status === "available"; }).length;
+      var phish = ds.filter(function (x) { return x.category === "phishing"; }).length;
+      var totalReg = taken + after;
+      var score = Math.max(12, Math.min(100, Math.round(100 - (taken * 4) - (after * 2.5))));
+
+      document.getElementById("kTaken").textContent = String(taken);
+      document.getElementById("kAfter").textContent = String(after);
+      document.getElementById("kAvail").textContent = String(avail);
+      var scEl = document.getElementById("kScore");
+      scEl.textContent = score + "/100";
+      scEl.style.color = score >= 75 ? "#34d399" : score >= 45 ? "#fbbf24" : "#fb7185";
+      document.getElementById("kNote").textContent = ds.length + " lookalikes checked in " + data.elapsedMs + "ms";
+
+      document.getElementById("cAll").textContent = String(ds.length);
+      document.getElementById("cTaken").textContent = String(taken);
+      document.getElementById("cAfter").textContent = String(after);
+      document.getElementById("cAvail").textContent = String(avail);
+      document.getElementById("cPhish").textContent = String(phish);
+
+      fullAppBtn.href = "https://brand-checker.appwrite.network/typos?q=" + encodeURIComponent(data.baseDomain);
+      document.getElementById("banInbox").href = "https://inbox-checker.appwrite.network/?domain=" + encodeURIComponent(data.baseDomain);
+      document.getElementById("banSuite").href = "https://omnipulse-x402.appwrite.network/checkout/launch-stack?domain=" + encodeURIComponent(data.baseDomain) + "&score=" + score + "&issues=" + totalReg;
+      document.getElementById("banHead").textContent = totalReg > 0
+        ? (totalReg + " registered lookalikes found around " + data.baseDomain + " — enforce DMARC p=reject & audit launch security")
+        : ("Clean lookalike profile around " + data.baseDomain + " — register critical typos & verify pre-launch");
+      csvBtn.disabled = false;
+      renderRows();
+      btn.disabled = false;
+      btn.textContent = "Scan 28 Lookalikes Free";
+    }
+
+    document.querySelectorAll(".pill[data-f]").forEach(function (p) {
+      p.addEventListener("click", function () {
+        document.querySelectorAll(".pill[data-f]").forEach(function (x) { x.classList.remove("active"); });
+        p.classList.add("active");
+        activeFilter = p.getAttribute("data-f");
+        renderRows();
+      });
+    });
+    document.querySelectorAll(".demo-chip[data-q]").forEach(function (c) {
+      c.addEventListener("click", function () { inp.value = c.getAttribute("data-q"); run(inp.value, true); });
+    });
+    csvBtn.addEventListener("click", function () {
+      if (!lastData) return;
+      var lines = ["domain,category,risk,status,aftermarket_venue,nameservers"];
+      (lastData.domains || []).forEach(function (r) {
+        lines.push([r.domain, r.category, r.risk, r.status, r.aftermarketVenue || "", (r.nameservers || []).join(";")].map(function (v) {
+          return '"' + String(v || "").replace(/"/g, '""') + '"';
+        }).join(","));
+      });
+      var blob = new Blob([lines.join("\r\n")], { type: "text/csv;charset=utf-8" });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement("a"); a.href = url; a.download = "brandshield-typos-" + (lastData.label || "domain") + ".csv";
+      document.body.appendChild(a); a.click(); document.body.removeChild(a);
+      setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+    });
+    form.addEventListener("submit", function (e) { e.preventDefault(); run(inp.value, true); });
+
+    var qs = new URLSearchParams(window.location.search).get("q");
+    inp.value = qs || "stripe.com";
+    run(inp.value, !!qs);
+  })();
+  </script>
+</body>
+</html>

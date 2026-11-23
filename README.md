@@ -12,7 +12,8 @@
 
 ### Live Free Tools & Interactive Benchmarks
 
-- **Flagship v6.4 Web App (100% Free Forever — 78+ TLDs, Real NS Aftermarket, USPTO, 50-Brand CSV, A4 PDF):** [https://brand-checker.appwrite.network](https://brand-checker.appwrite.network)
+- **Flagship v6.5 Web App (100% Free Forever — 78+ TLDs, Real NS Aftermarket, USPTO, 50-Brand CSV, A4 PDF):** [https://brand-checker.appwrite.network](https://brand-checker.appwrite.network)
+- **Live Startup Typosquatting & Lookalike Domain Shield (28 DNSTwist Variants + RDAP/MX):** [Live `/typos` App](https://brand-checker.appwrite.network/typos) · [Interactive Static Scanner](https://zcoldwater.github.io/brandshield-cli/typosquatting-udrp-checker.html)
 - **78-TLD Cross-Registrar Price Matrix (Cloudflare At-Cost vs. Porkbun vs. Namecheap vs. GoDaddy):** [https://brand-checker.appwrite.network/tlds](https://brand-checker.appwrite.network/tlds)
 - **Free AI Brand Namer (60 Ideas + Live `.com`/`.ai`/`.io` RDAP):** [https://brand-checker.appwrite.network/namer](https://brand-checker.appwrite.network/namer)
 - **Startup Domain Renewal & 5-Year TLD Cost Calculator:** [Interactive Calculator](https://zcoldwater.github.io/brandshield-cli/domain-renewal-5yr-calculator.html)
