@@ -10,10 +10,11 @@
 [![Zero Dependencies](https://img.shields.io/badge/dependencies-0-success.svg)](./package.json)
 [![GitHub Action](https://img.shields.io/badge/GitHub%20Action-v1-2088FF.svg?logo=githubactions&logoColor=white)](./action.yml)
 
-- **Flagship v5.0 Online Web App (Zero Signup, Search-as-You-Type):** [https://brand-checker.appwrite.network](https://brand-checker.appwrite.network)
+- **Flagship v6.3 Online Web App (100% Free Forever, 78 TLDs + USPTO):** [https://brand-checker.appwrite.network](https://brand-checker.appwrite.network)
 - **Free AI Brand Namer (60 Ideas + Live `.com/.ai/.io` RDAP):** [https://brand-checker.appwrite.network/namer](https://brand-checker.appwrite.network/namer)
+- **NEW — 2026 Top 100 AI Startups TLD Benchmark (`.ai` 41% vs `.com` 40% & Aftermarket Study):** [Interactive Report](https://zcoldwater.github.io/brandshield-cli/ai-startup-tld-benchmark-2026.html) · [Raw JSON Dataset (N=100)](https://zcoldwater.github.io/brandshield-cli/ai-startup-tld-benchmark-2026.json)
 - **Landing Page & Honest Comparisons:** [https://zcoldwater.github.io/brandshield-cli/](https://zcoldwater.github.io/brandshield-cli/) · [InstantDomainSearch vs. BrandShield](https://zcoldwater.github.io/launch-audit-reports/compare/instantdomainsearch-vs-brandshield.html) · [vs. Namecheap & Namechk](https://zcoldwater.github.io/brandshield-cli/compare.html)
-- **2026 SaaS Launch Readiness Benchmarks (228 Live Public Audits):** [https://zcoldwater.github.io/launch-audit-reports/](https://zcoldwater.github.io/launch-audit-reports/)
+- **2026 SaaS Launch Readiness Benchmarks:** [Top 100 AI Startups TLD Study](https://zcoldwater.github.io/brandshield-cli/ai-startup-tld-benchmark-2026.html) · [60-SaaS Security Headers](https://zcoldwater.github.io/vibeshield-cli/web-security-headers-benchmark-2026.html) · [50-SaaS AI Search Readiness](https://zcoldwater.github.io/citeready-cli/ai-search-readiness-benchmark-2026.html)
 - **BrandShield Web Pro ($2 Launch Special (was $12) — Instant In-Browser Unlock, 14-Day Refund):** [Gumroad Checkout](https://omnipulse-x402.appwrite.network/go/gumroad/brandshield) · [Direct 7-Chain Checkout](https://omnipulse-x402.appwrite.network/checkout/brandshield)
 - **OmniForge Complete Suite ($5 Launch Special, was $29 — Unlocks VibeShield + InboxShield + CiteReady; BrandShield 100% Free):** [Gumroad Bundle](https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack) · [Direct Checkout](https://omnipulse-x402.appwrite.network/checkout/launch-stack)
 

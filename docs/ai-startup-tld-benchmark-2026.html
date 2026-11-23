@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2026 Top 100 AI Startups TLD Benchmark: .ai (41%) vs .com (40%) &amp; Aftermarket Study | BrandShield</title>
+  <meta name="description" content="Empirical 2026 DNS &amp; aftermarket study of 100 top AI startups: .ai (41%) edges out .com (40%), 81.7% of non-.com AI startups do not own their exact .com, 40% face aftermarket brokers, and 36% leave core TLD siblings unregistered." />
+  <link rel="canonical" href="https://zcoldwater.github.io/brandshield-cli/ai-startup-tld-benchmark-2026.html" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="2026 Top 100 AI Startups TLD Adoption: .ai (41%) vs .com (40%) &amp; Aftermarket Benchmark" />
+  <meta property="og:description" content="500 live DNS/HTTPS probes across 100 AI startups: .ai overtakes .com, only 18.3% of non-.com startups redirect .com, and 36% leave core siblings open." />
+  <meta property="og:url" content="https://zcoldwater.github.io/brandshield-cli/ai-startup-tld-benchmark-2026.html" />
+  <meta property="og:image" content="https://brand-checker.appwrite.network/assets/cover-brandshield-free.png" />
+  <meta property="og:image:width" content="1280" />
+  <meta property="og:image:height" content="720" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="2026 Top 100 AI Startups TLD Benchmark (.ai 41% vs .com 40%)" />
+  <meta name="twitter:description" content="Empirical DNS &amp; aftermarket study of 100 leading AI startups + free 78-TLD &amp; USPTO startup name auditor." />
+  <meta name="twitter:image" content="https://brand-checker.appwrite.network/assets/cover-brandshield-free.png" />
+
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","headline":"2026 Top 100 AI Startups TLD Adoption, .ai vs .com & Aftermarket Availability Benchmark","datePublished":"2026-11-23","dateModified":"2026-11-23","author":{"@type":"Organization","name":"OmniForge · Agent Arena Studio","url":"https://brand-checker.appwrite.network/"},"publisher":{"@type":"Organization","name":"BrandShield Research","url":"https://zcoldwater.github.io/brandshield-cli/"},"image":"https://brand-checker.appwrite.network/assets/cover-brandshield-free.png","mainEntityOfPage":"https://zcoldwater.github.io/brandshield-cli/ai-startup-tld-benchmark-2026.html","description":"Empirical DNS, RDAP, and HTTPS redirect study of 100 leading AI startups: .ai (41%) vs .com (40%) primary adoption, defensive .com/.ai redirect rates (18.3% vs 30.0%), aftermarket broker parking (40%), and open sibling availability (36%)."},{"@type":"Dataset","name":"2026 Top 100 AI Startups Domain, TLD & Aftermarket Dataset","description":"Live read-only DNS NS/A and HTTPS redirect dataset across 100 AI startups and 500 domain combinations (.com, .ai, .io, .dev, .app).","url":"https://zcoldwater.github.io/brandshield-cli/ai-startup-tld-benchmark-2026.html","license":"https://opensource.org/licenses/MIT","temporalCoverage":"2026-11","distribution":[{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"https://zcoldwater.github.io/brandshield-cli/ai-startup-tld-benchmark-2026.json"}]}]}</script>
+
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --surface-alt: #f1f5f9;
+      --border: #e2e8f0;
+      --border-strong: #cbd5e1;
+      --ink: #0f172a;
+      --muted: #475569;
+      --subtle: #64748b;
+      --brand: #4f46e5;
+      --brand-dark: #4338ca;
+      --emerald: #059669;
+      --emerald-bg: #ecfdf5;
+      --emerald-bd: #a7f3d0;
+      --blue: #0284c7;
+      --blue-bg: #f0f9ff;
+      --blue-bd: #bae6fd;
+      --amber: #d97706;
+      --amber-bg: #fffbeb;
+      --rose: #e11d48;
+      --radius: 12px;
+      --shadow: 0 1px 3px rgba(15, 23, 42, 0.06), 0 6px 18px rgba(15, 23, 42, 0.04);
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.55;
+      overflow-x: hidden;
+    }
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+    .topbar-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .brand-mark {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 15px;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .brand-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 3px;
+      background: linear-gradient(135deg, var(--brand), var(--emerald));
+    }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .nav-link {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--muted);
+      padding: 6px 10px;
+      border-radius: 8px;
+    }
+    .nav-link:hover { background: var(--surface-alt); text-decoration: none; color: var(--ink); }
+    .lang-btn {
+      appearance: none;
+      border: 1px solid var(--border-strong);
+      background: var(--surface);
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 11px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: var(--brand);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 13px;
+      padding: 8px 14px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .btn-primary:hover { background: var(--brand-dark); text-decoration: none; color: #ffffff; }
+    .btn-emerald { background: var(--emerald); }
+    .btn-emerald:hover { background: #047857; }
+
+    .wrap {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 28px 20px 64px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--brand);
+      background: #eef2ff;
+      border: 1px solid #c7d2fe;
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(26px, 3.6vw, 40px);
+      line-height: 1.16;
+      letter-spacing: -0.02em;
+    }
+    .lead {
+      margin: 0 0 22px;
+      max-width: 880px;
+      font-size: 16px;
+      color: var(--muted);
+    }
+
+    /* Interactive BrandShield Search & Price Comparison Card */
+    .launcher-card {
+      background: var(--surface);
+      border: 2px solid #c7d2fe;
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
+    }
+    .launcher-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+    .launcher-title {
+      font-weight: 800;
+      font-size: 15px;
+      color: var(--ink);
+    }
+    .free-pill {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--emerald);
+      background: var(--emerald-bg);
+      border: 1px solid var(--emerald-bd);
+      padding: 3px 9px;
+      border-radius: 999px;
+    }
+    .launcher-form {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .launcher-input {
+      flex: 1 1 260px;
+      min-height: 42px;
+      padding: 9px 14px;
+      font-size: 15px;
+      border: 1px solid var(--border-strong);
+      border-radius: 8px;
+      outline: none;
+    }
+    .launcher-input:focus { border-color: var(--brand); box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.14); }
+    .registrar-bar {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+    .reg-links {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .reg-chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 12px;
+      border: 1px solid var(--border-strong);
+      background: var(--surface-alt);
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .reg-chip:hover { border-color: var(--brand); color: var(--brand); text-decoration: none; }
+    .reg-chip.aftermarket { background: var(--blue-bg); border-color: var(--blue-bd); color: var(--blue); }
+
+    /* KPI Grid */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+    .kpi-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      box-shadow: var(--shadow);
+    }
+    .kpi-num {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+    .kpi-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+    .kpi-sub {
+      font-size: 12px;
+      color: var(--subtle);
+    }
+
+    /* Charts Row */
+    .charts-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      box-shadow: var(--shadow);
+    }
+    .panel h2 {
+      margin: 0 0 14px;
+      font-size: 16px;
+      font-weight: 800;
+    }
+    .bar-row {
+      margin-bottom: 10px;
+    }
+    .bar-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .bar-track {
+      height: 10px;
+      background: var(--surface-alt);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 999px;
+      background: var(--brand);
+    }
+    .bar-fill.emerald { background: var(--emerald); }
+    .bar-fill.blue { background: var(--blue); }
+    .bar-fill.amber { background: var(--amber); }
+
+    /* Controls & Matrix Table */
+    .controls-bar {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+    .filter-pills {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .fpill {
+      appearance: none;
+      border: 1px solid var(--border-strong);
+      background: var(--surface);
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 11px;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+    .fpill.active {
+      background: var(--ink);
+      border-color: var(--ink);
+      color: #ffffff;
+    }
+    .search-box {
+      min-width: 220px;
+      padding: 7px 12px;
+      border: 1px solid var(--border-strong);
+      border-radius: 8px;
+      font-size: 13px;
+    }
+
+    .table-shell {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      white-space: nowrap;
+    }
+    th {
+      background: var(--surface-alt);
+      font-size: 11.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+    }
+    tr:hover td { background: #f8fafc; }
+    .tld-pill {
+      display: inline-block;
+      padding: 2px 7px;
+      border-radius: 6px;
+      font-weight: 800;
+      font-size: 11.5px;
+    }
+    .tld-ai { background: #eef2ff; color: var(--brand); }
+    .tld-com { background: var(--emerald-bg); color: var(--emerald); }
+    .tld-alt { background: var(--amber-bg); color: var(--amber); }
+
+    .matrix-chips {
+      display: inline-flex;
+      gap: 5px;
+    }
+    .mchip {
+      display: inline-block;
+      padding: 2px 6px;
+      border-radius: 5px;
+      font-size: 11px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .mchip-avail {
+      background: var(--emerald-bg);
+      border: 1px solid var(--emerald-bd);
+      color: var(--emerald);
+    }
+    .mchip-after {
+      background: var(--blue-bg);
+      border: 1px solid var(--blue-bd);
+      color: var(--blue);
+    }
+    .mchip-taken {
+      background: var(--surface-alt);
+      color: var(--subtle);
+    }
+    .audit-mini {
+      display: inline-block;
+      padding: 4px 9px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      background: #eef2ff;
+      color: var(--brand);
+      text-decoration: none;
+    }
+    .audit-mini:hover { background: var(--brand); color: #ffffff; text-decoration: none; }
+
+    .suite-strip {
+      margin-top: 28px;
+      background: var(--ink);
+      color: #ffffff;
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .suite-strip h3 { margin: 0 0 4px; font-size: 17px; }
+    .suite-strip p { margin: 0; font-size: 13px; color: #cbd5e1; }
+    .suite-links { display: flex; gap: 8px; flex-wrap: wrap; }
+    .suite-btn {
+      display: inline-block;
+      padding: 8px 13px;
+      border-radius: 8px;
+      font-size: 12.5px;
+      font-weight: 700;
+      background: rgba(255, 255, 255, 0.12);
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .suite-btn.gold { background: var(--emerald); color: #ffffff; }
+    .suite-btn:hover { opacity: 0.92; text-decoration: none; }
+
+    footer {
+      margin-top: 32px;
+      font-size: 12.5px;
+      color: var(--subtle);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    @media (max-width: 900px) {
+      .kpi-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .charts-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .kpi-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand-mark" href="https://brand-checker.appwrite.network/">
+        <span class="brand-dot"></span>
+        <span>BrandShield Research · 2026 TLD Benchmark</span>
+      </a>
+      <div class="nav-actions">
+        <a class="nav-link" href="./index.html" data-i18n="navDocs">CLI &amp; Action</a>
+        <a class="nav-link" href="./compare.html" data-i18n="navCompare">Comparison</a>
+        <a class="nav-link" href="./ai-startup-tld-benchmark-2026.json">Raw JSON (N=100)</a>
+        <button type="button" id="langSwitchBtn" class="lang-btn">中文</button>
+        <a class="btn-primary" href="https://brand-checker.appwrite.network/" target="_blank" rel="noopener" data-track="scan" data-i18n="navLaunch">Open Free 78-TLD Scanner -&gt;</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <span class="eyebrow" data-i18n="eyebrow">Empirical DNS, RDAP &amp; Aftermarket Study · N = 100 Startups · 500 Domains</span>
+    <h1 data-i18n="heroTitle">2026 Top 100 AI Startups TLD Adoption, .ai vs .com &amp; Aftermarket Availability Benchmark</h1>
+    <p class="lead" data-i18n="heroLead">
+      Live read-only DNS nameserver, A-record, and HTTPS redirect measurements across 100 leading AI startups (Foundation Labs, AI Coding, Inference Cloud, Agent Infrastructure, Creative Media, and Enterprise SaaS). For the first time, <strong>.ai (41%)</strong> edges out <strong>.com (40%)</strong> as the #1 primary TLD—yet <strong>81.7%</strong> of non-.com startups do not control a redirecting exact-match .com, and <strong>36%</strong> still leave at least one core sibling (.com/.ai/.io/.dev/.app) unregistered.
+    </p>
+
+    <section class="launcher-card" id="liveBrandLauncher">
+      <div class="launcher-head">
+        <div class="launcher-title" data-i18n="launcherTitle">Audit Your Startup Name Across 78 TLDs + USPTO Trademarks (Zero Front-Running)</div>
+        <span class="free-pill" data-i18n="freePill">100% Free Forever · Direct IANA RDAP</span>
+      </div>
+      <form class="launcher-form" id="brandAuditForm">
+        <input type="text" id="brandQueryInput" class="launcher-input" placeholder="Enter your startup or product name (e.g. novapulse,forgekit)..." aria-label="Startup or brand name" />
+        <button type="submit" class="btn-primary" data-i18n="btnAudit78">Audit 78 TLDs + USPTO -&gt;</button>
+        <button type="button" id="btnAiNamer" class="btn-primary btn-emerald" data-i18n="btnNamer">60-Idea AI Brand Namer -&gt;</button>
+      </form>
+      <div class="registrar-bar">
+        <span data-i18n="regCompareLabel">1-Click Registrar &amp; Aftermarket Price Check (uses typed name above):</span>
+        <div class="reg-links">
+          <a href="https://www.godaddy.com/domainsearch/find?domainToCheck=novapulse.com" class="reg-chip" data-reg="godaddy" target="_blank" rel="noopener">GoDaddy (.com / .ai)</a>
+          <a href="https://www.namecheap.com/domains/registration/results/?domain=novapulse.com" class="reg-chip" data-reg="namecheap" target="_blank" rel="noopener">Namecheap Compare</a>
+          <a href="https://porkbun.com/checkout/search?q=novapulse.ai" class="reg-chip" data-reg="porkbun" target="_blank" rel="noopener">Porkbun .ai Rate</a>
+          <a href="https://sedo.com/search/?keyword=novapulse" class="reg-chip aftermarket" data-reg="sedo" target="_blank" rel="noopener">Sedo Aftermarket</a>
+          <a href="https://www.afternic.com/domains/novapulse.com" class="reg-chip aftermarket" data-reg="afternic" target="_blank" rel="noopener">Afternic Broker</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-num">41% vs 40%</div>
+        <div class="kpi-label" data-i18n="kpi1Title">.ai Overtakes .com Primary Share</div>
+        <div class="kpi-sub" data-i18n="kpi1Sub">41 on .ai, 40 on .com, 7 on .dev, 5 on .io, and 7 across .co/.app/.new/.tech/.art/.company.</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num">18.3% (11/60)</div>
+        <div class="kpi-label" data-i18n="kpi2Title">Non-.com Startups Redirecting .com</div>
+        <div class="kpi-sub" data-i18n="kpi2Sub">49 of 60 non-.com AI startups operate without owning a 301-redirecting exact-match .com.</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num">36% &amp; 40%</div>
+        <div class="kpi-label" data-i18n="kpi3Title">Open Siblings vs Aftermarket Parking</div>
+        <div class="kpi-sub" data-i18n="kpi3Sub">36% leave &gt;=1 core TLD unregistered; 40% have &gt;=1 sibling parked on Sedo/Afternic/brokers.</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num">55% Cloudflare</div>
+        <div class="kpi-label" data-i18n="kpi4Title">Primary Authoritative DNS Share</div>
+        <div class="kpi-sub" data-i18n="kpi4Sub">Cloudflare 55%, AWS Route 53 20%, Google Cloud DNS 13%, Registrar/Custom/Vercel 12%.</div>
+      </div>
+    </section>
+
+    <section class="charts-grid">
+      <div class="panel">
+        <h2 data-i18n="chart1Title">Primary Canonical TLD Distribution (N = 100 AI Startups)</h2>
+        <div class="bar-row">
+          <div class="bar-meta"><span>.ai (Anguilla / AI Standard — Perplexity, Mistral, xAI, Harvey, Sierra)</span><span>41% (41)</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:41%"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-meta"><span>.com (Global Commercial — OpenAI, Anthropic, Cursor, Windsurf, Groq)</span><span>40% (40)</span></div>
+          <div class="bar-track"><div class="bar-fill emerald" style="width:40%"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-meta"><span>.dev (Google HSTS Developer TLD — Lovable, v0, Magic, Firecrawl, Braintrust)</span><span>7% (7)</span></div>
+          <div class="bar-track"><div class="bar-fill amber" style="width:7%"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-meta"><span>.io (Pinecone, Weaviate, ElevenLabs, Synthesia, RunPod)</span><span>5% (5)</span></div>
+          <div class="bar-track"><div class="bar-fill blue" style="width:5%"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-meta"><span>.co / .app / .new / .tech / .art / .company (Hugging Face, Bolt.new, Gamma, Pika)</span><span>7% (7)</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:7%"></div></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2 data-i18n="chart2Title">Defensive Domain Ownership &amp; DNS Resilience Findings</h2>
+        <div class="bar-row">
+          <div class="bar-meta"><span>.com-primary startups defensively redirecting &lt;brand&gt;.ai (12 of 40)</span><span>30.0%</span></div>
+          <div class="bar-track"><div class="bar-fill emerald" style="width:30%"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-meta"><span>Non-.com startups defensively redirecting &lt;brand&gt;.com (11 of 60)</span><span>18.3%</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:18.3%"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-meta"><span>Startups with &gt;=1 sibling on Sedo / Afternic / Broker Parking NS</span><span>40.0%</span></div>
+          <div class="bar-track"><div class="bar-fill blue" style="width:40%"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-meta"><span>Startups leaving &gt;=1 core sibling (.com/.ai/.io/.dev/.app) unregistered</span><span>36.0%</span></div>
+          <div class="bar-track"><div class="bar-fill amber" style="width:36%"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-meta"><span>Cloudflare + AWS Route 53 combined authoritative DNS share</span><span>75.0%</span></div>
+          <div class="bar-track"><div class="bar-fill emerald" style="width:75%"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="controls-bar">
+        <div class="filter-pills" id="catPills">
+          <button type="button" class="fpill active" data-cat="ALL">All 100</button>
+          <button type="button" class="fpill" data-cat="Foundation Labs">Foundation Labs (20)</button>
+          <button type="button" class="fpill" data-cat="AI Coding">AI Coding (18)</button>
+          <button type="button" class="fpill" data-cat="Cloud & Inference">Cloud &amp; Inference (18)</button>
+          <button type="button" class="fpill" data-cat="Agent Infra & Data">Agent Infra (16)</button>
+          <button type="button" class="fpill" data-cat="Voice, Video & Media">Voice &amp; Video (14)</button>
+          <button type="button" class="fpill" data-cat="Enterprise & Apps">Enterprise Apps (14)</button>
+          <button type="button" class="fpill" data-cat="AVAIL">Open Sibling (36)</button>
+          <button type="button" class="fpill" data-cat="AFTER">Aftermarket Sibling (40)</button>
+        </div>
+        <input type="search" id="matrixSearch" class="search-box" placeholder="Filter by startup, domain, TLD or DNS..." aria-label="Filter startups" />
+      </div>
+
+      <div class="table-shell">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Startup</th>
+              <th>Category</th>
+              <th>Primary Domain</th>
+              <th>TLD</th>
+              <th>5-TLD Sibling Matrix (Click Green to Register / Blue for Broker)</th>
+              <th>.com Posture</th>
+              <th>DNS Infra</th>
+              <th>78-TLD Audit</th>
+            </tr>
+          </thead>
+          <tbody id="benchBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="suite-strip">
+      <div>
+        <h3 data-i18n="suiteTitle">Picked Your Domain? Run the Pre-Launch Security, Email DNS &amp; AI Search Checks</h3>
+        <p data-i18n="suiteDesc">BrandShield 78-TLD + USPTO scanning is 100% free forever. Unlock full remediation playbooks across VibeShield, InboxShield &amp; CiteReady for $2 each or $5 for all 3.</p>
+      </div>
+      <div class="suite-links">
+        <a class="suite-btn" href="https://vibe-checker.appwrite.network/" target="_blank" rel="noopener" data-track="paywall">VibeShield Security ($2 Fix)</a>
+        <a class="suite-btn" href="https://inbox-checker.appwrite.network/" target="_blank" rel="noopener" data-track="paywall">InboxShield Email DNS ($2 Fix)</a>
+        <a class="suite-btn" href="https://citeready-checker.appwrite.network/" target="_blank" rel="noopener" data-track="paywall">CiteReady AI Search ($2 Fix)</a>
+        <a class="suite-btn gold" href="https://omnipulse-x402.appwrite.network/checkout/launch-stack" target="_blank" rel="noopener" data-track="paywall">All-in-1 Launch Suite ($5) -&gt;</a>
+      </div>
+    </section>
+
+    <footer>
+      <div>Measured 2026-11-23 via read-only DNS/HTTPS · MIT Open Dataset · OmniForge · Agent Arena Studio</div>
+      <div>
+        <a href="https://brand-checker.appwrite.network/">BrandShield Web App</a> ·
+        <a href="https://github.com/zColdWater/brandshield-cli">GitHub Action &amp; CLI</a> ·
+        <a href="https://zcoldwater.github.io/vibeshield-cli/web-security-headers-benchmark-2026.html">Security Headers Benchmark</a> ·
+        <a href="https://zcoldwater.github.io/citeready-cli/ai-search-readiness-benchmark-2026.html">AI Search Benchmark</a>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+  (function() {
+    var ROWS = [{"i":1,"n":"OpenAI","slug":"openai","cat":"Foundation Labs","dom":"openai.com","tld":".com","dns":"custom_dns","comRel":"primary","aiRel":"available","avail":[".ai"],"after":[],"m":{"com":"custom_dns","ai":"available","io":"registrar_dns","dev":"registrar_dns","app":"registrar_dns"}},{"i":2,"n":"Anthropic","slug":"anthropic","cat":"Foundation Labs","dom":"anthropic.com","tld":".com","dns":"cloudflare","comRel":"primary","aiRel":"third_party_or_separate","avail":[".dev"],"after":[".io"],"m":{"com":"cloudflare","ai":"custom_dns","io":"aftermarket_afternic","dev":"available","app":"custom_dns"}},{"i":3,"n":"xAI","slug":"x","cat":"Foundation Labs","dom":"x.ai","tld":".ai","dns":"cloudflare","comRel":"third_party_or_separate","aiRel":"primary","avail":[".dev"],"after":[],"m":{"com":"custom_dns","ai":"cloudflare","io":"cloudflare","dev":"available","app":"registrar_dns"}},{"i":4,"n":"Mistral AI","slug":"mistral","cat":"Foundation Labs","dom":"mistral.ai","tld":".ai","dns":"cloudflare","comRel":"third_party_or_separate","aiRel":"primary","avail":[],"after":[".dev"],"m":{"com":"cloudflare","ai":"cloudflare","io":"custom_dns","dev":"aftermarket_afternic","app":"cloudflare"}},{"i":5,"n":"Cohere","slug":"cohere","cat":"Foundation Labs","dom":"cohere.com","tld":".com","dns":"cloudflare","comRel":"primary","aiRel":"defensive_redirect","avail":[],"after":[".app"],"m":{"com":"cloudflare","ai":"cloudflare","io":"cloudflare","dev":"google_cloud_dns","app":"aftermarket_broker"}},{"i":6,"n":"DeepSeek","slug":"deepseek","cat":"Foundation Labs","dom":"deepseek.com","tld":".com","dns":"custom_dns","comRel":"primary","aiRel":"third_party_or_separate","avail":[],"after":[".dev"],"m":{"com":"custom_dns","ai":"registrar_dns","io":"registrar_dns","dev":"aftermarket_afternic","app":"cloudflare"}},{"i":7,"n":"Perplexity","slug":"perplexity","cat":"Foundation Labs","dom":"perplexity.ai","tld":".ai","dns":"cloudflare","comRel":"defensive_redirect","aiRel":"primary","avail":[],"after":[".dev",".app"],"m":{"com":"cloudflare","ai":"cloudflare","io":"custom_dns","dev":"aftermarket_afternic","app":"aftermarket_broker"}},{"i":8,"n":"Inflection","slug":"inflection","cat":"Foundation Labs","dom":"inflection.ai","tld":".ai","dns":"cloudflare","comRel":"third_party_or_separate","aiRel":"primary","avail":[],"after":[".app"],"m":{"com":"aws_route53","ai":"cloudflare","io":"aws_route53","dev":"google_cloud_dns","app":"aftermarket_broker"}},{"i":9,"n":"Adept","slug":"adept","cat":"Foundation Labs","dom":"adept.ai","tld":".ai","dns":"cloudflare","comRel":"third_party_or_separate","aiRel":"primary","avail":[".dev"],"after":[],"m":{"com":"aws_route53","ai":"cloudflare","io":"registrar_dns","dev":"available","app":"custom_dns"}},{"i":10,"n":"Imbue","slug":"imbue","cat":"Foundation Labs","dom":"imbue.com","tld":".com","dns":"registrar_dns","comRel":"primary","aiRel":"aftermarket_broker","avail":[],"after":[".ai"],"m":{"com":"registrar_dns","ai":"aftermarket_broker","io":"registrar_dns","dev":"registrar_dns","app":"custom_dns"}},{"i":11,"n":"Sakana AI","slug":"sakana","cat":"Foundation Labs","dom":"sakana.ai","tld":".ai","dns":"cloudflare","comRel":"third_party_or_separate","aiRel":"primary","avail":[".io"],"after":[".app"],"m":{"com":"cloudflare","ai":"cloudflare","io":"available","dev":"cloudflare","app":"aftermarket_broker"}},{"i":12,"n":"Contextual AI","slug":"contextual","cat":"Foundation Labs","dom":"contextual.ai","tld":".ai","dns":"cloudflare","comRel":"third_party_or_separate","aiRel":"primary","avail":[],"after":[],"m":{"com":"aws_route53","ai":"cloudflare","io":"registrar_dns","dev":"google_cloud_dns","app":"custom_dns"}},{"i":13,"n":"Nous Research","slug":"nousresearch","cat":"Foundation Labs","dom":"nousresearch.com","tld":".com","dns":"cloudflare","comRel":"primary","aiRel":"aftermarket_afternic","avail":[".io"],"after":[".ai"],"m":{"com":"cloudflare","ai":"aftermarket_afternic","io":"available","dev":"registrar_dns","app":"cloudflare"}},{"i":14,"n":"Prime Intellect","slug":"primeintellect","cat":"Foundation Labs","dom":"primeintellect.ai","tld":".ai","dns":"registrar_dns","comRel":"third_party_or_separate","aiRel":"primary","avail":[],"after":[],"m":{"com":"registrar_dns","ai":"registrar_dns","io":"google_cloud_dns","dev":"vercel_dns","app":"vercel_dns"}},{"i":15,"n":"Physical Intelligence","slug":"physicalintelligence","cat":"Foundation Labs","dom":"physicalintelligence.company","tld":".company","dns":"google_cloud_dns","comRel":"third_party_or_separate","aiRel":"third_party_or_separate","avail":[],"after":[".dev",".app"],"m":{"com":"registrar_dns","ai":"registrar_dns","io":"registrar_dns","dev":"aftermarket_afternic","app":"aftermarket_afternic"}},{"i":16,"n":"Poolside","slug":"poolside","cat":"Foundation Labs","dom":"poolside.ai","tld":".ai","dns":"cloudflare","comRel":"third_party_or_separate","aiRel":"primary","avail":[],"after":[],"m":{"com":"registrar_dns","ai":"cloudflare","io":"custom_dns","dev":"cloudflare","app":"registrar_dns"}},{"i":17,"n":"Magic","slug":"magic","cat":"Foundation Labs","dom":"magic.dev","tld":".dev","dns":"cloudflare","comRel":"third_party_or_separate","aiRel":"third_party_or_separate","avail":[],"after":[],"m":{"com":"custom_dns","ai":"cloudflare","io":"registrar_dns","dev":"cloudflare","app":"cloudflare"}},{"i":18,"n":"Reka AI","slug":"reka","cat":"Foundation Labs","dom":"reka.ai","tld":".ai","dns":"cloudflare","comRel":"third_party_or_separate","aiRel":"primary","avail":[],"after":[".io"],"m":{"com":"custom_dns","ai":"cloudflare","io":"aftermarket_afternic","dev":"cloudflare","app":"custom_dns"}},{"i":19,"n":"AI21 Labs","slug":"ai21","cat":"Foundation Labs","dom":"ai21.com","tld":".com","dns":"cloudflare","comRel":"primary","aiRel":"aftermarket_afternic","avail":[".io"],"after":[".ai"],"m":{"com":"cloudflare","ai":"aftermarket_afternic","io":"available","dev":"registrar_dns","app":"cloudflare"}},{"i":20,"n":"Liquid AI","slug":"liquid","cat":"Foundation Labs","dom":"liquid.ai","tld":".ai","dns":"cloudflare","comRel":"third_party_or_separate","aiRel":"primary","avail":[".dev",".app"],"after":[],"m":{"com":"aws_route53","ai":"cloudflare","io":"custom_dns","dev":"available","app":"available"}},{"i":21,"n":"Cursor","slug":"cursor","cat":"AI Coding","dom":"cursor.com","tld":".com","dns":"aws_route53","comRel":"primary","aiRel":"third_party_or_separate","avail":[],"after":[],"m":{"com":"aws_route53","ai":"custom_dns","io":"custom_dns","dev":"cloudflare","app":"custom_dns"}},{"i":22,"n":"Windsurf","slug":"windsurf","cat":"AI Coding","dom":"windsurf.com","tld":".com","dns":"google_cloud_dns","comRel":"primary","aiRel":"defensive_redirect","avail":[],"after":[],"m":{"com":"google_cloud_dns","ai":"google_cloud_dns","io":"custom_dns","dev":"vercel_dns","app":"google_cloud_dns"}},{"i":23,"n":"Cognition (Devin)","slug":"cognition","cat":"AI Coding","dom":"cognition.ai","tld":".ai","dns":"aws_route53","comRel":"third_party_or_separate","aiRel":"primary","avail":[],"after":[".app"],"m":{"com":"aws_route53","ai":"aws_route53","io":"registrar_dns","dev":"registrar_dns","app":"aftermarket_afternic"}},{"i":24,"n":"Devin","slug":"devin","cat":"AI Coding","dom":"devin.ai","tld":".ai","dns":"aws_route53","comRel":"third_party_or_separate","aiRel":"primary","avail":[],"after":[],"m":{"com":"custom_dns","ai":"aws_route53","io":"aws_route53","dev":"google_cloud_dns","app":"google_cloud_dns"}},{"i":25,"n":"Lovable","slug":"lovable","cat":"AI Coding","dom":"lovable.dev","tld":".dev","dns":"cloudflare","comRel":"defensive_redirect","aiRel":"defensive_redirect","avail":[],"after":[],"m":{"com":"cloudflare","ai":"cloudflare","io":"custom_dns","dev":"cloudflare","app":"cloudflare"}},{"i":26,"n":"Bolt.new","slug":"bolt","cat":"AI Coding","dom":"bolt.new","tld":".new","dns":"cloudflare","comRel":"third_party_or_separate","aiRel":"third_party_or_separate","avail":[],"after":[],"m":{"com":"custom_dns","ai":"cloudflare","io":"custom_dns","dev":"cloudflare","app":"cloudflare"}},{"i":27,"n":"Replit","slug":"replit","cat":"AI Coding","dom":"replit.com","tld":".com","dns":"cloudflare","comRel":"primary","aiRel":"third_party_or_separate","avail":[],"after":[],"m":{"com":"cloudflare","ai":"custom_dns","io":"custom_dns","dev":"cloudflare","app":"google_cloud_dns"}},{"i":28,"n":"v0","slug":"v0","cat":"AI Coding","dom":"v0.dev","tld":".dev","dns":"vercel_dns","comRel":"third_party_or_separate","aiRel":"third_party_or_separate","avail":[],"after":[],"m":{"com":"custom_dns","ai":"cloudflare","io":"registrar_dns","dev":"vercel_dns","app":"vercel_dns"}},{"i":29,"n":"Augment Code","slug":"augmentcode","cat":"AI Coding","dom":"augmentcode.com","tld":".com","dns":"google_cloud_dns","comRel":"primary","aiRel":"aftermarket_afternic","avail":[],"after":[".ai",".app"],"m":{"com":"google_cloud_dns","ai":"aftermarket_afternic","io":"custom_dns","dev":"registrar_dns","app":"aftermarket_afternic"}},{"i":30,"n":"Sourcegraph","slug":"sourcegraph","cat":"AI Coding","dom":"sourcegraph.com","tld":".com","dns":"cloudflare","comRel":"primary","aiRel":"third_party_or_separate","avail":[".io",".dev"],"after":[],"m":{"com":"cloudflare","ai":"registrar_dns","io":"available","dev":"available","app":"cloudflare"}},{"i":31,"n":"Continue","slug":"continue","cat":"AI Coding","dom":"continue.dev","tld":".dev","dns":"custom_dns","comRel":"third_party_or_separate","aiRel":"available","avail":[".ai"],"after":[],"m":{"com":"cloudflare","ai":"available","io":"custom_dns","dev":"custom_dns","app":"registrar_dns"}},{"i":32,"n":"Tabnine","slug":"tabnine","cat":"AI Coding","dom":"tabnine.com","tld":".com","dns":"aws_route53","comRel":"primary","aiRel":"third_party_or_separate","avail":[],"after":[],"m":{"com":"aws_route53","ai":"registrar_dns","io":"google_cloud_dns","dev":"google_cloud_dns","app":"cloudflare"}},{"i":33,"n":"Codeium","slug":"codeium","cat":"AI Coding","dom":"codeium.com","tld":".com","dns":"google_cloud_dns","comRel":"primary","aiRel":"defensive_redirect","avail":[".io",".app"],"after":[],"m":{"com":"google_cloud_dns","ai":"google_cloud_dns","io":"available","dev":"custom_dns","app":"available"}},{"i":34,"n":"Supermaven","slug":"supermaven","cat":"AI Coding","dom":"supermaven.com","tld":".com","dns":"cloudflare","comRel":"primary","aiRel":"available","avail":[".ai",".io",".dev",".app"],"after":[],"m":{"com":"cloudflare","ai":"available","io":"available","dev":"available","app":"available"}},{"i":35,"n":"Factory","slug":"factory","cat":"AI Coding","dom":"factory.ai","tld":".ai","dns":"aws_route53","comRel":"third_party_or_separate","aiRel":"primary","avail":[],"after":[],"m":{"com":"aws_route53","ai":"aws_route53","io":"registrar_dns","dev":"cloudflare","app":"aws_route53"}},{"i":36,"n":"All Hands","slug":"all-hands","cat":"AI Coding","dom":"all-hands.dev","tld":".dev","dns":"google_cloud_dns","comRel":"third_party_or_separate","aiRel":"available","avail":[".ai",".app"],"after":[],"m":{"com":"custom_dns","ai":"available","io":"custom_dns","dev":"google_cloud_dns","app":"available"}},{"i":37,"n":"CodeRabbit","slug":"coderabbit","cat":"AI Coding","dom":"coderabbit.ai","tld":".ai","dns":"cloudflare","comRel":"defensive_redirect","aiRel":"primary","avail":[".dev"],"after":[],"m":{"com":"cloudflare","ai":"cloudflare","io":"vercel_dns","dev":"available","app":"cloudflare"}},{"i":38,"n":"Greptile","slug":"greptile","cat":"AI Coding","dom":"greptile.com","tld":".com","dns":"registrar_dns","comRel":"primary","aiRel":"third_party_or_separate","avail":[".dev"],"after":[],"m":{"com":"registrar_dns","ai":"registrar_dns","io":"vercel_dns","dev":"available","app":"custom_dns"}},{"i":39,"n":"Hugging Face","slug":"huggingface","cat":"Cloud & Inference","dom":"huggingface.co","tld":".co","dns":"aws_route53","comRel":"defensive_redirect","aiRel":"aftermarket_broker","avail":[],"after":[".ai"],"m":{"com":"aws_route53","ai":"aftermarket_broker","io":"registrar_dns","dev":"custom_dns","app":"cloudflare"}},{"i":40,"n":"Groq","slug":"groq","cat":"Cloud & Inference","dom":"groq.com","tld":".com","dns":"cloudflare","comRel":"primary","aiRel":"third_party_or_separate","avail":[],"after":[],"m":{"com":"cloudflare","ai":"custom_dns","io":"cloudflare","dev":"vercel_dns","app":"vercel_dns"}},{"i":41,"n":"Together AI","slug":"together","cat":"Cloud & Inference","dom":"together.ai","tld":".ai","dns":"cloudflare","comRel":"third_party_or_separate","aiRel":"primary","avail":[".app"],"after":[],"m":{"com":"custom_dns","ai":"cloudflare","io":"custom_dns","dev":"aws_route53","app":"available"}},{"i":42,"n":"Fireworks AI","slug":"fireworks","cat":"Cloud & Inference","dom":"fireworks.ai","tld":".ai","dns":"cloudflare","comRel":"third_party_or_separate","aiRel":"primary","avail":[".app"],"after":[".io"],"m":{"com":"cloudflare","ai":"cloudflare","io":"aftermarket_afternic","dev":"custom_dns","app":"available"}},{"i":43,"n":"Replicate","slug":"replicate","cat":"Cloud & Inference","dom":"replicate.com","tld":".com","dns":"cloudflare","comRel":"primary","aiRel":"defensive_redirect","avail":[],"after":[],"m":{"com":"cloudflare","ai":"cloudflare","io":"cloudflare","dev":"cloudflare","app":"custom_dns"}},{"i":44,"n":"fal.ai","slug":"fal","cat":"Cloud & Inference","dom":"fal.ai","tld":".ai","dns":"cloudflare","comRel":"third_party_or_separate","aiRel":"primary","avail":[],"after":[".app"],"m":{"com":"aws_route53","ai":"cloudflare","io":"cloudflare","dev":"google_cloud_dns","app":"aftermarket_broker"}},{"i":45,"n":"Baseten","slug":"baseten","cat":"Cloud & Inference","dom":"baseten.co","tld":".co","dns":"google_cloud_dns","comRel":"defensive_redirect","aiRel":"third_party_or_separate","avail":[],"after":[],"m":{"com":"aws_route53","ai":"registrar_dns","io":"google_cloud_dns","dev":"google_cloud_dns","app":"google_cloud_dns"}},{"i":46,"n":"Modal","slug":"modal","cat":"Cloud & Inference","dom":"modal.com","tld":".com","dns":"aws_route53","comRel":"primary","aiRel":"aftermarket_afternic","avail":[],"after":[".ai"],"m":{"com":"aws_route53","ai":"aftermarket_afternic","io":"google_cloud_dns","dev":"aws_route53","app":"custom_dns"}},{"i":47,"n":"Anyscale","slug":"anyscale","cat":"Cloud & Inference","dom":"anyscale.com","tld":".com","dns":"aws_route53","comRel":"primary","aiRel":"available","avail":[".ai",".app"],"after":[],"m":{"com":"aws_route53","ai":"available","io":"aws_route53","dev":"aws_route53","app":"available"}},{"i":48,"n":"Cerebras","slug":"cerebras","cat":"Cloud & Inference","dom":"cerebras.ai","tld":".ai","dns":"registrar_dns","comRel":"third_party_or_separate","aiRel":"primary","avail":[],"after":[],"m":{"com":"aws_route53","ai":"registrar_dns","io":"registrar_dns","dev":"custom_dns","app":"registrar_dns"}},{"i":49,"n":"SambaNova","slug":"sambanova","cat":"Cloud & Inference","dom":"sambanova.ai","tld":".ai","dns":"cloudflare","comRel":"available","aiRel":"primary","avail":[".com",".dev"],"after":[],"m":{"com":"available","ai":"cloudflare","io":"cloudflare","dev":"available","app":"cloudflare"}},{"i":50,"n":"RunPod","slug":"runpod","cat":"Cloud & Inference","dom":"runpod.io","tld":".io","dns":"aws_route53","comRel":"defensive_redirect","aiRel":"defensive_redirect","avail":[],"after":[],"m":{"com":"cloudflare","ai":"cloudflare","io":"aws_route53","dev":"aws_route53","app":"custom_dns"}},{"i":51,"n":"Lambda","slug":"lambda","cat":"Cloud & Inference","dom":"lambda.ai","tld":".ai","dns":"cloudflare","comRel":"third_party_or_separate","aiRel":"primary","avail":[],"after":[".io",".app"],"m":{"com":"cloudflare","ai":"cloudflare","io":"aftermarket_afternic","dev":"custom_dns","app":"aftermarket_afternic"}},{"i":52,"n":"CoreWeave","slug":"coreweave","cat":"Cloud & Inference","dom":"coreweave.com","tld":".com","dns":"cloudflare","comRel":"primary","aiRel":"third_party_or_separate","avail":[".dev"],"after":[],"m":{"com":"cloudflare","ai":"registrar_dns","io":"registrar_dns","dev":"available","app":"cloudflare"}},{"i":53,"n":"Crusoe","slug":"crusoe","cat":"Cloud & Inference","dom":"crusoe.ai","tld":".ai","dns":"cloudflare","comRel":"third_party_or_separate","aiRel":"primary","avail":[],"after":[".io",".app"],"m":{"com":"custom_dns","ai":"cloudflare","io":"aftermarket_broker","dev":"registrar_dns","app":"aftermarket_broker"}},{"i":54,"n":"OpenRouter","slug":"openrouter","cat":"Cloud & Inference","dom":"openrouter.ai","tld":".ai","dns":"cloudflare","comRel":"third_party_or_separate","aiRel":"primary","avail":[],"after":[],"m":{"com":"registrar_dns","ai":"cloudflare","io":"registrar_dns","dev":"cloudflare","app":"cloudflare"}},{"i":55,"n":"Etched","slug":"etched","cat":"Cloud & Inference","dom":"etched.com","tld":".com","dns":"cloudflare","comRel":"primary","aiRel":"defensive_redirect","avail":[],"after":[],"m":{"com":"cloudflare","ai":"cloudflare","io":"cloudflare","dev":"google_cloud_dns","app":"cloudflare"}},{"i":56,"n":"Modular","slug":"modular","cat":"Cloud & Inference","dom":"modular.com","tld":".com","dns":"cloudflare","comRel":"primary","aiRel":"defensive_redirect","avail":[],"after":[".app"],"m":{"com":"cloudflare","ai":"cloudflare","io":"registrar_dns","dev":"google_cloud_dns","app":"aftermarket_broker"}},{"i":57,"n":"LangChain","slug":"langchain","cat":"Agent Infra & Data","dom":"langchain.com","tld":".com","dns":"google_cloud_dns","comRel":"primary","aiRel":"third_party_or_separate","avail":[],"after":[".app"],"m":{"com":"google_cloud_dns","ai":"aws_route53","io":"cloudflare","dev":"google_cloud_dns","app":"aftermarket_afternic"}},{"i":58,"n":"LlamaIndex","slug":"llamaindex","cat":"Agent Infra & Data","dom":"llamaindex.ai","tld":".ai","dns":"registrar_dns","comRel":"third_party_or_separate","aiRel":"primary","avail":[".io",".dev",".app"],"after":[],"m":{"com":"registrar_dns","ai":"registrar_dns","io":"available","dev":"available","app":"available"}},{"i":59,"n":"Pinecone","slug":"pinecone","cat":"Agent Infra & Data","dom":"pinecone.io","tld":".io","dns":"aws_route53","comRel":"third_party_or_separate","aiRel":"aftermarket_broker","avail":[],"after":[".ai"],"m":{"com":"custom_dns","ai":"aftermarket_broker","io":"aws_route53","dev":"custom_dns","app":"google_cloud_dns"}},{"i":60,"n":"Weaviate","slug":"weaviate","cat":"Agent Infra & Data","dom":"weaviate.io","tld":".io","dns":"google_cloud_dns","comRel":"third_party_or_separate","aiRel":"third_party_or_separate","avail":[".dev"],"after":[],"m":{"com":"registrar_dns","ai":"registrar_dns","io":"google_cloud_dns","dev":"available","app":"registrar_dns"}},{"i":61,"n":"Qdrant","slug":"qdrant","cat":"Agent Infra & Data","dom":"qdrant.tech","tld":".tech","dns":"aws_route53","comRel":"defensive_redirect","aiRel":"third_party_or_separate","avail":[],"after":[],"m":{"com":"registrar_dns","ai":"registrar_dns","io":"aws_route53","dev":"registrar_dns","app":"cloudflare"}},{"i":62,"n":"Chroma","slug":"trychroma","cat":"Agent Infra & Data","dom":"trychroma.com","tld":".com","dns":"google_cloud_dns","comRel":"primary","aiRel":"aftermarket_broker","avail":[".io",".dev",".app"],"after":[".ai"],"m":{"com":"google_cloud_dns","ai":"aftermarket_broker","io":"available","dev":"available","app":"available"}},{"i":63,"n":"Browserbase","slug":"browserbase","cat":"Agent Infra & Data","dom":"browserbase.com","tld":".com","dns":"cloudflare","comRel":"primary","aiRel":"third_party_or_separate","avail":[],"after":[],"m":{"com":"cloudflare","ai":"registrar_dns","io":"registrar_dns","dev":"registrar_dns","app":"google_cloud_dns"}},{"i":64,"n":"Exa","slug":"exa","cat":"Agent Infra & Data","dom":"exa.ai","tld":".ai","dns":"cloudflare","comRel":"third_party_or_separate","aiRel":"primary","avail":[],"after":[],"m":{"com":"aws_route53","ai":"cloudflare","io":"custom_dns","dev":"cloudflare","app":"registrar_dns"}},{"i":65,"n":"Tavily","slug":"tavily","cat":"Agent Infra & Data","dom":"tavily.com","tld":".com","dns":"aws_route53","comRel":"primary","aiRel":"defensive_redirect","avail":[".io"],"after":[".app"],"m":{"com":"aws_route53","ai":"aws_route53","io":"available","dev":"registrar_dns","app":"aftermarket_afternic"}},{"i":66,"n":"Firecrawl","slug":"firecrawl","cat":"Agent Infra & Data","dom":"firecrawl.dev","tld":".dev","dns":"registrar_dns","comRel":"defensive_redirect","aiRel":"third_party_or_separate","avail":[],"after":[".app"],"m":{"com":"registrar_dns","ai":"registrar_dns","io":"registrar_dns","dev":"registrar_dns","app":"aftermarket_afternic"}},{"i":67,"n":"Scale AI","slug":"scale","cat":"Agent Infra & Data","dom":"scale.com","tld":".com","dns":"cloudflare","comRel":"primary","aiRel":"defensive_redirect","avail":[],"after":[".app"],"m":{"com":"cloudflare","ai":"cloudflare","io":"aws_route53","dev":"cloudflare","app":"aftermarket_afternic"}},{"i":68,"n":"Weights & Biases","slug":"wandb","cat":"Agent Infra & Data","dom":"wandb.ai","tld":".ai","dns":"cloudflare","comRel":"defensive_redirect","aiRel":"primary","avail":[],"after":[],"m":{"com":"google_cloud_dns","ai":"cloudflare","io":"google_cloud_dns","dev":"google_cloud_dns","app":"google_cloud_dns"}},{"i":69,"n":"Arize AI","slug":"arize","cat":"Agent Infra & Data","dom":"arize.com","tld":".com","dns":"google_cloud_dns","comRel":"primary","aiRel":"aftermarket_broker","avail":[],"after":[".ai"],"m":{"com":"google_cloud_dns","ai":"aftermarket_broker","io":"cloudflare","dev":"cloudflare","app":"registrar_dns"}},{"i":70,"n":"Braintrust","slug":"braintrust","cat":"Agent Infra & Data","dom":"braintrust.dev","tld":".dev","dns":"aws_route53","comRel":"third_party_or_separate","aiRel":"third_party_or_separate","avail":[".io"],"after":[],"m":{"com":"google_cloud_dns","ai":"aws_route53","io":"available","dev":"aws_route53","app":"registrar_dns"}},{"i":71,"n":"Helicone","slug":"helicone","cat":"Agent Infra & Data","dom":"helicone.ai","tld":".ai","dns":"cloudflare","comRel":"aftermarket_afternic","aiRel":"primary","avail":[".io",".dev",".app"],"after":[".com"],"m":{"com":"aftermarket_afternic","ai":"cloudflare","io":"available","dev":"available","app":"available"}},{"i":72,"n":"Portkey","slug":"portkey","cat":"Agent Infra & Data","dom":"portkey.ai","tld":".ai","dns":"cloudflare","comRel":"third_party_or_separate","aiRel":"primary","avail":[".dev"],"after":[],"m":{"com":"aws_route53","ai":"cloudflare","io":"registrar_dns","dev":"available","app":"cloudflare"}},{"i":73,"n":"Midjourney","slug":"midjourney","cat":"Voice, Video & Media","dom":"midjourney.com","tld":".com","dns":"cloudflare","comRel":"primary","aiRel":"third_party_or_separate","avail":[],"after":[],"m":{"com":"cloudflare","ai":"custom_dns","io":"custom_dns","dev":"cloudflare","app":"google_cloud_dns"}},{"i":74,"n":"Runway","slug":"runwayml","cat":"Voice, Video & Media","dom":"runwayml.com","tld":".com","dns":"aws_route53","comRel":"primary","aiRel":"third_party_or_separate","avail":[".dev"],"after":[],"m":{"com":"aws_route53","ai":"cloudflare","io":"aws_route53","dev":"available","app":"aws_route53"}},{"i":75,"n":"ElevenLabs","slug":"elevenlabs","cat":"Voice, Video & Media","dom":"elevenlabs.io","tld":".io","dns":"google_cloud_dns","comRel":"defensive_redirect","aiRel":"third_party_or_separate","avail":[],"after":[],"m":{"com":"google_cloud_dns","ai":"registrar_dns","io":"google_cloud_dns","dev":"cloudflare","app":"cloudflare"}},{"i":76,"n":"Suno","slug":"suno","cat":"Voice, Video & Media","dom":"suno.com","tld":".com","dns":"cloudflare","comRel":"primary","aiRel":"defensive_redirect","avail":[],"after":[],"m":{"com":"cloudflare","ai":"cloudflare","io":"custom_dns","dev":"vercel_dns","app":"custom_dns"}},{"i":77,"n":"Udio","slug":"udio","cat":"Voice, Video & Media","dom":"udio.com","tld":".com","dns":"cloudflare","comRel":"primary","aiRel":"aftermarket_afternic","avail":[],"after":[".ai"],"m":{"com":"cloudflare","ai":"aftermarket_afternic","io":"custom_dns","dev":"registrar_dns","app":"custom_dns"}},{"i":78,"n":"Pika","slug":"pika","cat":"Voice, Video & Media","dom":"pika.art","tld":".art","dns":"cloudflare","comRel":"third_party_or_separate","aiRel":"third_party_or_separate","avail":[],"after":[],"m":{"com":"custom_dns","ai":"registrar_dns","io":"registrar_dns","dev":"vercel_dns","app":"cloudflare"}},{"i":79,"n":"Luma AI","slug":"lumalabs","cat":"Voice, Video & Media","dom":"lumalabs.ai","tld":".ai","dns":"registrar_dns","comRel":"third_party_or_separate","aiRel":"primary","avail":[".io",".dev"],"after":[],"m":{"com":"google_cloud_dns","ai":"registrar_dns","io":"available","dev":"available","app":"cloudflare"}},{"i":80,"n":"HeyGen","slug":"heygen","cat":"Voice, Video & Media","dom":"heygen.com","tld":".com","dns":"cloudflare","comRel":"primary","aiRel":"defensive_redirect","avail":[],"after":[".app"],"m":{"com":"cloudflare","ai":"cloudflare","io":"cloudflare","dev":"registrar_dns","app":"aftermarket_broker"}},{"i":81,"n":"Synthesia","slug":"synthesia","cat":"Voice, Video & Media","dom":"synthesia.io","tld":".io","dns":"aws_route53","comRel":"third_party_or_separate","aiRel":"third_party_or_separate","avail":[],"after":[],"m":{"com":"custom_dns","ai":"custom_dns","io":"aws_route53","dev":"custom_dns","app":"aws_route53"}},{"i":82,"n":"Deepgram","slug":"deepgram","cat":"Voice, Video & Media","dom":"deepgram.com","tld":".com","dns":"aws_route53","comRel":"primary","aiRel":"third_party_or_separate","avail":[".app"],"after":[],"m":{"com":"aws_route53","ai":"aws_route53","io":"aws_route53","dev":"custom_dns","app":"available"}},{"i":83,"n":"Cartesia","slug":"cartesia","cat":"Voice, Video & Media","dom":"cartesia.ai","tld":".ai","dns":"vercel_dns","comRel":"third_party_or_separate","aiRel":"primary","avail":[],"after":[],"m":{"com":"custom_dns","ai":"vercel_dns","io":"aws_route53","dev":"cloudflare","app":"vercel_dns"}},{"i":84,"n":"Bland AI","slug":"bland","cat":"Voice, Video & Media","dom":"bland.ai","tld":".ai","dns":"cloudflare","comRel":"defensive_redirect","aiRel":"primary","avail":[],"after":[".io",".dev"],"m":{"com":"cloudflare","ai":"cloudflare","io":"aftermarket_afternic","dev":"aftermarket_afternic","app":"custom_dns"}},{"i":85,"n":"Vapi","slug":"vapi","cat":"Voice, Video & Media","dom":"vapi.ai","tld":".ai","dns":"cloudflare","comRel":"third_party_or_separate","aiRel":"primary","avail":[".io",".dev"],"after":[".app"],"m":{"com":"custom_dns","ai":"cloudflare","io":"available","dev":"available","app":"aftermarket_broker"}},{"i":86,"n":"Hume AI","slug":"hume","cat":"Voice, Video & Media","dom":"hume.ai","tld":".ai","dns":"cloudflare","comRel":"third_party_or_separate","aiRel":"primary","avail":[],"after":[".app"],"m":{"com":"custom_dns","ai":"cloudflare","io":"cloudflare","dev":"custom_dns","app":"aftermarket_afternic"}},{"i":87,"n":"Harvey","slug":"harvey","cat":"Enterprise & Apps","dom":"harvey.ai","tld":".ai","dns":"google_cloud_dns","comRel":"third_party_or_separate","aiRel":"primary","avail":[".dev",".app"],"after":[],"m":{"com":"aws_route53","ai":"google_cloud_dns","io":"google_cloud_dns","dev":"available","app":"available"}},{"i":88,"n":"Sierra","slug":"sierra","cat":"Enterprise & Apps","dom":"sierra.ai","tld":".ai","dns":"cloudflare","comRel":"third_party_or_separate","aiRel":"primary","avail":[".app"],"after":[],"m":{"com":"custom_dns","ai":"cloudflare","io":"custom_dns","dev":"custom_dns","app":"available"}},{"i":89,"n":"Decagon","slug":"decagon","cat":"Enterprise & Apps","dom":"decagon.ai","tld":".ai","dns":"cloudflare","comRel":"third_party_or_separate","aiRel":"primary","avail":[".io",".dev"],"after":[],"m":{"com":"cloudflare","ai":"cloudflare","io":"available","dev":"available","app":"custom_dns"}},{"i":90,"n":"Glean","slug":"glean","cat":"Enterprise & Apps","dom":"glean.com","tld":".com","dns":"google_cloud_dns","comRel":"primary","aiRel":"third_party_or_separate","avail":[],"after":[".app"],"m":{"com":"google_cloud_dns","ai":"custom_dns","io":"custom_dns","dev":"cloudflare","app":"aftermarket_afternic"}},{"i":91,"n":"Hebbia","slug":"hebbia","cat":"Enterprise & Apps","dom":"hebbia.com","tld":".com","dns":"aws_route53","comRel":"primary","aiRel":"defensive_redirect","avail":[".dev"],"after":[],"m":{"com":"aws_route53","ai":"aws_route53","io":"aws_route53","dev":"available","app":"registrar_dns"}},{"i":92,"n":"Mercor","slug":"mercor","cat":"Enterprise & Apps","dom":"mercor.com","tld":".com","dns":"aws_route53","comRel":"primary","aiRel":"third_party_or_separate","avail":[],"after":[],"m":{"com":"aws_route53","ai":"registrar_dns","io":"aws_route53","dev":"cloudflare","app":"cloudflare"}},{"i":93,"n":"Clay","slug":"clay","cat":"Enterprise & Apps","dom":"clay.com","tld":".com","dns":"aws_route53","comRel":"primary","aiRel":"third_party_or_separate","avail":[],"after":[".io"],"m":{"com":"aws_route53","ai":"custom_dns","io":"aftermarket_afternic","dev":"cloudflare","app":"google_cloud_dns"}},{"i":94,"n":"11x","slug":"11x","cat":"Enterprise & Apps","dom":"11x.ai","tld":".ai","dns":"cloudflare","comRel":"third_party_or_separate","aiRel":"primary","avail":[],"after":[],"m":{"com":"cloudflare","ai":"cloudflare","io":"registrar_dns","dev":"google_cloud_dns","app":"google_cloud_dns"}},{"i":95,"n":"Writer","slug":"writer","cat":"Enterprise & Apps","dom":"writer.com","tld":".com","dns":"cloudflare","comRel":"primary","aiRel":"defensive_redirect","avail":[".dev"],"after":[".app"],"m":{"com":"cloudflare","ai":"cloudflare","io":"registrar_dns","dev":"available","app":"aftermarket_sedo"}},{"i":96,"n":"Jasper","slug":"jasper","cat":"Enterprise & Apps","dom":"jasper.ai","tld":".ai","dns":"cloudflare","comRel":"third_party_or_separate","aiRel":"primary","avail":[],"after":[".app"],"m":{"com":"custom_dns","ai":"cloudflare","io":"cloudflare","dev":"registrar_dns","app":"aftermarket_afternic"}},{"i":97,"n":"Copy.ai","slug":"copy","cat":"Enterprise & Apps","dom":"copy.ai","tld":".ai","dns":"cloudflare","comRel":"third_party_or_separate","aiRel":"primary","avail":[],"after":[],"m":{"com":"cloudflare","ai":"cloudflare","io":"registrar_dns","dev":"registrar_dns","app":"vercel_dns"}},{"i":98,"n":"Gamma","slug":"gamma","cat":"Enterprise & Apps","dom":"gamma.app","tld":".app","dns":"cloudflare","comRel":"third_party_or_separate","aiRel":"third_party_or_separate","avail":[],"after":[],"m":{"com":"aws_route53","ai":"custom_dns","io":"cloudflare","dev":"custom_dns","app":"cloudflare"}},{"i":99,"n":"Granola","slug":"granola","cat":"Enterprise & Apps","dom":"granola.ai","tld":".ai","dns":"aws_route53","comRel":"third_party_or_separate","aiRel":"primary","avail":[],"after":[".io",".dev"],"m":{"com":"custom_dns","ai":"aws_route53","io":"aftermarket_afternic","dev":"aftermarket_afternic","app":"aws_route53"}},{"i":100,"n":"Character.AI","slug":"character","cat":"Enterprise & Apps","dom":"character.ai","tld":".ai","dns":"cloudflare","comRel":"third_party_or_separate","aiRel":"primary","avail":[],"after":[".io"],"m":{"com":"registrar_dns","ai":"cloudflare","io":"aftermarket_afternic","dev":"custom_dns","app":"cloudflare"}}];
+    var I18N = {
+      en: {
+        navDocs: "CLI & Action",
+        navCompare: "Comparison",
+        navLaunch: "Open Free 78-TLD Scanner ->",
+        eyebrow: "Empirical DNS, RDAP & Aftermarket Study · N = 100 Startups · 500 Domains",
+        heroTitle: "2026 Top 100 AI Startups TLD Adoption, .ai vs .com & Aftermarket Availability Benchmark",
+        heroLead: "Live read-only DNS nameserver, A-record, and HTTPS redirect measurements across 100 leading AI startups. .ai (41%) edges out .com (40%) as the #1 primary TLD—yet 81.7% of non-.com startups do not control a redirecting exact-match .com, and 36% leave at least one core sibling unregistered.",
+        launcherTitle: "Audit Your Startup Name Across 78 TLDs + USPTO Trademarks (Zero Front-Running)",
+        freePill: "100% Free Forever · Direct IANA RDAP",
+        btnAudit78: "Audit 78 TLDs + USPTO ->",
+        btnNamer: "60-Idea AI Brand Namer ->",
+        regCompareLabel: "1-Click Registrar & Aftermarket Price Check (uses typed name above):",
+        kpi1Title: ".ai Overtakes .com Primary Share",
+        kpi1Sub: "41 on .ai, 40 on .com, 7 on .dev, 5 on .io, and 7 across .co/.app/.new/.tech/.art/.company.",
+        kpi2Title: "Non-.com Startups Redirecting .com",
+        kpi2Sub: "49 of 60 non-.com AI startups operate without owning a 301-redirecting exact-match .com.",
+        kpi3Title: "Open Siblings vs Aftermarket Parking",
+        kpi3Sub: "36% leave >=1 core TLD unregistered; 40% have >=1 sibling parked on Sedo/Afternic/brokers.",
+        kpi4Title: "Primary Authoritative DNS Share",
+        kpi4Sub: "Cloudflare 55%, AWS Route 53 20%, Google Cloud DNS 13%, Registrar/Custom/Vercel 12%.",
+        chart1Title: "Primary Canonical TLD Distribution (N = 100 AI Startups)",
+        chart2Title: "Defensive Domain Ownership & DNS Resilience Findings",
+        suiteTitle: "Picked Your Domain? Run the Pre-Launch Security, Email DNS & AI Search Checks",
+        suiteDesc: "BrandShield 78-TLD + USPTO scanning is 100% free forever. Unlock full remediation playbooks across VibeShield, InboxShield & CiteReady for $2 each or $5 for all 3."
+      },
+      zh: {
+        navDocs: "CLI 与 GitHub Action",
+        navCompare: "工具对比",
+        navLaunch: "免费 78 后缀查重 ->",
+        eyebrow: "2026 实证 DNS / RDAP 与二手域名研究 · N = 100 家 AI 独角兽与新锐 · 500 域名实测",
+        heroTitle: "2026 全球 Top 100 AI 创业公司后缀采用率（.ai 41% vs .com 40%）与二手流通实证报告",
+        heroLead: "基于只读 DNS 权威 NS、A 记录与 HTTPS 跳转头对 100 家代表性 AI 公司的实测：.ai（41%）首次以微弱优势超越 .com（40%）成为第一主域名后缀；但 81.7% 的非 .com 公司未持有可 301 跳转的同名 .com，36% 仍留有至少 1 个核心后缀未注册。",
+        launcherTitle: "一键实测你的创业品牌名：78 后缀官方 RDAP + 美国商标局 USPTO 零抢注查重",
+        freePill: "100% 永久免费 · 官方 RDAP 直连",
+        btnAudit78: "实测 78 后缀 + USPTO ->",
+        btnNamer: "60 创意 AI 起名器 ->",
+        regCompareLabel: "一键跨注册商与二手市场比价（自动带入上方输入词根）：",
+        kpi1Title: ".ai 首次反超 .com 登顶第一后缀",
+        kpi1Sub: "41 家使用 .ai，40 家 .com，7 家 .dev，5 家 .io，其余 7 家分布于 .co/.app/.new 等。",
+        kpi2Title: "非 .com 公司持有同名 .com 跳转率",
+        kpi2Sub: "60 家非 .com AI 公司中有 49 家未掌控同名 .com 跳转，存在品牌分流隐患。",
+        kpi3Title: "未注册空缺后缀 vs 二手停靠率",
+        kpi3Sub: "36% 留有至少 1 个核心后缀未注册；40% 存在同根后缀停靠于 Sedo/Afternic 等经纪商。",
+        kpi4Title: "权威 DNS 基础设施占比",
+        kpi4Sub: "Cloudflare 独占 55%，AWS Route 53 占 20%，Google Cloud DNS 占 13%。",
+        chart1Title: "主域名后缀真实分布（N = 100 家 AI 创业公司）",
+        chart2Title: "防御性后缀保护率与基础设施韧性指标",
+        suiteTitle: "选好域名准备上线？一键完成代码安全、邮箱送达率与 AI 搜索可见度体检",
+        suiteDesc: "BrandShield 78 后缀与商标查重永久免费；VibeShield、InboxShield、CiteReady 完整修复方案单项仅 $2，三合一全套 $5。"
+      }
+    };
+
+    var curLang = "en";
+    try {
+      var saved = localStorage.getItem("of_lang_v5");
+      if (saved === "zh" || saved === "en") curLang = saved;
+    } catch (e) {}
+
+    function escH(s) {
+      return String(s == null ? "" : s)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    // Real-Human Analytics beacon (preserves navigator.webdriver for bot isolation)
+    var sid = "";
+    try {
+      sid = sessionStorage.getItem("op_sid_bs") || "";
+      if (!sid) {
+        sid = "bs_" + Math.random().toString(36).slice(2, 11) + Date.now().toString(36);
+        sessionStorage.setItem("op_sid_bs", sid);
+      }
+    } catch (e) {
+      sid = "bs_" + Math.random().toString(36).slice(2, 11);
+    }
+    var t0 = Date.now();
+
+    function opTrack(ev) {
+      try {
+        var payload = JSON.stringify({
+          site: "brand-checker",
+          event: ev,
+          sessionId: sid,
+          path: "/tld-benchmark-2026",
+          referrer: document.referrer || "",
+          lang: navigator.language || "en",
+          screenW: window.screen ? window.screen.width : 0,
+          tz: Intl.DateTimeFormat().resolvedOptions().timeZone || "",
+          webdriver: Boolean(navigator.webdriver),
+          dwellSec: Math.round((Date.now() - t0) / 1000)
+        });
+        if (navigator.sendBeacon) {
+          var blob = new Blob([payload], { type: "application/json" });
+          navigator.sendBeacon("https://omnipulse-x402.appwrite.network/v1/telemetry", blob);
+        } else {
+          fetch("https://omnipulse-x402.appwrite.network/v1/telemetry", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: payload,
+            keepalive: true
+          }).catch(function() {});
+        }
+      } catch (e) {}
+    }
+
+    function cleanBrandSlug(raw) {
+      var v = String(raw || "").trim().toLowerCase().replace(/^https?:\/\//, "").split("/")[0].split(".")[0];
+      return v.replace(/[^a-z0-9-]/g, "") || "novapulse";
+    }
+
+    function syncRegistrarLinks() {
+      var slug = cleanBrandSlug(document.getElementById("brandQueryInput").value);
+      document.querySelectorAll("[data-reg]").forEach(function(a) {
+        var kind = a.getAttribute("data-reg");
+        if (kind === "godaddy") a.href = "https://www.godaddy.com/domainsearch/find?domainToCheck=" + encodeURIComponent(slug + ".com");
+        else if (kind === "namecheap") a.href = "https://www.namecheap.com/domains/registration/results/?domain=" + encodeURIComponent(slug + ".com");
+        else if (kind === "porkbun") a.href = "https://porkbun.com/checkout/search?q=" + encodeURIComponent(slug + ".ai");
+        else if (kind === "sedo") a.href = "https://sedo.com/search/?keyword=" + encodeURIComponent(slug);
+        else if (kind === "afternic") a.href = "https://www.afternic.com/domains/" + encodeURIComponent(slug + ".com");
+      });
+    }
+
+    var activeCat = "ALL";
+    var searchQ = "";
+
+    function formatComRel(rel) {
+      if (rel === "primary") return "Primary (.com)";
+      if (rel === "defensive_redirect") return "301 Redirects to Primary";
+      if (rel === "available") return "Unregistered (.com Open)";
+      if (rel && rel.indexOf("aftermarket") === 0) return "Aftermarket Broker";
+      return "Separate / 3rd-Party";
+    }
+
+    function formatDns(d) {
+      if (d === "cloudflare") return "Cloudflare";
+      if (d === "aws_route53") return "AWS Route 53";
+      if (d === "google_cloud_dns") return "Google Cloud DNS";
+      if (d === "vercel_dns") return "Vercel DNS";
+      if (d === "registrar_dns") return "Registrar DNS";
+      return "Custom NS";
+    }
+
+    function renderMatrix() {
+      var q = searchQ.trim().toLowerCase();
+      var filtered = ROWS.filter(function(r) {
+        if (activeCat === "AVAIL" && r.avail.length === 0) return false;
+        if (activeCat === "AFTER" && r.after.length === 0 && r.comRel.indexOf("aftermarket") !== 0) return false;
+        if (activeCat !== "ALL" && activeCat !== "AVAIL" && activeCat !== "AFTER" && r.cat !== activeCat) return false;
+        if (!q) return true;
+        return (
+          r.n.toLowerCase().indexOf(q) >= 0 ||
+          r.dom.toLowerCase().indexOf(q) >= 0 ||
+          r.tld.toLowerCase().indexOf(q) >= 0 ||
+          r.dns.toLowerCase().indexOf(q) >= 0 ||
+          r.cat.toLowerCase().indexOf(q) >= 0
+        );
+      });
+
+      var htmlRows = filtered.map(function(r) {
+        var tldCls = r.tld === ".ai" ? "tld-ai" : r.tld === ".com" ? "tld-com" : "tld-alt";
+        var tlds = ["com", "ai", "io", "dev", "app"];
+        var chips = tlds.map(function(t) {
+          var st = r.m[t];
+          var fqdn = r.slug + "." + t;
+          if (st === "available") {
+            return '<a class="mchip mchip-avail" data-outbound="1" target="_blank" rel="noopener" title="Available — Register on GoDaddy" href="https://www.godaddy.com/domainsearch/find?domainToCheck=' + encodeURIComponent(fqdn) + '">.' + t + ' Open</a>';
+          }
+          if (st && st.indexOf("aftermarket") === 0) {
+            var mktUrl = st === "aftermarket_sedo"
+              ? "https://sedo.com/search/?keyword=" + encodeURIComponent(fqdn)
+              : "https://www.afternic.com/domains/" + encodeURIComponent(fqdn);
+            return '<a class="mchip mchip-after" data-outbound="1" target="_blank" rel="noopener" title="Listed on Aftermarket" href="' + mktUrl + '">.' + t + ' Sale</a>';
+          }
+          return '<span class="mchip mchip-taken">.' + t + '</span>';
+        }).join("");
+
+        return '<tr>' +
+          '<td>' + r.i + '</td>' +
+          '<td><strong>' + escH(r.n) + '</strong></td>' +
+          '<td>' + escH(r.cat) + '</td>' +
+          '<td><code>' + escH(r.dom) + '</code></td>' +
+          '<td><span class="tld-pill ' + tldCls + '">' + escH(r.tld) + '</span></td>' +
+          '<td><div class="matrix-chips">' + chips + '</div></td>' +
+          '<td>' + escH(formatComRel(r.comRel)) + '</td>' +
+          '<td>' + escH(formatDns(r.dns)) + '</td>' +
+          '<td><a class="audit-mini" data-scan="1" target="_blank" rel="noopener" href="https://brand-checker.appwrite.network/?q=' + encodeURIComponent(r.slug) + '">78 TLDs -&gt;</a></td>' +
+        '</tr>';
+      }).join("");
+
+      var tb = document.getElementById("benchBody");
+      tb.innerHTML = htmlRows;
+      tb.querySelectorAll("[data-outbound]").forEach(function(el) {
+        el.addEventListener("click", function() { opTrack("outbound"); });
+      });
+      tb.querySelectorAll("[data-scan]").forEach(function(el) {
+        el.addEventListener("click", function() { opTrack("scan"); });
+      });
+    }
+
+    function applyLang(lang) {
+      curLang = lang === "zh" ? "zh" : "en";
+      var dict = I18N[curLang];
+      document.documentElement.lang = curLang;
+      document.getElementById("langSwitchBtn").textContent = curLang === "en" ? "中文" : "EN";
+      document.querySelectorAll("[data-i18n]").forEach(function(el) {
+        var k = el.getAttribute("data-i18n");
+        if (dict[k]) el.textContent = dict[k];
+      });
+      try { localStorage.setItem("of_lang_v5", curLang); } catch (e) {}
+    }
+
+    document.getElementById("langSwitchBtn").addEventListener("click", function() {
+      applyLang(curLang === "en" ? "zh" : "en");
+    });
+
+    document.getElementById("brandQueryInput").addEventListener("input", syncRegistrarLinks);
+
+    document.getElementById("brandAuditForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      var slug = cleanBrandSlug(document.getElementById("brandQueryInput").value);
+      opTrack("scan");
+      window.open("https://brand-checker.appwrite.network/?q=" + encodeURIComponent(slug), "_blank", "noopener");
+    });
+
+    document.getElementById("btnAiNamer").addEventListener("click", function() {
+      var slug = cleanBrandSlug(document.getElementById("brandQueryInput").value);
+      opTrack("scan");
+      window.open("https://brand-checker.appwrite.network/namer?q=" + encodeURIComponent(slug), "_blank", "noopener");
+    });
+
+    document.querySelectorAll("[data-reg]").forEach(function(el) {
+      el.addEventListener("click", function() { opTrack("outbound"); });
+    });
+
+    document.querySelectorAll("[data-track]").forEach(function(el) {
+      el.addEventListener("click", function() { opTrack(el.getAttribute("data-track")); });
+    });
+
+    document.querySelectorAll("#catPills .fpill").forEach(function(btn) {
+      btn.addEventListener("click", function() {
+        activeCat = btn.getAttribute("data-cat") || "ALL";
+        document.querySelectorAll("#catPills .fpill").forEach(function(b) {
+          b.classList.toggle("active", b === btn);
+        });
+        renderMatrix();
+      });
+    });
+
+    document.getElementById("matrixSearch").addEventListener("input", function(e) {
+      searchQ = e.target.value || "";
+      renderMatrix();
+    });
+
+    applyLang(curLang);
+    syncRegistrarLinks();
+    renderMatrix();
+    opTrack("pageview");
+    setTimeout(function() { opTrack("heartbeat"); }, 15000);
+  })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,2656 @@
+{
+  "summary": {
+    "benchmarkTitle": "2026 Top 100 AI Startups TLD Adoption, .ai vs .com & Aftermarket Availability Benchmark",
+    "measuredAt": "2026-11-23T03:07:36.950Z",
+    "sampleSize": 100,
+    "methodology": "Live read-only DNS NS/A resolution (Cloudflare 1.1.1.1 & Google 8.8.8.8) across 5 core startup TLDs (.com, .ai, .io, .dev, .app) + non-intrusive HTTPS Location header inspection on exact-match .com/.ai siblings.",
+    "primaryTldDistribution": {
+      ".com": 40,
+      ".ai": 41,
+      ".company": 1,
+      ".dev": 7,
+      ".new": 1,
+      ".co": 2,
+      ".io": 5,
+      ".tech": 1,
+      ".art": 1,
+      ".app": 1
+    },
+    "primaryDnsInfrastructure": {
+      "custom_dns": 3,
+      "cloudflare": 55,
+      "registrar_dns": 7,
+      "google_cloud_dns": 13,
+      "aws_route53": 20,
+      "vercel_dns": 2
+    },
+    "keyMetrics": {
+      "comPrimaryPct": 40,
+      "aiPrimaryPct": 41,
+      "altDevTldPct": 19,
+      "nonComTotal": 60,
+      "nonComOwnsComRedirect": 11,
+      "nonComOwnsComRedirectPct": 18.3,
+      "comPrimaryTotal": 40,
+      "comOwnsAiRedirect": 12,
+      "comOwnsAiRedirectPct": 30,
+      "startupsWithUnregisteredCoreSibling": 36,
+      "startupsWithAftermarketCoreSibling": 40
+    }
+  },
+  "startups": [
+    {
+      "name": "OpenAI",
+      "slug": "openai",
+      "category": "Foundation Labs",
+      "primaryDomain": "openai.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "custom_dns",
+      "primaryNameservers": [
+        "ns1-02.azure-dns.com",
+        "ns2-02.azure-dns.net",
+        "ns3-02.azure-dns.org"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "available",
+      "siblingRegisteredCount": 4,
+      "availableSiblings": [
+        ".ai"
+      ],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "custom_dns",
+        "ai": "available",
+        "io": "registrar_dns",
+        "dev": "registrar_dns",
+        "app": "registrar_dns"
+      }
+    },
+    {
+      "name": "Anthropic",
+      "slug": "anthropic",
+      "category": "Foundation Labs",
+      "primaryDomain": "anthropic.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "isla.ns.cloudflare.com",
+        "randy.ns.cloudflare.com"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "third_party_or_separate",
+      "siblingRegisteredCount": 4,
+      "availableSiblings": [
+        ".dev"
+      ],
+      "aftermarketSiblings": [
+        ".io"
+      ],
+      "tldMatrix": {
+        "com": "cloudflare",
+        "ai": "custom_dns",
+        "io": "aftermarket_afternic",
+        "dev": "available",
+        "app": "custom_dns"
+      }
+    },
+    {
+      "name": "xAI",
+      "slug": "x",
+      "category": "Foundation Labs",
+      "primaryDomain": "x.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "chelsea.ns.cloudflare.com",
+        "damon.ns.cloudflare.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 4,
+      "availableSiblings": [
+        ".dev"
+      ],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "custom_dns",
+        "ai": "cloudflare",
+        "io": "cloudflare",
+        "dev": "available",
+        "app": "registrar_dns"
+      }
+    },
+    {
+      "name": "Mistral AI",
+      "slug": "mistral",
+      "category": "Foundation Labs",
+      "primaryDomain": "mistral.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "ada.ns.cloudflare.com",
+        "ivan.ns.cloudflare.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [
+        ".dev"
+      ],
+      "tldMatrix": {
+        "com": "cloudflare",
+        "ai": "cloudflare",
+        "io": "custom_dns",
+        "dev": "aftermarket_afternic",
+        "app": "cloudflare"
+      }
+    },
+    {
+      "name": "Cohere",
+      "slug": "cohere",
+      "category": "Foundation Labs",
+      "primaryDomain": "cohere.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "davina.ns.cloudflare.com",
+        "konnor.ns.cloudflare.com"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "defensive_redirect",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [
+        ".app"
+      ],
+      "tldMatrix": {
+        "com": "cloudflare",
+        "ai": "cloudflare",
+        "io": "cloudflare",
+        "dev": "google_cloud_dns",
+        "app": "aftermarket_broker"
+      }
+    },
+    {
+      "name": "DeepSeek",
+      "slug": "deepseek",
+      "category": "Foundation Labs",
+      "primaryDomain": "deepseek.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "custom_dns",
+      "primaryNameservers": [
+        "ns4.dnsv4.com",
+        "ns3.dnsv4.com"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "third_party_or_separate",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [
+        ".dev"
+      ],
+      "tldMatrix": {
+        "com": "custom_dns",
+        "ai": "registrar_dns",
+        "io": "registrar_dns",
+        "dev": "aftermarket_afternic",
+        "app": "cloudflare"
+      }
+    },
+    {
+      "name": "Perplexity",
+      "slug": "perplexity",
+      "category": "Foundation Labs",
+      "primaryDomain": "perplexity.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "emerson.ns.cloudflare.com",
+        "jessica.ns.cloudflare.com"
+      ],
+      "comStatus": "defensive_redirect",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [
+        ".dev",
+        ".app"
+      ],
+      "tldMatrix": {
+        "com": "cloudflare",
+        "ai": "cloudflare",
+        "io": "custom_dns",
+        "dev": "aftermarket_afternic",
+        "app": "aftermarket_broker"
+      }
+    },
+    {
+      "name": "Inflection",
+      "slug": "inflection",
+      "category": "Foundation Labs",
+      "primaryDomain": "inflection.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "rex.ns.cloudflare.com",
+        "violet.ns.cloudflare.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [
+        ".app"
+      ],
+      "tldMatrix": {
+        "com": "aws_route53",
+        "ai": "cloudflare",
+        "io": "aws_route53",
+        "dev": "google_cloud_dns",
+        "app": "aftermarket_broker"
+      }
+    },
+    {
+      "name": "Adept",
+      "slug": "adept",
+      "category": "Foundation Labs",
+      "primaryDomain": "adept.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "eugene.ns.cloudflare.com",
+        "monroe.ns.cloudflare.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 4,
+      "availableSiblings": [
+        ".dev"
+      ],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "aws_route53",
+        "ai": "cloudflare",
+        "io": "registrar_dns",
+        "dev": "available",
+        "app": "custom_dns"
+      }
+    },
+    {
+      "name": "Imbue",
+      "slug": "imbue",
+      "category": "Foundation Labs",
+      "primaryDomain": "imbue.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "registrar_dns",
+      "primaryNameservers": [
+        "ns20.domaincontrol.com",
+        "ns19.domaincontrol.com"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "aftermarket_broker",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [
+        ".ai"
+      ],
+      "tldMatrix": {
+        "com": "registrar_dns",
+        "ai": "aftermarket_broker",
+        "io": "registrar_dns",
+        "dev": "registrar_dns",
+        "app": "custom_dns"
+      }
+    },
+    {
+      "name": "Sakana AI",
+      "slug": "sakana",
+      "category": "Foundation Labs",
+      "primaryDomain": "sakana.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "gabriel.ns.cloudflare.com",
+        "joselyn.ns.cloudflare.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 4,
+      "availableSiblings": [
+        ".io"
+      ],
+      "aftermarketSiblings": [
+        ".app"
+      ],
+      "tldMatrix": {
+        "com": "cloudflare",
+        "ai": "cloudflare",
+        "io": "available",
+        "dev": "cloudflare",
+        "app": "aftermarket_broker"
+      }
+    },
+    {
+      "name": "Contextual AI",
+      "slug": "contextual",
+      "category": "Foundation Labs",
+      "primaryDomain": "contextual.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "martin.ns.cloudflare.com",
+        "noor.ns.cloudflare.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "aws_route53",
+        "ai": "cloudflare",
+        "io": "registrar_dns",
+        "dev": "google_cloud_dns",
+        "app": "custom_dns"
+      }
+    },
+    {
+      "name": "Nous Research",
+      "slug": "nousresearch",
+      "category": "Foundation Labs",
+      "primaryDomain": "nousresearch.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "karl.ns.cloudflare.com",
+        "alice.ns.cloudflare.com"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "aftermarket_afternic",
+      "siblingRegisteredCount": 4,
+      "availableSiblings": [
+        ".io"
+      ],
+      "aftermarketSiblings": [
+        ".ai"
+      ],
+      "tldMatrix": {
+        "com": "cloudflare",
+        "ai": "aftermarket_afternic",
+        "io": "available",
+        "dev": "registrar_dns",
+        "app": "cloudflare"
+      }
+    },
+    {
+      "name": "Prime Intellect",
+      "slug": "primeintellect",
+      "category": "Foundation Labs",
+      "primaryDomain": "primeintellect.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "registrar_dns",
+      "primaryNameservers": [
+        "dns2.registrar-servers.com",
+        "dns1.registrar-servers.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "registrar_dns",
+        "ai": "registrar_dns",
+        "io": "google_cloud_dns",
+        "dev": "vercel_dns",
+        "app": "vercel_dns"
+      }
+    },
+    {
+      "name": "Physical Intelligence",
+      "slug": "physicalintelligence",
+      "category": "Foundation Labs",
+      "primaryDomain": "physicalintelligence.company",
+      "primaryTld": ".company",
+      "primaryDnsProvider": "google_cloud_dns",
+      "primaryNameservers": [
+        "ns-cloud-c2.googledomains.com",
+        "ns-cloud-c4.googledomains.com",
+        "ns-cloud-c1.googledomains.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "third_party_or_separate",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [
+        ".dev",
+        ".app"
+      ],
+      "tldMatrix": {
+        "com": "registrar_dns",
+        "ai": "registrar_dns",
+        "io": "registrar_dns",
+        "dev": "aftermarket_afternic",
+        "app": "aftermarket_afternic"
+      }
+    },
+    {
+      "name": "Poolside",
+      "slug": "poolside",
+      "category": "Foundation Labs",
+      "primaryDomain": "poolside.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "stella.ns.cloudflare.com",
+        "neil.ns.cloudflare.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "registrar_dns",
+        "ai": "cloudflare",
+        "io": "custom_dns",
+        "dev": "cloudflare",
+        "app": "registrar_dns"
+      }
+    },
+    {
+      "name": "Magic",
+      "slug": "magic",
+      "category": "Foundation Labs",
+      "primaryDomain": "magic.dev",
+      "primaryTld": ".dev",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "elinore.ns.cloudflare.com",
+        "tom.ns.cloudflare.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "third_party_or_separate",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "custom_dns",
+        "ai": "cloudflare",
+        "io": "registrar_dns",
+        "dev": "cloudflare",
+        "app": "cloudflare"
+      }
+    },
+    {
+      "name": "Reka AI",
+      "slug": "reka",
+      "category": "Foundation Labs",
+      "primaryDomain": "reka.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "indie.ns.cloudflare.com",
+        "leo.ns.cloudflare.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [
+        ".io"
+      ],
+      "tldMatrix": {
+        "com": "custom_dns",
+        "ai": "cloudflare",
+        "io": "aftermarket_afternic",
+        "dev": "cloudflare",
+        "app": "custom_dns"
+      }
+    },
+    {
+      "name": "AI21 Labs",
+      "slug": "ai21",
+      "category": "Foundation Labs",
+      "primaryDomain": "ai21.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "chance.ns.cloudflare.com",
+        "veronica.ns.cloudflare.com"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "aftermarket_afternic",
+      "siblingRegisteredCount": 4,
+      "availableSiblings": [
+        ".io"
+      ],
+      "aftermarketSiblings": [
+        ".ai"
+      ],
+      "tldMatrix": {
+        "com": "cloudflare",
+        "ai": "aftermarket_afternic",
+        "io": "available",
+        "dev": "registrar_dns",
+        "app": "cloudflare"
+      }
+    },
+    {
+      "name": "Liquid AI",
+      "slug": "liquid",
+      "category": "Foundation Labs",
+      "primaryDomain": "liquid.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "aria.ns.cloudflare.com",
+        "zac.ns.cloudflare.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 3,
+      "availableSiblings": [
+        ".dev",
+        ".app"
+      ],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "aws_route53",
+        "ai": "cloudflare",
+        "io": "custom_dns",
+        "dev": "available",
+        "app": "available"
+      }
+    },
+    {
+      "name": "Cursor",
+      "slug": "cursor",
+      "category": "AI Coding",
+      "primaryDomain": "cursor.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "aws_route53",
+      "primaryNameservers": [
+        "ns-1366.awsdns-42.org",
+        "ns-682.awsdns-21.net",
+        "ns-265.awsdns-33.com"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "third_party_or_separate",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "aws_route53",
+        "ai": "custom_dns",
+        "io": "custom_dns",
+        "dev": "cloudflare",
+        "app": "custom_dns"
+      }
+    },
+    {
+      "name": "Windsurf",
+      "slug": "windsurf",
+      "category": "AI Coding",
+      "primaryDomain": "windsurf.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "google_cloud_dns",
+      "primaryNameservers": [
+        "ns-cloud-b3.googledomains.com",
+        "ns-cloud-b2.googledomains.com",
+        "ns-cloud-b4.googledomains.com"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "defensive_redirect",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "google_cloud_dns",
+        "ai": "google_cloud_dns",
+        "io": "custom_dns",
+        "dev": "vercel_dns",
+        "app": "google_cloud_dns"
+      }
+    },
+    {
+      "name": "Cognition (Devin)",
+      "slug": "cognition",
+      "category": "AI Coding",
+      "primaryDomain": "cognition.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "aws_route53",
+      "primaryNameservers": [
+        "ns-909.awsdns-49.net",
+        "ns-1372.awsdns-43.org",
+        "ns-194.awsdns-24.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [
+        ".app"
+      ],
+      "tldMatrix": {
+        "com": "aws_route53",
+        "ai": "aws_route53",
+        "io": "registrar_dns",
+        "dev": "registrar_dns",
+        "app": "aftermarket_afternic"
+      }
+    },
+    {
+      "name": "Devin",
+      "slug": "devin",
+      "category": "AI Coding",
+      "primaryDomain": "devin.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "aws_route53",
+      "primaryNameservers": [
+        "ns-1474.awsdns-56.org",
+        "ns-145.awsdns-18.com",
+        "ns-1759.awsdns-27.co.uk"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "custom_dns",
+        "ai": "aws_route53",
+        "io": "aws_route53",
+        "dev": "google_cloud_dns",
+        "app": "google_cloud_dns"
+      }
+    },
+    {
+      "name": "Lovable",
+      "slug": "lovable",
+      "category": "AI Coding",
+      "primaryDomain": "lovable.dev",
+      "primaryTld": ".dev",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "rafe.ns.cloudflare.com",
+        "ivan.ns.cloudflare.com"
+      ],
+      "comStatus": "defensive_redirect",
+      "aiStatus": "defensive_redirect",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "cloudflare",
+        "ai": "cloudflare",
+        "io": "custom_dns",
+        "dev": "cloudflare",
+        "app": "cloudflare"
+      }
+    },
+    {
+      "name": "Bolt.new",
+      "slug": "bolt",
+      "category": "AI Coding",
+      "primaryDomain": "bolt.new",
+      "primaryTld": ".new",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "zoe.ns.cloudflare.com",
+        "igor.ns.cloudflare.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "third_party_or_separate",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "custom_dns",
+        "ai": "cloudflare",
+        "io": "custom_dns",
+        "dev": "cloudflare",
+        "app": "cloudflare"
+      }
+    },
+    {
+      "name": "Replit",
+      "slug": "replit",
+      "category": "AI Coding",
+      "primaryDomain": "replit.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "cody.ns.cloudflare.com",
+        "ivy.ns.cloudflare.com"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "third_party_or_separate",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "cloudflare",
+        "ai": "custom_dns",
+        "io": "custom_dns",
+        "dev": "cloudflare",
+        "app": "google_cloud_dns"
+      }
+    },
+    {
+      "name": "v0",
+      "slug": "v0",
+      "category": "AI Coding",
+      "primaryDomain": "v0.dev",
+      "primaryTld": ".dev",
+      "primaryDnsProvider": "vercel_dns",
+      "primaryNameservers": [
+        "ns1.vercel-dns.com",
+        "ns2.vercel-dns.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "third_party_or_separate",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "custom_dns",
+        "ai": "cloudflare",
+        "io": "registrar_dns",
+        "dev": "vercel_dns",
+        "app": "vercel_dns"
+      }
+    },
+    {
+      "name": "Augment Code",
+      "slug": "augmentcode",
+      "category": "AI Coding",
+      "primaryDomain": "augmentcode.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "google_cloud_dns",
+      "primaryNameservers": [
+        "ns-cloud-a3.googledomains.com",
+        "ns-cloud-a4.googledomains.com",
+        "ns-cloud-a2.googledomains.com"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "aftermarket_afternic",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [
+        ".ai",
+        ".app"
+      ],
+      "tldMatrix": {
+        "com": "google_cloud_dns",
+        "ai": "aftermarket_afternic",
+        "io": "custom_dns",
+        "dev": "registrar_dns",
+        "app": "aftermarket_afternic"
+      }
+    },
+    {
+      "name": "Sourcegraph",
+      "slug": "sourcegraph",
+      "category": "AI Coding",
+      "primaryDomain": "sourcegraph.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "lakas.ns.cloudflare.com",
+        "kay.ns.cloudflare.com"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "third_party_or_separate",
+      "siblingRegisteredCount": 3,
+      "availableSiblings": [
+        ".io",
+        ".dev"
+      ],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "cloudflare",
+        "ai": "registrar_dns",
+        "io": "available",
+        "dev": "available",
+        "app": "cloudflare"
+      }
+    },
+    {
+      "name": "Continue",
+      "slug": "continue",
+      "category": "AI Coding",
+      "primaryDomain": "continue.dev",
+      "primaryTld": ".dev",
+      "primaryDnsProvider": "custom_dns",
+      "primaryNameservers": [
+        "dns3.p08.nsone.net",
+        "dns1.p08.nsone.net",
+        "dns4.p08.nsone.net"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "available",
+      "siblingRegisteredCount": 4,
+      "availableSiblings": [
+        ".ai"
+      ],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "cloudflare",
+        "ai": "available",
+        "io": "custom_dns",
+        "dev": "custom_dns",
+        "app": "registrar_dns"
+      }
+    },
+    {
+      "name": "Tabnine",
+      "slug": "tabnine",
+      "category": "AI Coding",
+      "primaryDomain": "tabnine.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "aws_route53",
+      "primaryNameservers": [
+        "ns-757.awsdns-30.net",
+        "ns-1515.awsdns-61.org",
+        "ns-1753.awsdns-27.co.uk"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "third_party_or_separate",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "aws_route53",
+        "ai": "registrar_dns",
+        "io": "google_cloud_dns",
+        "dev": "google_cloud_dns",
+        "app": "cloudflare"
+      }
+    },
+    {
+      "name": "Codeium",
+      "slug": "codeium",
+      "category": "AI Coding",
+      "primaryDomain": "codeium.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "google_cloud_dns",
+      "primaryNameservers": [
+        "ns-cloud-e1.googledomains.com",
+        "ns-cloud-e3.googledomains.com",
+        "ns-cloud-e4.googledomains.com"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "defensive_redirect",
+      "siblingRegisteredCount": 3,
+      "availableSiblings": [
+        ".io",
+        ".app"
+      ],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "google_cloud_dns",
+        "ai": "google_cloud_dns",
+        "io": "available",
+        "dev": "custom_dns",
+        "app": "available"
+      }
+    },
+    {
+      "name": "Supermaven",
+      "slug": "supermaven",
+      "category": "AI Coding",
+      "primaryDomain": "supermaven.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "ray.ns.cloudflare.com",
+        "abby.ns.cloudflare.com"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "available",
+      "siblingRegisteredCount": 1,
+      "availableSiblings": [
+        ".ai",
+        ".io",
+        ".dev",
+        ".app"
+      ],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "cloudflare",
+        "ai": "available",
+        "io": "available",
+        "dev": "available",
+        "app": "available"
+      }
+    },
+    {
+      "name": "Factory",
+      "slug": "factory",
+      "category": "AI Coding",
+      "primaryDomain": "factory.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "aws_route53",
+      "primaryNameservers": [
+        "ns-1778.awsdns-30.co.uk",
+        "ns-270.awsdns-33.com",
+        "ns-789.awsdns-34.net"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "aws_route53",
+        "ai": "aws_route53",
+        "io": "registrar_dns",
+        "dev": "cloudflare",
+        "app": "aws_route53"
+      }
+    },
+    {
+      "name": "All Hands",
+      "slug": "all-hands",
+      "category": "AI Coding",
+      "primaryDomain": "all-hands.dev",
+      "primaryTld": ".dev",
+      "primaryDnsProvider": "google_cloud_dns",
+      "primaryNameservers": [
+        "ns-cloud-d1.googledomains.com",
+        "ns-cloud-d3.googledomains.com",
+        "ns-cloud-d2.googledomains.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "available",
+      "siblingRegisteredCount": 3,
+      "availableSiblings": [
+        ".ai",
+        ".app"
+      ],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "custom_dns",
+        "ai": "available",
+        "io": "custom_dns",
+        "dev": "google_cloud_dns",
+        "app": "available"
+      }
+    },
+    {
+      "name": "CodeRabbit",
+      "slug": "coderabbit",
+      "category": "AI Coding",
+      "primaryDomain": "coderabbit.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "george.ns.cloudflare.com",
+        "josephine.ns.cloudflare.com"
+      ],
+      "comStatus": "defensive_redirect",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 4,
+      "availableSiblings": [
+        ".dev"
+      ],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "cloudflare",
+        "ai": "cloudflare",
+        "io": "vercel_dns",
+        "dev": "available",
+        "app": "cloudflare"
+      }
+    },
+    {
+      "name": "Greptile",
+      "slug": "greptile",
+      "category": "AI Coding",
+      "primaryDomain": "greptile.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "registrar_dns",
+      "primaryNameservers": [
+        "dns1.registrar-servers.com",
+        "dns2.registrar-servers.com"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "third_party_or_separate",
+      "siblingRegisteredCount": 4,
+      "availableSiblings": [
+        ".dev"
+      ],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "registrar_dns",
+        "ai": "registrar_dns",
+        "io": "vercel_dns",
+        "dev": "available",
+        "app": "custom_dns"
+      }
+    },
+    {
+      "name": "Hugging Face",
+      "slug": "huggingface",
+      "category": "Cloud & Inference",
+      "primaryDomain": "huggingface.co",
+      "primaryTld": ".co",
+      "primaryDnsProvider": "aws_route53",
+      "primaryNameservers": [
+        "ns-919.awsdns-50.net",
+        "ns-137.awsdns-17.com",
+        "ns-1452.awsdns-53.org"
+      ],
+      "comStatus": "defensive_redirect",
+      "aiStatus": "aftermarket_broker",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [
+        ".ai"
+      ],
+      "tldMatrix": {
+        "com": "aws_route53",
+        "ai": "aftermarket_broker",
+        "io": "registrar_dns",
+        "dev": "custom_dns",
+        "app": "cloudflare"
+      }
+    },
+    {
+      "name": "Groq",
+      "slug": "groq",
+      "category": "Cloud & Inference",
+      "primaryDomain": "groq.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "imani.ns.cloudflare.com",
+        "jihoon.ns.cloudflare.com"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "third_party_or_separate",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "cloudflare",
+        "ai": "custom_dns",
+        "io": "cloudflare",
+        "dev": "vercel_dns",
+        "app": "vercel_dns"
+      }
+    },
+    {
+      "name": "Together AI",
+      "slug": "together",
+      "category": "Cloud & Inference",
+      "primaryDomain": "together.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "edward.ns.cloudflare.com",
+        "gail.ns.cloudflare.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 4,
+      "availableSiblings": [
+        ".app"
+      ],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "custom_dns",
+        "ai": "cloudflare",
+        "io": "custom_dns",
+        "dev": "aws_route53",
+        "app": "available"
+      }
+    },
+    {
+      "name": "Fireworks AI",
+      "slug": "fireworks",
+      "category": "Cloud & Inference",
+      "primaryDomain": "fireworks.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "aron.ns.cloudflare.com",
+        "darwin.ns.cloudflare.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 4,
+      "availableSiblings": [
+        ".app"
+      ],
+      "aftermarketSiblings": [
+        ".io"
+      ],
+      "tldMatrix": {
+        "com": "cloudflare",
+        "ai": "cloudflare",
+        "io": "aftermarket_afternic",
+        "dev": "custom_dns",
+        "app": "available"
+      }
+    },
+    {
+      "name": "Replicate",
+      "slug": "replicate",
+      "category": "Cloud & Inference",
+      "primaryDomain": "replicate.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "dawn.ns.cloudflare.com",
+        "lou.ns.cloudflare.com"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "defensive_redirect",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "cloudflare",
+        "ai": "cloudflare",
+        "io": "cloudflare",
+        "dev": "cloudflare",
+        "app": "custom_dns"
+      }
+    },
+    {
+      "name": "fal.ai",
+      "slug": "fal",
+      "category": "Cloud & Inference",
+      "primaryDomain": "fal.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "cecelia.ns.cloudflare.com",
+        "cody.ns.cloudflare.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [
+        ".app"
+      ],
+      "tldMatrix": {
+        "com": "aws_route53",
+        "ai": "cloudflare",
+        "io": "cloudflare",
+        "dev": "google_cloud_dns",
+        "app": "aftermarket_broker"
+      }
+    },
+    {
+      "name": "Baseten",
+      "slug": "baseten",
+      "category": "Cloud & Inference",
+      "primaryDomain": "baseten.co",
+      "primaryTld": ".co",
+      "primaryDnsProvider": "google_cloud_dns",
+      "primaryNameservers": [
+        "ns-cloud-e1.googledomains.com",
+        "ns-cloud-e4.googledomains.com",
+        "ns-cloud-e3.googledomains.com"
+      ],
+      "comStatus": "defensive_redirect",
+      "aiStatus": "third_party_or_separate",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "aws_route53",
+        "ai": "registrar_dns",
+        "io": "google_cloud_dns",
+        "dev": "google_cloud_dns",
+        "app": "google_cloud_dns"
+      }
+    },
+    {
+      "name": "Modal",
+      "slug": "modal",
+      "category": "Cloud & Inference",
+      "primaryDomain": "modal.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "aws_route53",
+      "primaryNameservers": [
+        "ns-1468.awsdns-55.org",
+        "ns-1834.awsdns-37.co.uk",
+        "ns-492.awsdns-61.com"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "aftermarket_afternic",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [
+        ".ai"
+      ],
+      "tldMatrix": {
+        "com": "aws_route53",
+        "ai": "aftermarket_afternic",
+        "io": "google_cloud_dns",
+        "dev": "aws_route53",
+        "app": "custom_dns"
+      }
+    },
+    {
+      "name": "Anyscale",
+      "slug": "anyscale",
+      "category": "Cloud & Inference",
+      "primaryDomain": "anyscale.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "aws_route53",
+      "primaryNameservers": [
+        "ns-1469.awsdns-55.org",
+        "ns-1554.awsdns-02.co.uk",
+        "ns-342.awsdns-42.com"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "available",
+      "siblingRegisteredCount": 3,
+      "availableSiblings": [
+        ".ai",
+        ".app"
+      ],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "aws_route53",
+        "ai": "available",
+        "io": "aws_route53",
+        "dev": "aws_route53",
+        "app": "available"
+      }
+    },
+    {
+      "name": "Cerebras",
+      "slug": "cerebras",
+      "category": "Cloud & Inference",
+      "primaryDomain": "cerebras.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "registrar_dns",
+      "primaryNameservers": [
+        "ns03.domaincontrol.com",
+        "ns04.domaincontrol.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "aws_route53",
+        "ai": "registrar_dns",
+        "io": "registrar_dns",
+        "dev": "custom_dns",
+        "app": "registrar_dns"
+      }
+    },
+    {
+      "name": "SambaNova",
+      "slug": "sambanova",
+      "category": "Cloud & Inference",
+      "primaryDomain": "sambanova.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "haley.ns.cloudflare.com",
+        "moura.ns.cloudflare.com"
+      ],
+      "comStatus": "available",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 3,
+      "availableSiblings": [
+        ".com",
+        ".dev"
+      ],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "available",
+        "ai": "cloudflare",
+        "io": "cloudflare",
+        "dev": "available",
+        "app": "cloudflare"
+      }
+    },
+    {
+      "name": "RunPod",
+      "slug": "runpod",
+      "category": "Cloud & Inference",
+      "primaryDomain": "runpod.io",
+      "primaryTld": ".io",
+      "primaryDnsProvider": "aws_route53",
+      "primaryNameservers": [
+        "ns-1410.awsdns-48.org",
+        "ns-1843.awsdns-38.co.uk",
+        "ns-86.awsdns-10.com"
+      ],
+      "comStatus": "defensive_redirect",
+      "aiStatus": "defensive_redirect",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "cloudflare",
+        "ai": "cloudflare",
+        "io": "aws_route53",
+        "dev": "aws_route53",
+        "app": "custom_dns"
+      }
+    },
+    {
+      "name": "Lambda",
+      "slug": "lambda",
+      "category": "Cloud & Inference",
+      "primaryDomain": "lambda.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "jeremy.ns.cloudflare.com",
+        "laylah.ns.cloudflare.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [
+        ".io",
+        ".app"
+      ],
+      "tldMatrix": {
+        "com": "cloudflare",
+        "ai": "cloudflare",
+        "io": "aftermarket_afternic",
+        "dev": "custom_dns",
+        "app": "aftermarket_afternic"
+      }
+    },
+    {
+      "name": "CoreWeave",
+      "slug": "coreweave",
+      "category": "Cloud & Inference",
+      "primaryDomain": "coreweave.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "chance.ns.cloudflare.com",
+        "dolly.ns.cloudflare.com"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "third_party_or_separate",
+      "siblingRegisteredCount": 4,
+      "availableSiblings": [
+        ".dev"
+      ],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "cloudflare",
+        "ai": "registrar_dns",
+        "io": "registrar_dns",
+        "dev": "available",
+        "app": "cloudflare"
+      }
+    },
+    {
+      "name": "Crusoe",
+      "slug": "crusoe",
+      "category": "Cloud & Inference",
+      "primaryDomain": "crusoe.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "khalid.ns.cloudflare.com",
+        "lily.ns.cloudflare.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [
+        ".io",
+        ".app"
+      ],
+      "tldMatrix": {
+        "com": "custom_dns",
+        "ai": "cloudflare",
+        "io": "aftermarket_broker",
+        "dev": "registrar_dns",
+        "app": "aftermarket_broker"
+      }
+    },
+    {
+      "name": "OpenRouter",
+      "slug": "openrouter",
+      "category": "Cloud & Inference",
+      "primaryDomain": "openrouter.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "clark.ns.cloudflare.com",
+        "ulla.ns.cloudflare.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "registrar_dns",
+        "ai": "cloudflare",
+        "io": "registrar_dns",
+        "dev": "cloudflare",
+        "app": "cloudflare"
+      }
+    },
+    {
+      "name": "Etched",
+      "slug": "etched",
+      "category": "Cloud & Inference",
+      "primaryDomain": "etched.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "achiel.ns.cloudflare.com",
+        "cecelia.ns.cloudflare.com"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "defensive_redirect",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "cloudflare",
+        "ai": "cloudflare",
+        "io": "cloudflare",
+        "dev": "google_cloud_dns",
+        "app": "cloudflare"
+      }
+    },
+    {
+      "name": "Modular",
+      "slug": "modular",
+      "category": "Cloud & Inference",
+      "primaryDomain": "modular.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "yevgen.ns.cloudflare.com",
+        "ryleigh.ns.cloudflare.com"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "defensive_redirect",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [
+        ".app"
+      ],
+      "tldMatrix": {
+        "com": "cloudflare",
+        "ai": "cloudflare",
+        "io": "registrar_dns",
+        "dev": "google_cloud_dns",
+        "app": "aftermarket_broker"
+      }
+    },
+    {
+      "name": "LangChain",
+      "slug": "langchain",
+      "category": "Agent Infra & Data",
+      "primaryDomain": "langchain.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "google_cloud_dns",
+      "primaryNameservers": [
+        "ns-cloud-c1.googledomains.com",
+        "ns-cloud-c2.googledomains.com",
+        "ns-cloud-c3.googledomains.com"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "third_party_or_separate",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [
+        ".app"
+      ],
+      "tldMatrix": {
+        "com": "google_cloud_dns",
+        "ai": "aws_route53",
+        "io": "cloudflare",
+        "dev": "google_cloud_dns",
+        "app": "aftermarket_afternic"
+      }
+    },
+    {
+      "name": "LlamaIndex",
+      "slug": "llamaindex",
+      "category": "Agent Infra & Data",
+      "primaryDomain": "llamaindex.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "registrar_dns",
+      "primaryNameservers": [
+        "dns1.registrar-servers.com",
+        "dns2.registrar-servers.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 2,
+      "availableSiblings": [
+        ".io",
+        ".dev",
+        ".app"
+      ],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "registrar_dns",
+        "ai": "registrar_dns",
+        "io": "available",
+        "dev": "available",
+        "app": "available"
+      }
+    },
+    {
+      "name": "Pinecone",
+      "slug": "pinecone",
+      "category": "Agent Infra & Data",
+      "primaryDomain": "pinecone.io",
+      "primaryTld": ".io",
+      "primaryDnsProvider": "aws_route53",
+      "primaryNameservers": [
+        "ns-316.awsdns-39.com",
+        "ns-1018.awsdns-63.net",
+        "ns-1503.awsdns-59.org"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "aftermarket_broker",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [
+        ".ai"
+      ],
+      "tldMatrix": {
+        "com": "custom_dns",
+        "ai": "aftermarket_broker",
+        "io": "aws_route53",
+        "dev": "custom_dns",
+        "app": "google_cloud_dns"
+      }
+    },
+    {
+      "name": "Weaviate",
+      "slug": "weaviate",
+      "category": "Agent Infra & Data",
+      "primaryDomain": "weaviate.io",
+      "primaryTld": ".io",
+      "primaryDnsProvider": "google_cloud_dns",
+      "primaryNameservers": [
+        "ns-cloud-b3.googledomains.com",
+        "ns-cloud-b4.googledomains.com",
+        "ns-cloud-b2.googledomains.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "third_party_or_separate",
+      "siblingRegisteredCount": 4,
+      "availableSiblings": [
+        ".dev"
+      ],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "registrar_dns",
+        "ai": "registrar_dns",
+        "io": "google_cloud_dns",
+        "dev": "available",
+        "app": "registrar_dns"
+      }
+    },
+    {
+      "name": "Qdrant",
+      "slug": "qdrant",
+      "category": "Agent Infra & Data",
+      "primaryDomain": "qdrant.tech",
+      "primaryTld": ".tech",
+      "primaryDnsProvider": "aws_route53",
+      "primaryNameservers": [
+        "ns-1088.awsdns-08.org",
+        "ns-2036.awsdns-62.co.uk",
+        "ns-45.awsdns-05.com"
+      ],
+      "comStatus": "defensive_redirect",
+      "aiStatus": "third_party_or_separate",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "registrar_dns",
+        "ai": "registrar_dns",
+        "io": "aws_route53",
+        "dev": "registrar_dns",
+        "app": "cloudflare"
+      }
+    },
+    {
+      "name": "Chroma",
+      "slug": "trychroma",
+      "category": "Agent Infra & Data",
+      "primaryDomain": "trychroma.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "google_cloud_dns",
+      "primaryNameservers": [
+        "ns-cloud-d1.googledomains.com",
+        "ns-cloud-d2.googledomains.com",
+        "ns-cloud-d3.googledomains.com"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "aftermarket_broker",
+      "siblingRegisteredCount": 2,
+      "availableSiblings": [
+        ".io",
+        ".dev",
+        ".app"
+      ],
+      "aftermarketSiblings": [
+        ".ai"
+      ],
+      "tldMatrix": {
+        "com": "google_cloud_dns",
+        "ai": "aftermarket_broker",
+        "io": "available",
+        "dev": "available",
+        "app": "available"
+      }
+    },
+    {
+      "name": "Browserbase",
+      "slug": "browserbase",
+      "category": "Agent Infra & Data",
+      "primaryDomain": "browserbase.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "cloe.ns.cloudflare.com",
+        "louis.ns.cloudflare.com"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "third_party_or_separate",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "cloudflare",
+        "ai": "registrar_dns",
+        "io": "registrar_dns",
+        "dev": "registrar_dns",
+        "app": "google_cloud_dns"
+      }
+    },
+    {
+      "name": "Exa",
+      "slug": "exa",
+      "category": "Agent Infra & Data",
+      "primaryDomain": "exa.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "cleo.ns.cloudflare.com",
+        "shaz.ns.cloudflare.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "aws_route53",
+        "ai": "cloudflare",
+        "io": "custom_dns",
+        "dev": "cloudflare",
+        "app": "registrar_dns"
+      }
+    },
+    {
+      "name": "Tavily",
+      "slug": "tavily",
+      "category": "Agent Infra & Data",
+      "primaryDomain": "tavily.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "aws_route53",
+      "primaryNameservers": [
+        "ns-144.awsdns-18.com",
+        "ns-1526.awsdns-62.org",
+        "ns-1905.awsdns-46.co.uk"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "defensive_redirect",
+      "siblingRegisteredCount": 4,
+      "availableSiblings": [
+        ".io"
+      ],
+      "aftermarketSiblings": [
+        ".app"
+      ],
+      "tldMatrix": {
+        "com": "aws_route53",
+        "ai": "aws_route53",
+        "io": "available",
+        "dev": "registrar_dns",
+        "app": "aftermarket_afternic"
+      }
+    },
+    {
+      "name": "Firecrawl",
+      "slug": "firecrawl",
+      "category": "Agent Infra & Data",
+      "primaryDomain": "firecrawl.dev",
+      "primaryTld": ".dev",
+      "primaryDnsProvider": "registrar_dns",
+      "primaryNameservers": [
+        "dns1.registrar-servers.com",
+        "dns2.registrar-servers.com"
+      ],
+      "comStatus": "defensive_redirect",
+      "aiStatus": "third_party_or_separate",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [
+        ".app"
+      ],
+      "tldMatrix": {
+        "com": "registrar_dns",
+        "ai": "registrar_dns",
+        "io": "registrar_dns",
+        "dev": "registrar_dns",
+        "app": "aftermarket_afternic"
+      }
+    },
+    {
+      "name": "Scale AI",
+      "slug": "scale",
+      "category": "Agent Infra & Data",
+      "primaryDomain": "scale.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "pam.ns.cloudflare.com",
+        "hugh.ns.cloudflare.com"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "defensive_redirect",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [
+        ".app"
+      ],
+      "tldMatrix": {
+        "com": "cloudflare",
+        "ai": "cloudflare",
+        "io": "aws_route53",
+        "dev": "cloudflare",
+        "app": "aftermarket_afternic"
+      }
+    },
+    {
+      "name": "Weights & Biases",
+      "slug": "wandb",
+      "category": "Agent Infra & Data",
+      "primaryDomain": "wandb.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "elma.ns.cloudflare.com",
+        "justin.ns.cloudflare.com"
+      ],
+      "comStatus": "defensive_redirect",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "google_cloud_dns",
+        "ai": "cloudflare",
+        "io": "google_cloud_dns",
+        "dev": "google_cloud_dns",
+        "app": "google_cloud_dns"
+      }
+    },
+    {
+      "name": "Arize AI",
+      "slug": "arize",
+      "category": "Agent Infra & Data",
+      "primaryDomain": "arize.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "google_cloud_dns",
+      "primaryNameservers": [
+        "ns-cloud-a1.googledomains.com",
+        "ns-cloud-a2.googledomains.com",
+        "ns-cloud-a3.googledomains.com"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "aftermarket_broker",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [
+        ".ai"
+      ],
+      "tldMatrix": {
+        "com": "google_cloud_dns",
+        "ai": "aftermarket_broker",
+        "io": "cloudflare",
+        "dev": "cloudflare",
+        "app": "registrar_dns"
+      }
+    },
+    {
+      "name": "Braintrust",
+      "slug": "braintrust",
+      "category": "Agent Infra & Data",
+      "primaryDomain": "braintrust.dev",
+      "primaryTld": ".dev",
+      "primaryDnsProvider": "aws_route53",
+      "primaryNameservers": [
+        "ns-1502.awsdns-59.org",
+        "ns-1840.awsdns-38.co.uk",
+        "ns-288.awsdns-36.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "third_party_or_separate",
+      "siblingRegisteredCount": 4,
+      "availableSiblings": [
+        ".io"
+      ],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "google_cloud_dns",
+        "ai": "aws_route53",
+        "io": "available",
+        "dev": "aws_route53",
+        "app": "registrar_dns"
+      }
+    },
+    {
+      "name": "Helicone",
+      "slug": "helicone",
+      "category": "Agent Infra & Data",
+      "primaryDomain": "helicone.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "marty.ns.cloudflare.com",
+        "hattie.ns.cloudflare.com"
+      ],
+      "comStatus": "aftermarket_afternic",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 2,
+      "availableSiblings": [
+        ".io",
+        ".dev",
+        ".app"
+      ],
+      "aftermarketSiblings": [
+        ".com"
+      ],
+      "tldMatrix": {
+        "com": "aftermarket_afternic",
+        "ai": "cloudflare",
+        "io": "available",
+        "dev": "available",
+        "app": "available"
+      }
+    },
+    {
+      "name": "Portkey",
+      "slug": "portkey",
+      "category": "Agent Infra & Data",
+      "primaryDomain": "portkey.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "athena.ns.cloudflare.com",
+        "arvind.ns.cloudflare.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 4,
+      "availableSiblings": [
+        ".dev"
+      ],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "aws_route53",
+        "ai": "cloudflare",
+        "io": "registrar_dns",
+        "dev": "available",
+        "app": "cloudflare"
+      }
+    },
+    {
+      "name": "Midjourney",
+      "slug": "midjourney",
+      "category": "Voice, Video & Media",
+      "primaryDomain": "midjourney.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "lucy.ns.cloudflare.com",
+        "dave.ns.cloudflare.com"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "third_party_or_separate",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "cloudflare",
+        "ai": "custom_dns",
+        "io": "custom_dns",
+        "dev": "cloudflare",
+        "app": "google_cloud_dns"
+      }
+    },
+    {
+      "name": "Runway",
+      "slug": "runwayml",
+      "category": "Voice, Video & Media",
+      "primaryDomain": "runwayml.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "aws_route53",
+      "primaryNameservers": [
+        "ns-1093.awsdns-08.org",
+        "ns-2001.awsdns-58.co.uk",
+        "ns-383.awsdns-47.com"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "third_party_or_separate",
+      "siblingRegisteredCount": 4,
+      "availableSiblings": [
+        ".dev"
+      ],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "aws_route53",
+        "ai": "cloudflare",
+        "io": "aws_route53",
+        "dev": "available",
+        "app": "aws_route53"
+      }
+    },
+    {
+      "name": "ElevenLabs",
+      "slug": "elevenlabs",
+      "category": "Voice, Video & Media",
+      "primaryDomain": "elevenlabs.io",
+      "primaryTld": ".io",
+      "primaryDnsProvider": "google_cloud_dns",
+      "primaryNameservers": [
+        "ns-cloud-c1.googledomains.com",
+        "ns-cloud-c2.googledomains.com",
+        "ns-cloud-c3.googledomains.com"
+      ],
+      "comStatus": "defensive_redirect",
+      "aiStatus": "third_party_or_separate",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "google_cloud_dns",
+        "ai": "registrar_dns",
+        "io": "google_cloud_dns",
+        "dev": "cloudflare",
+        "app": "cloudflare"
+      }
+    },
+    {
+      "name": "Suno",
+      "slug": "suno",
+      "category": "Voice, Video & Media",
+      "primaryDomain": "suno.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "evangeline.ns.cloudflare.com",
+        "seth.ns.cloudflare.com"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "defensive_redirect",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "cloudflare",
+        "ai": "cloudflare",
+        "io": "custom_dns",
+        "dev": "vercel_dns",
+        "app": "custom_dns"
+      }
+    },
+    {
+      "name": "Udio",
+      "slug": "udio",
+      "category": "Voice, Video & Media",
+      "primaryDomain": "udio.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "martin.ns.cloudflare.com",
+        "saanvi.ns.cloudflare.com"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "aftermarket_afternic",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [
+        ".ai"
+      ],
+      "tldMatrix": {
+        "com": "cloudflare",
+        "ai": "aftermarket_afternic",
+        "io": "custom_dns",
+        "dev": "registrar_dns",
+        "app": "custom_dns"
+      }
+    },
+    {
+      "name": "Pika",
+      "slug": "pika",
+      "category": "Voice, Video & Media",
+      "primaryDomain": "pika.art",
+      "primaryTld": ".art",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "matt.ns.cloudflare.com",
+        "roxy.ns.cloudflare.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "third_party_or_separate",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "custom_dns",
+        "ai": "registrar_dns",
+        "io": "registrar_dns",
+        "dev": "vercel_dns",
+        "app": "cloudflare"
+      }
+    },
+    {
+      "name": "Luma AI",
+      "slug": "lumalabs",
+      "category": "Voice, Video & Media",
+      "primaryDomain": "lumalabs.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "registrar_dns",
+      "primaryNameservers": [
+        "dns1.registrar-servers.com",
+        "dns2.registrar-servers.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 3,
+      "availableSiblings": [
+        ".io",
+        ".dev"
+      ],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "google_cloud_dns",
+        "ai": "registrar_dns",
+        "io": "available",
+        "dev": "available",
+        "app": "cloudflare"
+      }
+    },
+    {
+      "name": "HeyGen",
+      "slug": "heygen",
+      "category": "Voice, Video & Media",
+      "primaryDomain": "heygen.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "tim.ns.cloudflare.com",
+        "sandra.ns.cloudflare.com"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "defensive_redirect",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [
+        ".app"
+      ],
+      "tldMatrix": {
+        "com": "cloudflare",
+        "ai": "cloudflare",
+        "io": "cloudflare",
+        "dev": "registrar_dns",
+        "app": "aftermarket_broker"
+      }
+    },
+    {
+      "name": "Synthesia",
+      "slug": "synthesia",
+      "category": "Voice, Video & Media",
+      "primaryDomain": "synthesia.io",
+      "primaryTld": ".io",
+      "primaryDnsProvider": "aws_route53",
+      "primaryNameservers": [
+        "ns-1028.awsdns-00.org",
+        "ns-1821.awsdns-35.co.uk",
+        "ns-186.awsdns-23.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "third_party_or_separate",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "custom_dns",
+        "ai": "custom_dns",
+        "io": "aws_route53",
+        "dev": "custom_dns",
+        "app": "aws_route53"
+      }
+    },
+    {
+      "name": "Deepgram",
+      "slug": "deepgram",
+      "category": "Voice, Video & Media",
+      "primaryDomain": "deepgram.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "aws_route53",
+      "primaryNameservers": [
+        "ns-1238.awsdns-26.org",
+        "ns-1610.awsdns-09.co.uk",
+        "ns-20.awsdns-02.com"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "third_party_or_separate",
+      "siblingRegisteredCount": 4,
+      "availableSiblings": [
+        ".app"
+      ],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "aws_route53",
+        "ai": "aws_route53",
+        "io": "aws_route53",
+        "dev": "custom_dns",
+        "app": "available"
+      }
+    },
+    {
+      "name": "Cartesia",
+      "slug": "cartesia",
+      "category": "Voice, Video & Media",
+      "primaryDomain": "cartesia.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "vercel_dns",
+      "primaryNameservers": [
+        "ns1.vercel-dns.com",
+        "ns2.vercel-dns.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "custom_dns",
+        "ai": "vercel_dns",
+        "io": "aws_route53",
+        "dev": "cloudflare",
+        "app": "vercel_dns"
+      }
+    },
+    {
+      "name": "Bland AI",
+      "slug": "bland",
+      "category": "Voice, Video & Media",
+      "primaryDomain": "bland.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "johnathan.ns.cloudflare.com",
+        "lia.ns.cloudflare.com"
+      ],
+      "comStatus": "defensive_redirect",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [
+        ".io",
+        ".dev"
+      ],
+      "tldMatrix": {
+        "com": "cloudflare",
+        "ai": "cloudflare",
+        "io": "aftermarket_afternic",
+        "dev": "aftermarket_afternic",
+        "app": "custom_dns"
+      }
+    },
+    {
+      "name": "Vapi",
+      "slug": "vapi",
+      "category": "Voice, Video & Media",
+      "primaryDomain": "vapi.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "izabella.ns.cloudflare.com",
+        "uriah.ns.cloudflare.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 3,
+      "availableSiblings": [
+        ".io",
+        ".dev"
+      ],
+      "aftermarketSiblings": [
+        ".app"
+      ],
+      "tldMatrix": {
+        "com": "custom_dns",
+        "ai": "cloudflare",
+        "io": "available",
+        "dev": "available",
+        "app": "aftermarket_broker"
+      }
+    },
+    {
+      "name": "Hume AI",
+      "slug": "hume",
+      "category": "Voice, Video & Media",
+      "primaryDomain": "hume.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "jasper.ns.cloudflare.com",
+        "surina.ns.cloudflare.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [
+        ".app"
+      ],
+      "tldMatrix": {
+        "com": "custom_dns",
+        "ai": "cloudflare",
+        "io": "cloudflare",
+        "dev": "custom_dns",
+        "app": "aftermarket_afternic"
+      }
+    },
+    {
+      "name": "Harvey",
+      "slug": "harvey",
+      "category": "Enterprise & Apps",
+      "primaryDomain": "harvey.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "google_cloud_dns",
+      "primaryNameservers": [
+        "ns-cloud-b3.googledomains.com",
+        "ns-cloud-b1.googledomains.com",
+        "ns-cloud-b2.googledomains.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 3,
+      "availableSiblings": [
+        ".dev",
+        ".app"
+      ],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "aws_route53",
+        "ai": "google_cloud_dns",
+        "io": "google_cloud_dns",
+        "dev": "available",
+        "app": "available"
+      }
+    },
+    {
+      "name": "Sierra",
+      "slug": "sierra",
+      "category": "Enterprise & Apps",
+      "primaryDomain": "sierra.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "candy.ns.cloudflare.com",
+        "paul.ns.cloudflare.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 4,
+      "availableSiblings": [
+        ".app"
+      ],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "custom_dns",
+        "ai": "cloudflare",
+        "io": "custom_dns",
+        "dev": "custom_dns",
+        "app": "available"
+      }
+    },
+    {
+      "name": "Decagon",
+      "slug": "decagon",
+      "category": "Enterprise & Apps",
+      "primaryDomain": "decagon.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "pranab.ns.cloudflare.com",
+        "carla.ns.cloudflare.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 3,
+      "availableSiblings": [
+        ".io",
+        ".dev"
+      ],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "cloudflare",
+        "ai": "cloudflare",
+        "io": "available",
+        "dev": "available",
+        "app": "custom_dns"
+      }
+    },
+    {
+      "name": "Glean",
+      "slug": "glean",
+      "category": "Enterprise & Apps",
+      "primaryDomain": "glean.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "google_cloud_dns",
+      "primaryNameservers": [
+        "ns-cloud-b1.googledomains.com",
+        "ns-cloud-b2.googledomains.com",
+        "ns-cloud-b3.googledomains.com"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "third_party_or_separate",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [
+        ".app"
+      ],
+      "tldMatrix": {
+        "com": "google_cloud_dns",
+        "ai": "custom_dns",
+        "io": "custom_dns",
+        "dev": "cloudflare",
+        "app": "aftermarket_afternic"
+      }
+    },
+    {
+      "name": "Hebbia",
+      "slug": "hebbia",
+      "category": "Enterprise & Apps",
+      "primaryDomain": "hebbia.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "aws_route53",
+      "primaryNameservers": [
+        "ns-1183.awsdns-19.org",
+        "ns-1958.awsdns-52.co.uk",
+        "ns-223.awsdns-27.com"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "defensive_redirect",
+      "siblingRegisteredCount": 4,
+      "availableSiblings": [
+        ".dev"
+      ],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "aws_route53",
+        "ai": "aws_route53",
+        "io": "aws_route53",
+        "dev": "available",
+        "app": "registrar_dns"
+      }
+    },
+    {
+      "name": "Mercor",
+      "slug": "mercor",
+      "category": "Enterprise & Apps",
+      "primaryDomain": "mercor.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "aws_route53",
+      "primaryNameservers": [
+        "ns-1147.awsdns-15.org",
+        "ns-1952.awsdns-52.co.uk",
+        "ns-462.awsdns-57.com"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "third_party_or_separate",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "aws_route53",
+        "ai": "registrar_dns",
+        "io": "aws_route53",
+        "dev": "cloudflare",
+        "app": "cloudflare"
+      }
+    },
+    {
+      "name": "Clay",
+      "slug": "clay",
+      "category": "Enterprise & Apps",
+      "primaryDomain": "clay.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "aws_route53",
+      "primaryNameservers": [
+        "ns-1398.awsdns-46.org",
+        "ns-1996.awsdns-57.co.uk",
+        "ns-245.awsdns-30.com"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "third_party_or_separate",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [
+        ".io"
+      ],
+      "tldMatrix": {
+        "com": "aws_route53",
+        "ai": "custom_dns",
+        "io": "aftermarket_afternic",
+        "dev": "cloudflare",
+        "app": "google_cloud_dns"
+      }
+    },
+    {
+      "name": "11x",
+      "slug": "11x",
+      "category": "Enterprise & Apps",
+      "primaryDomain": "11x.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "benedict.ns.cloudflare.com",
+        "desi.ns.cloudflare.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "cloudflare",
+        "ai": "cloudflare",
+        "io": "registrar_dns",
+        "dev": "google_cloud_dns",
+        "app": "google_cloud_dns"
+      }
+    },
+    {
+      "name": "Writer",
+      "slug": "writer",
+      "category": "Enterprise & Apps",
+      "primaryDomain": "writer.com",
+      "primaryTld": ".com",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "wanda.ns.cloudflare.com",
+        "graham.ns.cloudflare.com"
+      ],
+      "comStatus": "primary",
+      "aiStatus": "defensive_redirect",
+      "siblingRegisteredCount": 4,
+      "availableSiblings": [
+        ".dev"
+      ],
+      "aftermarketSiblings": [
+        ".app"
+      ],
+      "tldMatrix": {
+        "com": "cloudflare",
+        "ai": "cloudflare",
+        "io": "registrar_dns",
+        "dev": "available",
+        "app": "aftermarket_sedo"
+      }
+    },
+    {
+      "name": "Jasper",
+      "slug": "jasper",
+      "category": "Enterprise & Apps",
+      "primaryDomain": "jasper.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "junade.ns.cloudflare.com",
+        "lovisa.ns.cloudflare.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [
+        ".app"
+      ],
+      "tldMatrix": {
+        "com": "custom_dns",
+        "ai": "cloudflare",
+        "io": "cloudflare",
+        "dev": "registrar_dns",
+        "app": "aftermarket_afternic"
+      }
+    },
+    {
+      "name": "Copy.ai",
+      "slug": "copy",
+      "category": "Enterprise & Apps",
+      "primaryDomain": "copy.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "jacqueline.ns.cloudflare.com",
+        "kanye.ns.cloudflare.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "cloudflare",
+        "ai": "cloudflare",
+        "io": "registrar_dns",
+        "dev": "registrar_dns",
+        "app": "vercel_dns"
+      }
+    },
+    {
+      "name": "Gamma",
+      "slug": "gamma",
+      "category": "Enterprise & Apps",
+      "primaryDomain": "gamma.app",
+      "primaryTld": ".app",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "major.ns.cloudflare.com",
+        "tricia.ns.cloudflare.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "third_party_or_separate",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [],
+      "tldMatrix": {
+        "com": "aws_route53",
+        "ai": "custom_dns",
+        "io": "cloudflare",
+        "dev": "custom_dns",
+        "app": "cloudflare"
+      }
+    },
+    {
+      "name": "Granola",
+      "slug": "granola",
+      "category": "Enterprise & Apps",
+      "primaryDomain": "granola.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "aws_route53",
+      "primaryNameservers": [
+        "ns-1255.awsdns-28.org",
+        "ns-1786.awsdns-31.co.uk",
+        "ns-241.awsdns-30.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [
+        ".io",
+        ".dev"
+      ],
+      "tldMatrix": {
+        "com": "custom_dns",
+        "ai": "aws_route53",
+        "io": "aftermarket_afternic",
+        "dev": "aftermarket_afternic",
+        "app": "aws_route53"
+      }
+    },
+    {
+      "name": "Character.AI",
+      "slug": "character",
+      "category": "Enterprise & Apps",
+      "primaryDomain": "character.ai",
+      "primaryTld": ".ai",
+      "primaryDnsProvider": "cloudflare",
+      "primaryNameservers": [
+        "cora.ns.cloudflare.com",
+        "elijah.ns.cloudflare.com"
+      ],
+      "comStatus": "third_party_or_separate",
+      "aiStatus": "primary",
+      "siblingRegisteredCount": 5,
+      "availableSiblings": [],
+      "aftermarketSiblings": [
+        ".io"
+      ],
+      "tldMatrix": {
+        "com": "registrar_dns",
+        "ai": "cloudflare",
+        "io": "aftermarket_afternic",
+        "dev": "custom_dns",
+        "app": "cloudflare"
+      }
+    }
+  ]
+}
