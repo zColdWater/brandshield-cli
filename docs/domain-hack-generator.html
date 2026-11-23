@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Free Domain Hack Generator &amp; Live Short ccTLD Splitter (185+ TLDs) | BrandShield</title>
+<meta name="description" content="Split any brand name or word into short creative domain hacks across 185+ real IANA extensions (like b.in, line.ar, cur.so, omnifor.ge) with live DNS/RDAP availability verification and direct registrar links." />
+<link rel="canonical" href="https://zcoldwater.github.io/brandshield-cli/domain-hack-generator.html" />
+<link rel="icon" type="image/svg+xml" href="https://brand-checker.appwrite.network/favicon.svg?v=6" />
+<link rel="icon" type="image/png" sizes="32x32" href="https://brand-checker.appwrite.network/favicon.ico?v=6" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Free Domain Hack Generator &amp; Live Short ccTLD Splitter | BrandShield" />
+<meta property="og:description" content="Generate and live-verify creative domain hacks (b.in, line.ar, stri.pe, omnifor.ge) across 185+ real IANA extensions. 100% free, zero search logging." />
+<meta property="og:url" content="https://zcoldwater.github.io/brandshield-cli/domain-hack-generator.html" />
+<meta property="og:image" content="https://brand-checker.appwrite.network/assets/cover-brandshield-free.png" />
+<meta property="og:image:width" content="1280" />
+<meta property="og:image:height" content="720" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Free Domain Hack Generator &amp; Live Short ccTLD Splitter | BrandShield" />
+<meta name="twitter:description" content="Split any brand into creative short domain hacks across 185+ real IANA TLDs and verify live availability in 1 second." />
+<meta name="twitter:image" content="https://brand-checker.appwrite.network/assets/cover-brandshield-free.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"BrandShield Free Domain Hack Generator","url":"https://zcoldwater.github.io/brandshield-cli/domain-hack-generator.html","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"BrandShield","item":"https://brand-checker.appwrite.network/"},{"@type":"ListItem","position":2,"name":"Domain Hack Generator","item":"https://zcoldwater.github.io/brandshield-cli/domain-hack-generator.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a domain hack?","acceptedAnswer":{"@type":"Answer","text":"A domain hack combines a domain label and a real top-level domain (TLD) to spell a full brand word or short memorable phrase, such as line.ar, cur.so, omnifor.ge, or b.in."}},{"@type":"Question","name":"Does this generator check live availability?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every generated hack is verified live against BrandShield's stateless Anycast DNS & IANA RDAP API with zero search logging."}},{"@type":"Question","name":"Are country-code TLDs (ccTLDs) safe for startups?","acceptedAnswer":{"@type":"Answer","text":"Many ccTLDs like .io, .ai, .co, .me, .so, .gg, and .sh are open worldwide. Some ccTLDs require local presence, so always review registrar rules and check federal USPTO marks before launching."}}]}]}</script>
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #000000;
+    --surface: #141417;
+    --surface-2: #1c1c21;
+    --border: rgba(255, 255, 255, 0.1);
+    --border-strong: rgba(255, 255, 255, 0.18);
+    --ink: #f5f5f7;
+    --ink-body: #b4b4bc;
+    --ink-muted: #8a8a93;
+    --accent: #a366d9;
+    --accent-soft: rgba(163, 102, 217, 0.15);
+    --green: #22e55c;
+    --green-bg: rgba(34, 229, 92, 0.12);
+    --red: #ff3b3b;
+    --red-bg: rgba(255, 59, 59, 0.12);
+    --blue: #3b93ff;
+    --blue-bg: rgba(59, 147, 255, 0.12);
+  }
+  [data-theme="light"] {
+    color-scheme: light;
+    --bg: #ffffff;
+    --surface: #f8fafc;
+    --surface-2: #f1f5f9;
+    --border: #e2e8f0;
+    --border-strong: #cbd5e1;
+    --ink: #0f172a;
+    --ink-body: #334155;
+    --ink-muted: #64748b;
+    --accent: #7c3aed;
+    --accent-soft: rgba(124, 58, 237, 0.08);
+    --green: #16a34a;
+    --green-bg: #dcfce7;
+    --red: #dc2626;
+    --red-bg: #fee2e2;
+    --blue: #2563eb;
+    --blue-bg: #dbeafe;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.55;
+  }
+  .mono { font-family: "JetBrains Mono", ui-monospace, monospace; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  header {
+    position: sticky; top: 0; z-index: 40;
+    background: var(--bg); border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    max-width: 1180px; margin: 0 auto; padding: 12px 22px;
+    display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+  }
+  .brand { display: inline-flex; align-items: center; gap: 9px; font-weight: 800; font-size: 16px; color: var(--ink); text-decoration: none !important; }
+  .nav-links { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; font-size: 13px; }
+  .nav-links a { color: var(--ink-body); font-weight: 500; }
+  .nav-links a:hover { color: var(--ink); text-decoration: none; }
+  .pill-btn {
+    padding: 5px 10px; border-radius: 7px; border: 1px solid var(--border-strong);
+    background: var(--surface); color: var(--ink); font-size: 12px; font-weight: 600; cursor: pointer; font-family: inherit;
+  }
+  main { max-width: 1180px; margin: 0 auto; padding: 34px 22px 64px; }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 7px; padding: 4px 11px; border-radius: 999px;
+    background: var(--accent-soft); border: 1px solid rgba(163, 102, 217, 0.35); color: var(--accent);
+    font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
+  }
+  h1 { margin: 12px 0 10px; font-size: clamp(28px, 4vw, 44px); font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; }
+  .lead { margin: 0 0 22px; max-width: 720px; color: var(--ink-body); font-size: 15.5px; }
+  .search-bar {
+    display: flex; gap: 10px; flex-wrap: wrap; padding: 8px;
+    border-radius: 13px; border: 1.5px solid var(--accent); background: var(--surface);
+    max-width: 780px;
+  }
+  .search-bar input {
+    flex: 1; min-width: 220px; height: 42px; padding: 0 12px; border: 0; outline: none;
+    background: transparent; color: var(--ink); font-size: 16px; font-weight: 600; font-family: inherit;
+  }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+    padding: 0 18px; height: 42px; border-radius: 9px; border: 1px solid var(--border-strong);
+    background: var(--surface-2); color: var(--ink); font-size: 13.5px; font-weight: 700;
+    cursor: pointer; font-family: inherit; text-decoration: none !important;
+  }
+  .btn-primary { background: var(--accent); border-color: var(--accent); color: #ffffff; }
+  .btn-ok { background: var(--green-bg); border-color: rgba(34, 229, 92, 0.35); color: var(--green); }
+  .chips { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; margin: 14px 0 24px; font-size: 12.5px; color: var(--ink-muted); }
+  .chip {
+    padding: 5px 11px; border-radius: 999px; border: 1px solid var(--border-strong); background: var(--surface);
+    color: var(--ink); font-size: 12px; font-weight: 600; cursor: pointer; font-family: "JetBrains Mono", monospace;
+  }
+  .chip:hover { border-color: var(--accent); color: var(--accent); }
+  .status-line { font-size: 13px; color: var(--ink-muted); margin-bottom: 14px; min-height: 20px; }
+  .hack-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 12px; }
+  .hack-card {
+    border: 1px solid var(--border); border-radius: 12px; background: var(--surface); padding: 15px 16px;
+    display: flex; flex-direction: column; gap: 10px; transition: border-color 140ms ease;
+  }
+  .hack-card.avail { border-color: rgba(34, 229, 92, 0.32); }
+  .hack-card.blue { border-color: rgba(59, 147, 255, 0.35); }
+  .hack-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+  .hack-dom { font-size: 19px; font-weight: 800; letter-spacing: -0.02em; }
+  .hack-dom .dot-tld { color: var(--accent); }
+  .badge {
+    padding: 3px 9px; border-radius: 999px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em;
+  }
+  .badge.avail { background: var(--green-bg); color: var(--green); }
+  .badge.taken { background: var(--red-bg); color: var(--red); }
+  .badge.blue { background: var(--blue-bg); color: var(--blue); }
+  .badge.checking { background: var(--surface-2); color: var(--ink-muted); }
+  .hack-meta { font-size: 12px; color: var(--ink-muted); }
+  .hack-actions { display: flex; gap: 7px; flex-wrap: wrap; margin-top: auto; }
+  .hack-actions a {
+    padding: 6px 11px; border-radius: 7px; font-size: 12px; font-weight: 700; text-decoration: none !important;
+    border: 1px solid var(--border-strong); background: var(--surface-2); color: var(--ink);
+  }
+  .hack-actions a.primary-reg { background: var(--green-bg); border-color: rgba(34, 229, 92, 0.4); color: var(--green); }
+  .funnel-strip {
+    margin-top: 30px; padding: 20px 22px; border-radius: 14px; border: 1px solid var(--border-strong);
+    background: var(--surface); display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  }
+  .faq-wrap { margin-top: 36px; display: grid; gap: 10px; }
+  details { border: 1px solid var(--border); border-radius: 10px; background: var(--surface); padding: 13px 16px; }
+  summary { font-weight: 700; cursor: pointer; font-size: 14.5px; }
+  details p { margin: 8px 0 0; font-size: 13.5px; color: var(--ink-body); }
+  footer { max-width: 1180px; margin: 0 auto; padding: 24px 22px 44px; border-top: 1px solid var(--border); font-size: 12.5px; color: var(--ink-muted); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+<header>
+  <div class="nav-inner">
+    <a class="brand" href="https://brand-checker.appwrite.network/">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="#a366d9" aria-hidden="true"><polygon points="14.2,2.2 5.6,13.6 11.4,13.6 9.8,21.8 18.6,10.2 12.7,10.2"/></svg>
+      <span>BrandShield</span>
+    </a>
+    <nav class="nav-links">
+      <a href="https://brand-checker.appwrite.network/">78-TLD Search</a>
+      <a href="https://brand-checker.appwrite.network/tlds">78-TLD Prices</a>
+      <a href="./domain-renewal-5yr-calculator.html">5-Year Renewal Calc</a>
+      <a href="./ai-startup-tld-benchmark-2026.html">2026 AI TLD Study</a>
+      <a href="https://vibe-checker.appwrite.network/" target="_blank" rel="noopener">VibeShield ($2 Fix)</a>
+      <button type="button" class="pill-btn" id="theme-btn">Light / Dark</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="eyebrow">185+ REAL IANA EXTENSIONS · LIVE DNS/RDAP · 100% FREE</div>
+  <h1>Free Domain Hack Generator &amp; Short ccTLD Splitter</h1>
+  <p class="lead">Split any startup name or English word into ultra-short creative domain hacks (like <span class="mono">line.ar</span>, <span class="mono">cur.so</span>, <span class="mono">omnifor.ge</span>, or <span class="mono">b.in</span>) and live-verify availability against BrandShield's zero-log DNS/RDAP engine.</p>
+
+  <form id="hack-form" class="search-bar" autocomplete="off">
+    <input id="word-input" type="text" maxlength="48" value="omniforge" placeholder="Type any word or brand (e.g. omniforge, linear, cursor, stripe, binance)..." aria-label="Word or brand name" required />
+    <button type="submit" class="btn btn-primary" id="run-btn">Generate &amp; Verify Live</button>
+  </form>
+
+  <div class="chips">
+    <span>Try live:</span>
+    <button type="button" class="chip" data-w="omniforge">omniforge</button>
+    <button type="button" class="chip" data-w="linear">linear</button>
+    <button type="button" class="chip" data-w="cursor">cursor</button>
+    <button type="button" class="chip" data-w="stripe">stripe</button>
+    <button type="button" class="chip" data-w="binance">binance</button>
+    <button type="button" class="chip" data-w="notion">notion</button>
+    <button type="button" class="chip" data-w="delicious">delicious</button>
+    <button type="button" class="chip" data-w="studio">studio</button>
+  </div>
+
+  <div id="status-line" class="status-line"></div>
+  <div id="hack-grid" class="hack-grid"></div>
+
+  <section style="margin-top:34px">
+    <div class="eyebrow" style="margin-bottom:10px">INSTANT OFFLINE PREFIX / SUFFIX COMBINER</div>
+    <h2 style="margin:0 0 6px;font-size:22px;letter-spacing:-0.02em">Prefix &amp; Suffix Startup Brand Combinations</h2>
+    <p style="margin:0 0 14px;font-size:13.5px;color:var(--ink-body)">If the root <span class="mono">.com</span> is taken, click any clean modifier below to launch a live 78-TLD + federal USPTO trademark check on BrandShield or jump directly to register.</p>
+    <div id="combo-grid" class="hack-grid"></div>
+  </section>
+
+  <section class="funnel-strip">
+    <div style="max-width:680px">
+      <h2 style="margin:0 0 4px;font-size:18px">Found a short domain hack? Clear trademarks &amp; launch security next.</h2>
+      <p style="margin:0;font-size:13.5px;color:var(--ink-body)">Check all 78 extensions + federal USPTO marks free on BrandShield, then lock down your site security on VibeShield ($2 Fix) or email DNS on InboxShield ($2 Fix).</p>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <a class="btn btn-primary" id="cta-full-brand" href="https://brand-checker.appwrite.network/?q=omniforge">Full 78-TLD &amp; USPTO Check -&gt;</a>
+      <a class="btn" href="https://omnipulse-x402.appwrite.network/go/gumroad/suite" target="_blank" rel="noopener">All 4 Launch Audits $5 -&gt;</a>
+    </div>
+  </section>
+
+  <section class="faq-wrap">
+    <details open>
+      <summary>How does the Domain Hack Generator split words?</summary>
+      <p>It matches exact 2, 3, and 4-letter suffixes (like <span class="mono">linear -&gt; line.ar</span>, <span class="mono">stripe -&gt; stri.pe</span>), ultra-short prefix splits (like <span class="mono">binance -&gt; b.in</span>), and vowel-dropped phonetic splits (like <span class="mono">studio -&gt; stud.io</span>) against 185+ real IANA top-level domains, then queries live DNS/RDAP via BrandShield's free API.</p>
+    </details>
+    <details>
+      <summary>Are domain hacks good for SEO and email deliverability?</summary>
+      <p>Google treats modern ccTLDs like <span class="mono">.io</span>, <span class="mono">.ai</span>, <span class="mono">.co</span>, and <span class="mono">.me</span> as generic extensions, while country-specific hacks (e.g. <span class="mono">.ar</span>, <span class="mono">.ge</span>, <span class="mono">.pe</span>) work best as short brand redirectors or marketing links paired with a canonical <span class="mono">.com</span> or <span class="mono">.ai</span>. Always configure SPF, DKIM, and DMARC before sending email.</p>
+    </details>
+    <details>
+      <summary>Does BrandShield log or front-run searched hacks?</summary>
+      <p>Never. All lookups execute statelessly in memory via read-only DNS/RDAP queries with zero database writes.</p>
+    </details>
+  </section>
+</main>
+
+<footer>
+  <span>BrandShield · OmniForge Agent Arena Studio · 100% Free Domain &amp; USPTO Tools</span>
+  <div style="display:flex;gap:14px;flex-wrap:wrap">
+    <a href="https://brand-checker.appwrite.network/">BrandShield App</a>
+    <a href="https://brand-checker.appwrite.network/tlds">78-TLD Prices</a>
+    <a href="./domain-renewal-5yr-calculator.html">5-Year Renewal Calc</a>
+    <a href="https://github.com/zColdWater/brandshield-cli" target="_blank" rel="noopener">GitHub CLI</a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var API_BASE = "https://brand-checker.appwrite.network";
+  var HACK_TLDS = [
+    "ac","ad","ae","af","ag","ai","al","am","ao","ar","as","at","au","az","ba","bb","bd","be","bf","bg","bh","bi","bj","bm","bn","bo","br","bs","bt","bw","by","bz",
+    "ca","cc","cd","cf","cg","ch","ci","ck","cl","cm","cn","co","cr","cu","cv","cx","cy","cz","de","dj","dk","dm","do","dz","ec","ee","eg","er","es","et","eu",
+    "fi","fj","fm","fo","fr","ga","gd","ge","gf","gg","gh","gi","gl","gm","gn","gp","gq","gr","gt","gu","gw","gy","hk","hn","hr","ht","hu",
+    "id","ie","il","im","in","io","iq","ir","is","it","je","jm","jo","jp","ke","kg","kh","ki","km","kn","kr","kw","ky","kz",
+    "la","lb","lc","li","lk","lr","ls","lt","lu","lv","ly","ma","mc","md","me","mg","mk","ml","mm","mn","mo","mp","mq","mr","ms","mt","mu","mv","mw","mx","my","mz",
+    "na","nc","ne","nf","ng","ni","nl","no","np","nr","nu","nz","om","pa","pe","pf","pg","ph","pk","pl","pm","pn","pr","ps","pt","pw","py","qa","re","ro","rs","ru","rw",
+    "sa","sb","sc","sd","se","sg","sh","si","sk","sl","sm","sn","so","sr","st","sv","sx","sy","sz","tc","td","tf","tg","th","tj","tk","tl","tm","tn","to","tr","tt","tv","tw","tz",
+    "ua","ug","uk","us","uy","uz","va","vc","ve","vg","vi","vn","vu","wf","ws","ye","yt","za","zm","zw",
+    "app","art","bar","bet","bio","biz","bot","box","buy","cam","car","ceo","com","day","dev","dog","eco","fan","fit","fly","fun","fyi","hot","ice","inc","ing","ink","joy",
+    "law","lol","ltd","map","net","new","now","nyc","one","org","pay","pet","pic","pin","pro","pub","red","rip","run","ski","tax","tel","top","uno","vet","vin","vip","win","wow","xyz",
+    "blog","bond","chat","club","code","cool","date","desi","farm","film","flow","free","game","gift","gold","guru","help","host","info","life","link","live","loan","love","menu","mobi",
+    "name","news","page","plus","rent","rich","sale","shop","show","site","spot","star","team","tech","tips","tube","wiki","work","zone"
+  ];
+  var TLD_SET = {};
+  for (var i = 0; i < HACK_TLDS.length; i++) TLD_SET[HACK_TLDS[i]] = 1;
+
+  var form = document.getElementById("hack-form");
+  var input = document.getElementById("word-input");
+  var grid = document.getElementById("hack-grid");
+  var comboGrid = document.getElementById("combo-grid");
+  var statusEl = document.getElementById("status-line");
+  var ctaFull = document.getElementById("cta-full-brand");
+
+  var MODIFIERS = [
+    ["get", "", "Action Prefix"], ["try", "", "Action Prefix"], ["use", "", "Action Prefix"], ["with", "", "Clean Prefix"],
+    ["run", "", "Dev Prefix"], ["open", "", "OSS Prefix"], ["", "hq", "Startup Standard"], ["", "ai", "AI Suffix"],
+    ["", "labs", "R&D Suffix"], ["", "cloud", "Infra Suffix"], ["", "stack", "Dev Suffix"], ["", "kit", "SDK Suffix"],
+    ["", "flow", "Workflow Suffix"], ["", "pulse", "Telemetry Suffix"], ["", "shield", "Security Suffix"], ["", "pilot", "Copilot Suffix"],
+    ["", "base", "Platform Suffix"], ["", "ops", "Ops Suffix"]
+  ];
+
+  function renderCombos(clean) {
+    if (!comboGrid || !clean) return;
+    comboGrid.innerHTML = MODIFIERS.map(function (m) {
+      var slug = m[0] + clean + m[1];
+      var comDom = slug + ".com";
+      var bsUrl = API_BASE + "/?q=" + encodeURIComponent(slug);
+      var gdUrl = "https://www.godaddy.com/domainsearch/find?domainToCheck=" + encodeURIComponent(comDom);
+      return '<article class="hack-card">' +
+        '<div class="hack-top"><div class="hack-dom mono" style="font-size:16.5px">' + esc(m[0]) + '<span style="color:var(--ink)">' + esc(clean) + '</span><span class="dot-tld">' + esc(m[1]) + '</span>.com</div><span class="badge checking">' + esc(m[2]) + '</span></div>' +
+        '<div class="hack-actions"><a class="primary-reg" href="' + esc(bsUrl) + '">Scan 78 TLDs &amp; USPTO -&gt;</a><a href="' + esc(gdUrl) + '" target="_blank" rel="noopener">GoDaddy .com -&gt;</a></div>' +
+      '</article>';
+    }).join("");
+  }
+
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+
+  function generateHacks(raw) {
+    var s = String(raw || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+    if (s.length < 3) return [];
+    var out = [], seen = {};
+    function push(left, tld, kind, note) {
+      if (!left || left.length < 1 || !TLD_SET[tld]) return;
+      var dom = left + "." + tld;
+      if (seen[dom]) return;
+      seen[dom] = 1;
+      out.push({ left: left, tld: tld, domain: dom, kind: kind, note: note, status: "checking" });
+    }
+    // 1. Exact suffix splits (4, 3, 2 chars)
+    [4, 3, 2].forEach(function (n) {
+      if (s.length > n) {
+        var l = s.slice(0, -n), t = s.slice(-n);
+        push(l, t, "Exact Suffix Hack", "Spells full word \"" + s + "\"");
+      }
+    });
+    // 2. Prefix ultra-short splits (e.g. binance -> b.in, bi.na, bina.nc)
+    for (var k = 1; k <= Math.min(5, s.length - 2); k++) {
+      var t2 = s.slice(k, k + 2);
+      if (t2.length === 2) push(s.slice(0, k), t2, "Ultra-Short Prefix Hack", "Compact " + (k + 2) + "-char shorthand");
+      var t3 = s.slice(k, k + 3);
+      if (t3.length === 3) push(s.slice(0, k), t3, "Short Prefix Hack", "Compact " + (k + 3) + "-char shorthand");
+    }
+    // 3. Vowel-dropped suffix hack (e.g. flicker -> flick.er / flck.er)
+    var noV = s.replace(/[aeiou](?=[a-z])/g, "");
+    if (noV.length >= 4 && noV !== s) {
+      [3, 2].forEach(function (n) {
+        if (noV.length > n) push(noV.slice(0, -n), noV.slice(-n), "Consonant Hack", "Web 2.0 compact spelling");
+      });
+    }
+    // 4. Add classic short companion hacks
+    ["io","ai","co","so","sh","gg","me","to","ly"].forEach(function (ext) {
+      if (out.length < 18) push(s, ext, "Short Companion TLD", "Startup-standard short TLD");
+    });
+    return out.slice(0, 18);
+  }
+
+  function renderCards(items) {
+    if (!items.length) {
+      grid.innerHTML = '<div style="color:var(--ink-muted)">Enter at least 3 letters to generate domain hacks.</div>';
+      return;
+    }
+    grid.innerHTML = items.map(function (it) {
+      var st = it.status || "checking";
+      var cls = st === "available" ? "avail" : (it.aftermarket ? "blue" : (st === "taken" ? "taken" : "checking"));
+      var lbl = st === "available" ? "Available" : (it.aftermarket ? "For Sale" : (st === "taken" ? "Registered" : "Checking..."));
+      var gdUrl = "https://www.godaddy.com/domainsearch/find?domainToCheck=" + encodeURIComponent(it.domain);
+      var pbUrl = "https://porkbun.com/checkout/search?q=" + encodeURIComponent(it.domain);
+      var bsUrl = API_BASE + "/?q=" + encodeURIComponent(it.domain);
+      var actHtml = st === "available"
+        ? '<a class="primary-reg" href="' + esc(gdUrl) + '" target="_blank" rel="noopener">Register GoDaddy -&gt;</a>' +
+          '<a href="' + esc(pbUrl) + '" target="_blank" rel="noopener">Porkbun -&gt;</a>' +
+          '<a href="' + esc(bsUrl) + '">RDAP &amp; USPTO</a>'
+        : '<a href="' + esc(gdUrl) + '" target="_blank" rel="noopener">Broker / Market -&gt;</a>' +
+          '<a href="' + esc(bsUrl) + '">Inspect RDAP &amp; DNS</a>';
+      return '<article class="hack-card ' + cls + '">' +
+        '<div class="hack-top">' +
+          '<div class="hack-dom mono">' + esc(it.left) + '<span class="dot-tld">.' + esc(it.tld) + '</span></div>' +
+          '<span class="badge ' + cls + '">' + esc(lbl) + '</span>' +
+        '</div>' +
+        '<div class="hack-meta">' + esc(it.kind) + ' · ' + esc(it.note) + (it.registrar ? (' · ' + esc(it.registrar)) : '') + '</div>' +
+        '<div class="hack-actions">' + actHtml + '</div>' +
+      '</article>';
+    }).join("");
+  }
+
+  async function runGenerator(word) {
+    var clean = String(word || "").trim().toLowerCase().replace(/^https?:\/\//, "").replace(/^www\./, "").split(/[/?#.]/)[0];
+    if (!clean || clean.length < 3) return;
+    if (window.__ofTrackEvent) window.__ofTrackEvent("scan");
+    if (ctaFull) ctaFull.href = API_BASE + "/?q=" + encodeURIComponent(clean);
+    var items = generateHacks(clean);
+    renderCards(items);
+    renderCombos(clean);
+    statusEl.textContent = 'Live-verifying ' + items.length + ' domain hacks for "' + clean + '" via BrandShield DNS/RDAP...';
+
+    var t0 = Date.now();
+    // 1. Fetch instant-tlds (verifies core hacks + 78 TLDs in parallel)
+    try {
+      var r = await fetch(API_BASE + "/api/instant-tlds?q=" + encodeURIComponent(clean));
+      var d = await r.json();
+      if (d && d.ok) {
+        var map = {};
+        (d.domains || []).concat(d.hacks || []).forEach(function (x) { map[x.domain] = x; });
+        items.forEach(function (it) {
+          if (map[it.domain]) {
+            it.status = map[it.domain].status;
+            it.aftermarket = Boolean(map[it.domain].aftermarket);
+          }
+        });
+        renderCards(items);
+      }
+    } catch (e) {}
+
+    // 2. Live RDAP/DNS check remaining unchecked hacks (up to 10 in parallel)
+    var rem = items.filter(function (x) { return x.status === "checking"; }).slice(0, 10);
+    await Promise.all(rem.map(async function (it) {
+      try {
+        var rr = await fetch(API_BASE + "/api/rdap-detail?domain=" + encodeURIComponent(it.domain));
+        var dj = await rr.json();
+        if (dj && dj.ok) {
+          it.status = dj.status || "unconfirmed";
+          if (dj.registrar) it.registrar = dj.registrar;
+        } else {
+          it.status = "unconfirmed";
+        }
+      } catch (e) { it.status = "unconfirmed"; }
+    }));
+
+    var availCnt = items.filter(function (x) { return x.status === "available"; }).length;
+    renderCards(items);
+    statusEl.textContent = 'Verified ' + items.length + ' domain hacks for "' + clean + '" in ' + (Date.now() - t0) + ' ms (' + availCnt + ' available right now).';
+  }
+
+  form.addEventListener("submit", function (ev) { ev.preventDefault(); runGenerator(input.value); });
+  var chipEls = document.querySelectorAll("[data-w]");
+  for (var c = 0; c < chipEls.length; c++) {
+    chipEls[c].addEventListener("click", function () {
+      var w = this.getAttribute("data-w");
+      input.value = w;
+      runGenerator(w);
+    });
+  }
+  document.getElementById("theme-btn").addEventListener("click", function () {
+    var cur = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", cur);
+  });
+
+  // OmniPulse Real-Human Telemetry v1.0
+  (function () {
+    var EP = "https://omnipulse-x402.appwrite.network/v1/telemetry";
+    var sid = "bs_" + Date.now().toString(36) + "_" + Math.random().toString(36).slice(2, 10);
+    var visSince = document.visibilityState === "hidden" ? 0 : Date.now();
+    var accMs = 0, maxScroll = 0, scansRun = 0, outboundClicks = 0, paywallClicks = 0, lastLeaveAt = 0;
+    var tz = ""; try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (e) {}
+    function dwellSec() { return Math.max(0, Math.round((accMs + (visSince ? Date.now() - visSince : 0)) / 1000)); }
+    function measureScroll() {
+      var docH = Math.max(1, document.documentElement.scrollHeight || 1);
+      var pct = Math.min(100, Math.max(0, Math.round((((window.scrollY || 0) + (window.innerHeight || 0)) / docH) * 100)));
+      if (pct > maxScroll) maxScroll = pct;
+    }
+    function sendTel(evName) {
+      measureScroll();
+      var payload = JSON.stringify({
+        site: "brandshield", sid: sid, event: evName, path: "/domain-hack-generator",
+        webdriver: Boolean(navigator.webdriver),
+        screen: (window.screen ? (screen.width || 0) + "x" + (screen.height || 0) : "0x0"),
+        dwellSec: dwellSec(), scrollPct: maxScroll, scansRun: scansRun, outboundClicks: outboundClicks, paywallClicks: paywallClicks,
+        referrer: String(document.referrer || "").slice(0, 128), tz: tz.slice(0, 64), lang: "en"
+      });
+      try { if (navigator.sendBeacon && navigator.sendBeacon(EP, payload)) return; } catch (e) {}
+      try { fetch(EP, { method: "POST", headers: { "Content-Type": "text/plain" }, body: payload, keepalive: true, mode: "cors" }).catch(function () {}); } catch (e) {}
+    }
+    window.__ofTrackEvent = function (ev) { if (ev === "scan") scansRun++; else if (ev === "outbound") outboundClicks++; else if (ev === "paywall") paywallClicks++; sendTel(ev); };
+    window.addEventListener("scroll", measureScroll, { passive: true });
+    document.addEventListener("click", function (ev) {
+      var t = ev.target && ev.target.closest ? ev.target.closest("a[href]") : null;
+      if (!t) return;
+      var href = t.getAttribute("href") || "";
+      if (/gumroad\.com|\/go\/gumroad|\/checkout\//i.test(href)) { paywallClicks++; sendTel("paywall"); return; }
+      if (/^https?:\/\//i.test(href) && href.indexOf(location.origin) !== 0) { outboundClicks++; sendTel("outbound"); }
+    }, true);
+    document.addEventListener("visibilitychange", function () {
+      if (document.visibilityState === "hidden") {
+        if (visSince) { accMs += Date.now() - visSince; visSince = 0; }
+        var nowMs = Date.now(); if (nowMs - lastLeaveAt > 800) { lastLeaveAt = nowMs; sendTel("leave"); }
+      } else { visSince = Date.now(); }
+    });
+    window.addEventListener("pagehide", function () {
+      if (visSince) { accMs += Date.now() - visSince; visSince = 0; }
+      var nowMs = Date.now(); if (nowMs - lastLeaveAt > 800) { lastLeaveAt = nowMs; sendTel("leave"); }
+    });
+    setInterval(function () { if (document.visibilityState === "visible") sendTel("heartbeat"); }, 15000);
+    sendTel("pageview");
+  })();
+
+  var initQ = "";
+  try { initQ = new URLSearchParams(window.location.search).get("q") || ""; } catch (e) {}
+  if (initQ) input.value = initQ;
+  runGenerator(input.value);
+})();
+</script>
+</body>
+</html>

@@ -2,8 +2,11 @@
 
 > Zero-front-running startup and product naming validation directly in your browser (2-second live audit across 78 TLDs, zero install, zero signup, 100% free forever) plus open-source MIT CLI & GitHub Action (`uses: zColdWater/brandshield-cli@v1`).
 
-- Flagship v6.3 Live Web App (100% Free Forever): https://brand-checker.appwrite.network
+- Flagship v6.4 Live Web App (100% Free Forever): https://brand-checker.appwrite.network
+- 78-TLD Cross-Registrar Price Matrix (Cloudflare vs Porkbun vs Namecheap vs GoDaddy): https://brand-checker.appwrite.network/tlds
 - Free 60-Idea AI Brand Namer + Live RDAP: https://brand-checker.appwrite.network/namer
+- Startup Domain Renewal & 5-Year TLD Cost Calculator: https://zcoldwater.github.io/brandshield-cli/domain-renewal-5yr-calculator.html
+- Free Domain Hack & Prefix/Suffix Brand Generator (185+ IANA TLDs): https://zcoldwater.github.io/brandshield-cli/domain-hack-generator.html
 - 2026 Top 100 AI Startups TLD Adoption (.ai 41% vs .com 40%) & Aftermarket Benchmark: https://zcoldwater.github.io/brandshield-cli/ai-startup-tld-benchmark-2026.html
 - Raw Benchmark JSON Dataset (N=100 Startups, 500 Domains): https://zcoldwater.github.io/brandshield-cli/ai-startup-tld-benchmark-2026.json
 - Landing Page & Docs: https://zcoldwater.github.io/brandshield-cli/

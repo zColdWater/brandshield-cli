@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Startup Domain Renewal &amp; 5-Year TLD Cost Calculator (2026) | BrandShield</title>
+<meta name="description" content="Calculate the true 5-year registration + renewal cost of .com, .ai, .io, .dev, .app, .xyz, .online, and 78 TLDs across Cloudflare At-Cost, Porkbun, Namecheap, and GoDaddy before you register." />
+<link rel="canonical" href="https://zcoldwater.github.io/brandshield-cli/domain-renewal-5yr-calculator.html" />
+<link rel="icon" type="image/svg+xml" href="https://brand-checker.appwrite.network/favicon.svg?v=6" />
+<link rel="icon" type="image/png" sizes="32x32" href="https://brand-checker.appwrite.network/favicon.ico?v=6" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Startup Domain Renewal &amp; 5-Year TLD Cost Calculator (2026) | BrandShield" />
+<meta property="og:description" content="Expose hidden year-2 renewal cliffs across .ai, .io, .com, .xyz, .online, and .store. Compare 5-year TCO on Cloudflare, Porkbun, Namecheap &amp; GoDaddy." />
+<meta property="og:url" content="https://zcoldwater.github.io/brandshield-cli/domain-renewal-5yr-calculator.html" />
+<meta property="og:image" content="https://brand-checker.appwrite.network/assets/cover-brandshield-free.png" />
+<meta property="og:image:width" content="1280" />
+<meta property="og:image:height" content="720" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Startup Domain Renewal &amp; 5-Year TLD Cost Calculator | BrandShield" />
+<meta name="twitter:description" content="Calculate true 5-year startup domain costs across Cloudflare At-Cost, Porkbun, Namecheap, and GoDaddy." />
+<meta name="twitter:image" content="https://brand-checker.appwrite.network/assets/cover-brandshield-free.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Startup Domain Renewal & 5-Year TLD Cost Calculator","url":"https://zcoldwater.github.io/brandshield-cli/domain-renewal-5yr-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"BrandShield","item":"https://brand-checker.appwrite.network/"},{"@type":"ListItem","position":2,"name":"5-Year Domain Renewal Cost Calculator","item":"https://zcoldwater.github.io/brandshield-cli/domain-renewal-5yr-calculator.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why do $2 promo domains cost over $140 across 5 years?","acceptedAnswer":{"@type":"Answer","text":"Many gTLDs like .online, .store, and .site discount year 1 to ~$2 while charging $27-$60/year on renewals from year 2 onward. Over 5 years, a standard .com (~$52 at Cloudflare) often costs one-third as much as a '$2' promo TLD."}},{"@type":"Question","name":"Which registrar has the lowest 5-year cost for .ai domains?","acceptedAnswer":{"@type":"Answer","text":"Cloudflare Registrar does not currently support .ai ccTLDs. Among major retail registrars, Porkbun consistently offers one of the lowest flat 5-year costs (~$69.40/yr, ~$347 over 5 years) versus ~$430-$480 at higher-markup registrars."}},{"@type":"Question","name":"Does Cloudflare Registrar really charge wholesale at-cost renewals?","acceptedAnswer":{"@type":"Answer","text":"Yes. For supported TLDs (.com, .net, .org, .dev, .app, .io, .co, etc.), Cloudflare passes through registry wholesale rates plus the $0.18 ICANN fee with zero renewal markup."}}]}]}</script>
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #000000;
+    --surface: #141417;
+    --surface-2: #1c1c21;
+    --border: rgba(255, 255, 255, 0.1);
+    --border-strong: rgba(255, 255, 255, 0.18);
+    --ink: #f5f5f7;
+    --ink-body: #b4b4bc;
+    --ink-muted: #8a8a93;
+    --accent: #a366d9;
+    --accent-soft: rgba(163, 102, 217, 0.15);
+    --green: #22e55c;
+    --green-bg: rgba(34, 229, 92, 0.13);
+    --amber: #f59e0b;
+    --amber-bg: rgba(245, 158, 11, 0.13);
+    --red: #ff3b3b;
+    --red-bg: rgba(255, 59, 59, 0.13);
+    --blue: #3b93ff;
+  }
+  [data-theme="light"] {
+    color-scheme: light;
+    --bg: #ffffff;
+    --surface: #f8fafc;
+    --surface-2: #f1f5f9;
+    --border: #e2e8f0;
+    --border-strong: #cbd5e1;
+    --ink: #0f172a;
+    --ink-body: #334155;
+    --ink-muted: #64748b;
+    --accent: #7c3aed;
+    --accent-soft: rgba(124, 58, 237, 0.08);
+    --green: #16a34a;
+    --green-bg: #dcfce7;
+    --amber: #d97706;
+    --amber-bg: #fef3c7;
+    --red: #dc2626;
+    --red-bg: #fee2e2;
+    --blue: #2563eb;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.55; }
+  .mono { font-family: "JetBrains Mono", ui-monospace, monospace; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  header { position: sticky; top: 0; z-index: 40; background: var(--bg); border-bottom: 1px solid var(--border); }
+  .nav-inner { max-width: 1180px; margin: 0 auto; padding: 12px 22px; display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
+  .brand { display: inline-flex; align-items: center; gap: 9px; font-weight: 800; font-size: 16px; color: var(--ink); text-decoration: none !important; }
+  .nav-links { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; font-size: 13px; }
+  .nav-links a { color: var(--ink-body); font-weight: 500; }
+  .nav-links a:hover { color: var(--ink); text-decoration: none; }
+  .pill-btn { padding: 5px 10px; border-radius: 7px; border: 1px solid var(--border-strong); background: var(--surface); color: var(--ink); font-size: 12px; font-weight: 600; cursor: pointer; font-family: inherit; }
+  main { max-width: 1180px; margin: 0 auto; padding: 32px 22px 64px; }
+  .eyebrow { display: inline-flex; align-items: center; padding: 4px 11px; border-radius: 999px; background: var(--accent-soft); border: 1px solid rgba(163, 102, 217, 0.35); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
+  h1 { margin: 12px 0 10px; font-size: clamp(28px, 4vw, 42px); font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; }
+  .lead { margin: 0 0 22px; max-width: 740px; color: var(--ink-body); font-size: 15.5px; }
+  .ctrl-card { border: 1px solid var(--border-strong); border-radius: 14px; background: var(--surface); padding: 18px 20px; margin-bottom: 20px; }
+  .ctrl-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 14px; align-items: end; }
+  @media (max-width: 820px) { .ctrl-grid { grid-template-columns: 1fr; } }
+  label.fld-lbl { display: block; font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-muted); margin-bottom: 6px; }
+  .inp, .sel {
+    width: 100%; height: 42px; padding: 0 12px; border-radius: 9px; border: 1px solid var(--border-strong);
+    background: var(--bg); color: var(--ink); font-size: 14px; font-family: inherit; outline: none;
+  }
+  .inp:focus, .sel:focus { border-color: var(--accent); }
+  .tld-chips { display: flex; gap: 7px; flex-wrap: wrap; margin-top: 14px; }
+  .tchip {
+    padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border-strong); background: var(--surface-2);
+    color: var(--ink-body); font-size: 12.5px; font-weight: 700; cursor: pointer; font-family: "JetBrains Mono", monospace;
+    transition: all 120ms ease;
+  }
+  .tchip.active { background: var(--accent); border-color: var(--accent); color: #ffffff; }
+  .kpi-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-bottom: 20px; }
+  @media (max-width: 900px) { .kpi-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 520px) { .kpi-grid { grid-template-columns: 1fr; } }
+  .kpi-card { border: 1px solid var(--border); border-radius: 12px; background: var(--surface); padding: 15px 16px; display: flex; flex-direction: column; gap: 6px; }
+  .kpi-card.best { border-color: rgba(34, 229, 92, 0.45); background: linear-gradient(180deg, rgba(34, 229, 92, 0.07), var(--surface)); }
+  .kpi-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  .kpi-title { font-size: 13.5px; font-weight: 700; }
+  .kpi-badge { font-size: 10.5px; font-weight: 700; padding: 2px 7px; border-radius: 999px; background: var(--green-bg); color: var(--green); }
+  .kpi-num { font-size: 28px; font-weight: 800; letter-spacing: -0.03em; }
+  .kpi-sub { font-size: 12px; color: var(--ink-muted); }
+  .bar-track { height: 7px; border-radius: 999px; background: var(--surface-2); overflow: hidden; margin: 4px 0; }
+  .bar-fill { height: 100%; border-radius: 999px; background: var(--accent); transition: width 220ms ease; }
+  .kpi-card.best .bar-fill { background: var(--green); }
+  .kpi-cta {
+    margin-top: auto; display: inline-flex; align-items: center; justify-content: center; padding: 8px 11px;
+    border-radius: 8px; border: 1px solid var(--border-strong); background: var(--surface-2); color: var(--ink);
+    font-size: 12.5px; font-weight: 700; text-decoration: none !important;
+  }
+  .kpi-card.best .kpi-cta { background: var(--green-bg); border-color: rgba(34, 229, 92, 0.4); color: var(--green); }
+  .alert-cliff {
+    margin-bottom: 20px; padding: 12px 16px; border-radius: 10px; border: 1px solid rgba(245, 158, 11, 0.35);
+    background: var(--amber-bg); color: var(--amber); font-size: 13px; font-weight: 600;
+  }
+  .tbl-card { border: 1px solid var(--border); border-radius: 14px; background: var(--surface); overflow: hidden; }
+  .tbl-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  th { text-align: left; padding: 12px 14px; background: var(--surface-2); border-bottom: 1px solid var(--border-strong); font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-muted); white-space: nowrap; }
+  td { padding: 11px 14px; border-bottom: 1px solid var(--border); }
+  tr:last-child td { border-bottom: 0; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 9px 16px; border-radius: 9px; border: 1px solid var(--border-strong); background: var(--surface-2); color: var(--ink); font-size: 13px; font-weight: 700; cursor: pointer; text-decoration: none !important; }
+  .btn-primary { background: var(--accent); border-color: var(--accent); color: #ffffff; }
+  .funnel-strip { margin-top: 26px; padding: 20px 22px; border-radius: 14px; border: 1px solid var(--border-strong); background: var(--surface); display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .faq-wrap { margin-top: 32px; display: grid; gap: 10px; }
+  details { border: 1px solid var(--border); border-radius: 10px; background: var(--surface); padding: 13px 16px; }
+  summary { font-weight: 700; cursor: pointer; font-size: 14.5px; }
+  details p { margin: 8px 0 0; font-size: 13.5px; color: var(--ink-body); }
+  footer { max-width: 1180px; margin: 0 auto; padding: 24px 22px 44px; border-top: 1px solid var(--border); font-size: 12.5px; color: var(--ink-muted); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+<header>
+  <div class="nav-inner">
+    <a class="brand" href="https://brand-checker.appwrite.network/">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="#a366d9" aria-hidden="true"><polygon points="14.2,2.2 5.6,13.6 11.4,13.6 9.8,21.8 18.6,10.2 12.7,10.2"/></svg>
+      <span>BrandShield</span>
+    </a>
+    <nav class="nav-links">
+      <a href="https://brand-checker.appwrite.network/">78-TLD Search</a>
+      <a href="https://brand-checker.appwrite.network/tlds">78-TLD Prices</a>
+      <a href="./domain-hack-generator.html">Domain Hack Generator</a>
+      <a href="./ai-startup-tld-benchmark-2026.html">2026 AI TLD Study</a>
+      <a href="https://inbox-checker.appwrite.network/" target="_blank" rel="noopener">InboxShield ($2 Fix)</a>
+      <button type="button" class="pill-btn" id="theme-btn">Light / Dark</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="eyebrow">ZERO RENEWAL SURPRISES · 5-YEAR STARTUP DOMAIN TCO</div>
+  <h1>Startup Domain Renewal &amp; 5-Year TLD Cost Calculator</h1>
+  <p class="lead">Select your startup's defensive TLD bundle (e.g. <span class="mono">.com + .ai + .io</span>) and horizon (1–10 years) to uncover hidden Year-2 renewal cliffs across <strong>Cloudflare At-Cost</strong>, <strong>Porkbun</strong>, <strong>Namecheap</strong>, and <strong>GoDaddy</strong>.</p>
+
+  <section class="ctrl-card">
+    <div class="ctrl-grid">
+      <div>
+        <label class="fld-lbl" for="brand-slug">Your Startup Brand Slug</label>
+        <input id="brand-slug" class="inp mono" type="text" maxlength="36" value="omniforge" placeholder="e.g. omniforge, linear, cursor" />
+      </div>
+      <div>
+        <label class="fld-lbl" for="horizon-sel">Ownership Horizon</label>
+        <select id="horizon-sel" class="sel">
+          <option value="1">1 Year (Promo Year Only)</option>
+          <option value="3">3 Years (Seed Stage)</option>
+          <option value="5" selected>5 Years (Series A / Standard)</option>
+          <option value="10">10 Years (Long-Term Brand Lock)</option>
+        </select>
+      </div>
+      <div>
+        <label class="fld-lbl" for="preset-sel">Quick Startup Bundle Preset</label>
+        <select id="preset-sel" class="sel">
+          <option value="ai-defense" selected>AI Startup Defense (.com + .ai + .io)</option>
+          <option value="dev-stack">DevTool Stack (.com + .dev + .app)</option>
+          <option value="promo-trap">Promo Trap Check (.online + .store + .xyz)</option>
+          <option value="single-ai">Single .ai Domain Only (.ai)</option>
+          <option value="single-com">Single .com Domain Only (.com)</option>
+        </select>
+      </div>
+    </div>
+
+    <div style="margin-top:14px;font-size:12px;color:var(--ink-muted);font-weight:600">Toggle extensions in your portfolio (click to add/remove):</div>
+    <div class="tld-chips" id="tld-chips"></div>
+  </section>
+
+  <div id="cliff-alert" class="alert-cliff" style="display:none"></div>
+  <section id="kpi-grid" class="kpi-grid"></section>
+
+  <section class="tbl-card">
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Domain</th>
+            <th>Cloudflare (At-Cost)</th>
+            <th>Porkbun (1st / Ren)</th>
+            <th>Namecheap (1st / Ren)</th>
+            <th>GoDaddy (1st / Ren)</th>
+            <th>Year-2 Spike</th>
+            <th>Live Check</th>
+          </tr>
+        </thead>
+        <tbody id="calc-tbody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <p style="margin-top:12px;font-size:12.5px;color:var(--ink-muted)">Reference pricing note: Standard USD retail/wholesale estimates (excluding local tax or premium aftermarket registry tiers). Where Cloudflare Registrar does not support a ccTLD (such as <span class="mono">.ai</span> or <span class="mono">.gg</span>), the Cloudflare portfolio total automatically falls back to Porkbun's flat rate so comparisons stay apples-to-apples.</p>
+
+  <section class="funnel-strip">
+    <div style="max-width:680px">
+      <h2 style="margin:0 0 4px;font-size:18px">Verify live availability &amp; USPTO trademark risk before buying a 5-year bundle.</h2>
+      <p style="margin:0;font-size:13.5px;color:var(--ink-body)">Scan all 78 extensions + live federal USPTO marks 100% free on BrandShield, or compare all 78 registrars side-by-side on <span class="mono">/tlds</span>.</p>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <a class="btn btn-primary" id="cta-live-check" href="https://brand-checker.appwrite.network/?q=omniforge">Check Live Availability &amp; USPTO -&gt;</a>
+      <a class="btn" href="https://brand-checker.appwrite.network/tlds">Full 78-TLD Price Matrix -&gt;</a>
+      <a class="btn" href="https://omnipulse-x402.appwrite.network/go/gumroad/suite" target="_blank" rel="noopener">All 4 Launch Audits $5 -&gt;</a>
+    </div>
+  </section>
+
+  <section class="faq-wrap">
+    <details open>
+      <summary>Why do "$2 promo" domains often cost more than a .com over 5 years?</summary>
+      <p>Registries aggressively discount Year 1 on <span class="mono">.online</span>, <span class="mono">.store</span>, <span class="mono">.site</span>, and <span class="mono">.tech</span> to ~$2–$5, then renew at $26–$60/year. Over 5 years, a <span class="mono">.store</span> renewal bill (~$179–$243) can be 3–4x the 5-year cost of a <span class="mono">.com</span> (~$52 at Cloudflare).</p>
+    </details>
+    <details>
+      <summary>Should an AI startup buy both .ai and .com?</summary>
+      <p>Our 2026 empirical study of 100 top AI startups found 41% use <span class="mono">.ai</span> as primary and 40% use <span class="mono">.com</span>, yet 40% have at least one core sibling parked on aftermarket broker nameservers. Securing both early prevents costly five-figure aftermarket buyouts later.</p>
+    </details>
+  </section>
+</main>
+
+<footer>
+  <span>BrandShield · OmniForge Agent Arena Studio · Transparent Domain TCO Tools</span>
+  <div style="display:flex;gap:14px;flex-wrap:wrap">
+    <a href="https://brand-checker.appwrite.network/">BrandShield App</a>
+    <a href="https://brand-checker.appwrite.network/tlds">78-TLD Prices</a>
+    <a href="./domain-hack-generator.html">Domain Hack Generator</a>
+    <a href="./ai-startup-tld-benchmark-2026.html">2026 AI TLD Study</a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // [tld, cfAtCost(null if unsupported), pb1, pbR, nc1, ncR, gd1, gdR]
+  var CATALOG = [
+    ["com", 10.44, 11.06, 11.06, 10.28, 15.88, 11.99, 21.99],
+    ["ai", null, 69.40, 69.40, 79.98, 89.98, 79.99, 99.99],
+    ["io", 42.00, 44.62, 44.62, 34.98, 49.98, 49.99, 64.99],
+    ["dev", 12.00, 12.87, 12.87, 13.98, 16.98, 16.99, 21.99],
+    ["app", 14.00, 14.08, 14.08, 15.98, 19.98, 17.99, 24.99],
+    ["co", 24.18, 11.49, 25.56, 11.98, 29.98, 11.99, 34.99],
+    ["net", 11.84, 12.50, 12.50, 12.98, 16.98, 14.99, 22.99],
+    ["org", 10.11, 10.73, 10.73, 9.98, 14.98, 9.99, 22.99],
+    ["xyz", 10.48, 2.04, 12.48, 2.00, 14.98, 2.99, 19.99],
+    ["online", 27.18, 2.13, 30.24, 1.98, 34.98, 2.99, 44.99],
+    ["store", 41.18, 1.99, 44.20, 2.98, 49.98, 2.99, 59.99],
+    ["site", 25.18, 1.88, 26.80, 1.98, 29.98, 2.99, 39.99],
+    ["tech", 42.18, 5.14, 44.80, 5.98, 49.98, 4.99, 59.99],
+    ["gg", null, 58.90, 58.90, 64.98, 69.98, 69.99, 79.99],
+    ["so", null, 38.80, 38.80, 42.98, 46.98, 49.99, 54.99],
+    ["sh", 39.00, 38.40, 38.40, 39.98, 44.98, 44.99, 54.99],
+    ["me", 16.00, 6.98, 16.90, 6.98, 19.98, 7.99, 23.99],
+    ["info", 21.00, 3.63, 21.80, 3.98, 23.98, 4.99, 29.99]
+  ];
+  var PRESETS = {
+    "ai-defense": ["com", "ai", "io"],
+    "dev-stack": ["com", "dev", "app"],
+    "promo-trap": ["online", "store", "xyz"],
+    "single-ai": ["ai"],
+    "single-com": ["com"]
+  };
+  var selected = { com: 1, ai: 1, io: 1 };
+
+  var brandIn = document.getElementById("brand-slug");
+  var horSel = document.getElementById("horizon-sel");
+  var preSel = document.getElementById("preset-sel");
+  var chipsWrap = document.getElementById("tld-chips");
+  var kpiGrid = document.getElementById("kpi-grid");
+  var tbody = document.getElementById("calc-tbody");
+  var cliffAlert = document.getElementById("cliff-alert");
+  var ctaLive = document.getElementById("cta-live-check");
+
+  function esc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
+  function usd(n) { return "$" + Number(n).toFixed(2); }
+  function totalFor(y1, ren, yrs) { return y1 + Math.max(0, yrs - 1) * ren; }
+
+  function renderChips() {
+    chipsWrap.innerHTML = CATALOG.map(function (r) {
+      return '<button type="button" class="tchip' + (selected[r[0]] ? ' active' : '') + '" data-tld="' + r[0] + '">.' + r[0] + '</button>';
+    }).join("");
+    var btns = chipsWrap.querySelectorAll("[data-tld]");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function () {
+        var t = this.getAttribute("data-tld");
+        if (selected[t]) {
+          var cnt = Object.keys(selected).filter(function (k) { return selected[k]; }).length;
+          if (cnt > 1) delete selected[t];
+        } else {
+          selected[t] = 1;
+        }
+        renderAll();
+      });
+    }
+  }
+
+  function renderAll() {
+    renderChips();
+    var brand = String(brandIn.value || "").toLowerCase().replace(/[^a-z0-9-]/g, "").slice(0, 32) || "omniforge";
+    var yrs = Math.max(1, parseInt(horSel.value, 10) || 5);
+    if (ctaLive) ctaLive.href = "https://brand-checker.appwrite.network/?q=" + encodeURIComponent(brand);
+
+    var activeRows = CATALOG.filter(function (r) { return selected[r[0]]; });
+    var sumCf = 0, sumPb = 0, sumNc = 0, sumGd = 0, cfUnsupported = [];
+    var maxSpike = 0, spikeDom = "";
+
+    var trHtml = activeRows.map(function (r) {
+      var tld = r[0], cf = r[1], pb1 = r[2], pbR = r[3], nc1 = r[4], ncR = r[5], gd1 = r[6], gdR = r[7];
+      var dom = brand + "." + tld;
+      var enc = encodeURIComponent(dom);
+      var cfTot = cf == null ? totalFor(pb1, pbR, yrs) : totalFor(cf, cf, yrs);
+      if (cf == null) cfUnsupported.push("." + tld);
+      var pbTot = totalFor(pb1, pbR, yrs);
+      var ncTot = totalFor(nc1, ncR, yrs);
+      var gdTot = totalFor(gd1, gdR, yrs);
+      sumCf += cfTot; sumPb += pbTot; sumNc += ncTot; sumGd += gdTot;
+
+      var spike = Math.round(((gdR - gd1) / Math.max(0.01, gd1)) * 100);
+      if (spike > maxSpike) { maxSpike = spike; spikeDom = dom; }
+
+      return '<tr>' +
+        '<td class="mono" style="font-weight:700">' + esc(dom) + '</td>' +
+        '<td class="mono">' + (cf == null ? '<span style="color:var(--ink-muted)">N/A (via Porkbun ' + usd(pbTot) + ')</span>' : ('<strong>' + usd(cfTot) + '</strong> <span style="font-size:11px;color:var(--ink-muted)">(' + usd(cf) + '/yr)</span>')) + '</td>' +
+        '<td class="mono"><strong>' + usd(pbTot) + '</strong> <span style="font-size:11px;color:var(--ink-muted)">(' + usd(pb1) + ' / ' + usd(pbR) + ')</span></td>' +
+        '<td class="mono"><strong>' + usd(ncTot) + '</strong> <span style="font-size:11px;color:var(--ink-muted)">(' + usd(nc1) + ' / ' + usd(ncR) + ')</span></td>' +
+        '<td class="mono"><strong>' + usd(gdTot) + '</strong> <span style="font-size:11px;color:var(--ink-muted)">(' + usd(gd1) + ' / ' + usd(gdR) + ')</span></td>' +
+        '<td class="mono" style="color:' + (spike >= 150 ? 'var(--red)' : (spike >= 60 ? 'var(--amber)' : 'var(--green)')) + ';font-weight:700">+' + spike + '%</td>' +
+        '<td><a href="https://brand-checker.appwrite.network/?q=' + enc + '" style="font-weight:700;font-size:12px">Check RDAP -&gt;</a></td>' +
+      '</tr>';
+    }).join("");
+    tbody.innerHTML = trHtml;
+
+    var maxTot = Math.max(sumCf, sumPb, sumNc, sumGd, 1);
+    var minTot = Math.min(sumCf, sumPb, sumNc, sumGd);
+    var primaryDom = brand + "." + (activeRows[0] ? activeRows[0][0] : "com");
+    var encP = encodeURIComponent(primaryDom);
+
+    var cards = [
+      {
+        name: "Cloudflare At-Cost",
+        tot: sumCf,
+        sub: cfUnsupported.length ? ("Includes Porkbun fallback for " + cfUnsupported.join(", ")) : "Zero renewal markup (wholesale + ICANN)",
+        url: "https://dash.cloudflare.com/?to=/:account/domains/register",
+        cta: "Register at Cloudflare ->"
+      },
+      {
+        name: "Porkbun",
+        tot: sumPb,
+        sub: "Flat transparent renewals · supports .ai & .gg",
+        url: "https://porkbun.com/checkout/search?q=" + encP,
+        cta: "Register on Porkbun ->"
+      },
+      {
+        name: "Namecheap",
+        tot: sumNc,
+        sub: "Strong Year-1 promos · moderate renewal markup",
+        url: "https://www.namecheap.com/domains/registration/results/?domain=" + encP,
+        cta: "Register on Namecheap ->"
+      },
+      {
+        name: "GoDaddy",
+        tot: sumGd,
+        sub: "Largest aftermarket & broker network · higher renewals",
+        url: "https://www.godaddy.com/domainsearch/find?domainToCheck=" + encP,
+        cta: "Check on GoDaddy ->"
+      }
+    ];
+
+    kpiGrid.innerHTML = cards.map(function (c) {
+      var isBest = c.tot <= minTot + 0.01;
+      var saveVsGd = Math.max(0, sumGd - c.tot);
+      var pct = Math.max(12, Math.round((c.tot / maxTot) * 100));
+      return '<article class="kpi-card' + (isBest ? ' best' : '') + '">' +
+        '<div class="kpi-head"><span class="kpi-title">' + esc(c.name) + '</span>' + (isBest ? '<span class="kpi-badge">Lowest ' + yrs + 'Y TCO</span>' : '') + '</div>' +
+        '<div class="kpi-num mono">' + usd(c.tot) + '</div>' +
+        '<div class="bar-track"><div class="bar-fill" style="width:' + pct + '%"></div></div>' +
+        '<div class="kpi-sub">' + esc(c.sub) + (saveVsGd >= 5 ? (' · Save ' + usd(saveVsGd) + ' vs GoDaddy') : '') + '</div>' +
+        '<a class="kpi-cta" href="' + esc(c.url) + '" target="_blank" rel="noopener">' + esc(c.cta) + '</a>' +
+      '</article>';
+    }).join("");
+
+    if (maxSpike >= 150 && yrs >= 3) {
+      cliffAlert.style.display = "block";
+      cliffAlert.textContent = "Renewal Cliff Alert: " + spikeDom + " spikes +" + maxSpike + "% after Year 1 on retail registrars. Over " + yrs + " years, choosing the lowest-renewal registrar saves " + usd(maxTot - minTot) + " across your selected bundle.";
+    } else {
+      cliffAlert.style.display = "none";
+    }
+  }
+
+  preSel.addEventListener("change", function () {
+    var arr = PRESETS[this.value] || ["com"];
+    selected = {};
+    arr.forEach(function (t) { selected[t] = 1; });
+    if (window.__ofTrackEvent) window.__ofTrackEvent("scan");
+    renderAll();
+  });
+  brandIn.addEventListener("input", renderAll);
+  horSel.addEventListener("change", function () { if (window.__ofTrackEvent) window.__ofTrackEvent("scan"); renderAll(); });
+  document.getElementById("theme-btn").addEventListener("click", function () {
+    var cur = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", cur);
+  });
+
+  // OmniPulse Real-Human Telemetry v1.0
+  (function () {
+    var EP = "https://omnipulse-x402.appwrite.network/v1/telemetry";
+    var sid = "bs_" + Date.now().toString(36) + "_" + Math.random().toString(36).slice(2, 10);
+    var visSince = document.visibilityState === "hidden" ? 0 : Date.now();
+    var accMs = 0, maxScroll = 0, scansRun = 0, outboundClicks = 0, paywallClicks = 0, lastLeaveAt = 0;
+    var tz = ""; try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (e) {}
+    function dwellSec() { return Math.max(0, Math.round((accMs + (visSince ? Date.now() - visSince : 0)) / 1000)); }
+    function measureScroll() {
+      var docH = Math.max(1, document.documentElement.scrollHeight || 1);
+      var pct = Math.min(100, Math.max(0, Math.round((((window.scrollY || 0) + (window.innerHeight || 0)) / docH) * 100)));
+      if (pct > maxScroll) maxScroll = pct;
+    }
+    function sendTel(evName) {
+      measureScroll();
+      var payload = JSON.stringify({
+        site: "brandshield", sid: sid, event: evName, path: "/domain-renewal-5yr-calculator",
+        webdriver: Boolean(navigator.webdriver),
+        screen: (window.screen ? (screen.width || 0) + "x" + (screen.height || 0) : "0x0"),
+        dwellSec: dwellSec(), scrollPct: maxScroll, scansRun: scansRun, outboundClicks: outboundClicks, paywallClicks: paywallClicks,
+        referrer: String(document.referrer || "").slice(0, 128), tz: tz.slice(0, 64), lang: "en"
+      });
+      try { if (navigator.sendBeacon && navigator.sendBeacon(EP, payload)) return; } catch (e) {}
+      try { fetch(EP, { method: "POST", headers: { "Content-Type": "text/plain" }, body: payload, keepalive: true, mode: "cors" }).catch(function () {}); } catch (e) {}
+    }
+    window.__ofTrackEvent = function (ev) { if (ev === "scan") scansRun++; else if (ev === "outbound") outboundClicks++; else if (ev === "paywall") paywallClicks++; sendTel(ev); };
+    window.addEventListener("scroll", measureScroll, { passive: true });
+    document.addEventListener("click", function (ev) {
+      var t = ev.target && ev.target.closest ? ev.target.closest("a[href]") : null;
+      if (!t) return;
+      var href = t.getAttribute("href") || "";
+      if (/gumroad\.com|\/go\/gumroad|\/checkout\//i.test(href)) { paywallClicks++; sendTel("paywall"); return; }
+      if (/^https?:\/\//i.test(href) && href.indexOf(location.origin) !== 0) { outboundClicks++; sendTel("outbound"); }
+    }, true);
+    document.addEventListener("visibilitychange", function () {
+      if (document.visibilityState === "hidden") {
+        if (visSince) { accMs += Date.now() - visSince; visSince = 0; }
+        var nowMs = Date.now(); if (nowMs - lastLeaveAt > 800) { lastLeaveAt = nowMs; sendTel("leave"); }
+      } else { visSince = Date.now(); }
+    });
+    window.addEventListener("pagehide", function () {
+      if (visSince) { accMs += Date.now() - visSince; visSince = 0; }
+      var nowMs = Date.now(); if (nowMs - lastLeaveAt > 800) { lastLeaveAt = nowMs; sendTel("leave"); }
+    });
+    setInterval(function () { if (document.visibilityState === "visible") sendTel("heartbeat"); }, 15000);
+    sendTel("pageview");
+  })();
+
+  renderAll();
+})();
+</script>
+</body>
+</html>
