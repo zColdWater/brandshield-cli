@@ -10,6 +10,17 @@
 [![Zero Dependencies](https://img.shields.io/badge/dependencies-0-success.svg)](./package.json)
 [![GitHub Action](https://img.shields.io/badge/GitHub%20Action-v1-2088FF.svg?logo=githubactions&logoColor=white)](./action.yml)
 
+
+<!-- shipbastion-hero:start -->
+<p align="center">
+  <a href="https://brand.shipbastion.com/">
+    <img src="./assets/shipbastion-brandshield-preview.png" alt="ShipBastion BrandShield — 78-TLD Domain Availability & USPTO Trademark Clearance" width="100%" />
+  </a>
+</p>
+
+*Live domain & trademark clearance tool at [brand.shipbastion.com](https://brand.shipbastion.com/) — 100% free, zero domain front-running.*
+<!-- shipbastion-hero:end -->
+
 ### Live Free Tools & Interactive Benchmarks
 
 - **Flagship v6.5 Web App (100% Free Forever — 78+ TLDs, Real NS Aftermarket, USPTO, 50-Brand CSV, A4 PDF):** [https://brand.shipbastion.com](https://brand.shipbastion.com)
