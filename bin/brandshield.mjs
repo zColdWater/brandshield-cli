@@ -13,11 +13,11 @@
 
 import fs from "node:fs";
 
-const DIAGNOSTIC_API = "https://brand-checker.appwrite.network";
+const DIAGNOSTIC_API = "https://brand.shipbastion.com";
 const PRO_URL = "https://agentarenastudi.gumroad.com/l/omniforge-brandshield";
-const DIRECT_URL = "https://omnipulse-x402.appwrite.network/checkout/brandshield";
-const STACK_URL = "https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack";
-const STACK_DIRECT_URL = "https://omnipulse-x402.appwrite.network/checkout/launch-stack";
+const DIRECT_URL = "https://api.shipbastion.com/checkout/brandshield";
+const STACK_URL = "https://api.shipbastion.com/go/gumroad/launch-stack";
+const STACK_DIRECT_URL = "https://api.shipbastion.com/checkout/launch-stack";
 const COMPARE_URL = "https://zcoldwater.github.io/brandshield-cli/compare.html";
 
 const RDAP_FALLBACK = {

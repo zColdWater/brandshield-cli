@@ -2,11 +2,11 @@
 
 > Zero-front-running startup and product naming validation directly in your browser (sub-second live audit across 78+ TLDs, 28 DNSTwist lookalikes, zero install, zero signup, 100% free forever) plus open-source MIT CLI & GitHub Action (`uses: zColdWater/brandshield-cli@v1`).
 
-- Flagship v6.5 Live Web App (100% Free Forever): https://brand-checker.appwrite.network
-- Live Startup Typosquatting & Lookalike Shield (/typos): https://brand-checker.appwrite.network/typos
-- 78-TLD Cross-Registrar Price Matrix (Cloudflare vs Porkbun vs Namecheap vs GoDaddy): https://brand-checker.appwrite.network/tlds
-- Free 60-Idea AI Brand Namer + Live RDAP: https://brand-checker.appwrite.network/namer
-- Zero-Install Terminal CLI One-Liner: https://brand-checker.appwrite.network/cli.sh
+- Flagship v6.5 Live Web App (100% Free Forever): https://brand.shipbastion.com
+- Live Startup Typosquatting & Lookalike Shield (/typos): https://brand.shipbastion.com/typos
+- 78-TLD Cross-Registrar Price Matrix (Cloudflare vs Porkbun vs Namecheap vs GoDaddy): https://brand.shipbastion.com/tlds
+- Free 60-Idea AI Brand Namer + Live RDAP: https://brand.shipbastion.com/namer
+- Zero-Install Terminal CLI One-Liner: https://brand.shipbastion.com/cli.sh
 - Startup Typosquatting & UDRP Lookalike Checker (28 Variants): https://zcoldwater.github.io/brandshield-cli/typosquatting-udrp-checker.html
 - Startup Domain Renewal & 5-Year TLD Cost Calculator: https://zcoldwater.github.io/brandshield-cli/domain-renewal-5yr-calculator.html
 - Free Domain Hack & Prefix/Suffix Brand Generator (185+ IANA TLDs): https://zcoldwater.github.io/brandshield-cli/domain-hack-generator.html
@@ -25,13 +25,13 @@
 
 ## OmniForge Pre-Launch Web Pro Suite ($2 Single / $5 All-in-1 Launch Suite)
 
-- BrandShield v6.3 (78-TLD RDAP + Aftermarket + USPTO + 60-Idea AI Namer, 100% Free Forever): https://brand-checker.appwrite.network
-- VibeShield v7.0 (116-Check JS Bundle Secrets, Headers & Supabase RLS, $2 Full Fix): https://vibe-checker.appwrite.network | https://omnipulse-x402.appwrite.network/checkout/vibeshield
-- InboxShield v7.2 (SPF Flattener + 24 DKIM + DMARC + DNSBL, $2 Full Fix): https://inbox-checker.appwrite.network | https://omnipulse-x402.appwrite.network/checkout/inboxshield
-- CiteReady v7.0 (10-Bot AI Search + Schema @graph + /llms.txt, $2 Full Fix): https://citeready-checker.appwrite.network | https://omnipulse-x402.appwrite.network/checkout/citeready
-- All-in-1 Launch Suite ($5 Once — Unlocks Full Remediation Across VibeShield, InboxShield & CiteReady): https://omnipulse-x402.appwrite.network/checkout/launch-stack
+- BrandShield v6.3 (78-TLD RDAP + Aftermarket + USPTO + 60-Idea AI Namer, 100% Free Forever): https://brand.shipbastion.com
+- VibeShield v7.0 (116-Check JS Bundle Secrets, Headers & Supabase RLS, $2 Full Fix): https://shipbastion.com | https://api.shipbastion.com/checkout/vibeshield
+- InboxShield v7.2 (SPF Flattener + 24 DKIM + DMARC + DNSBL, $2 Full Fix): https://inbox.shipbastion.com | https://api.shipbastion.com/checkout/inboxshield
+- CiteReady v7.0 (10-Bot AI Search + Schema @graph + /llms.txt, $2 Full Fix): https://cite.shipbastion.com | https://api.shipbastion.com/checkout/citeready
+- All-in-1 Launch Suite ($5 Once — Unlocks Full Remediation Across VibeShield, InboxShield & CiteReady): https://api.shipbastion.com/checkout/launch-stack
 
 ## Support & Official Contact
 
 - OmniForge · Agent Arena Studio — agentarenastudio@proton.me | https://x.com/agentarenastudi
-- Support & 14-Day Refund Policy: https://omnipulse-x402.appwrite.network/support | https://omnipulse-x402.appwrite.network/refund-policy
+- Support & 14-Day Refund Policy: https://api.shipbastion.com/support | https://api.shipbastion.com/refund-policy
