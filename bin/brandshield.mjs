@@ -1,21 +1,24 @@
 #!/usr/bin/env node
 /**
- * BrandShield Lite CLI v1.1.0 — Zero-dependency startup name & trademark clearance scanner.
+ * BrandShield CLI v1.2.0 — Zero-dependency startup name & trademark clearance scanner.
  * Checks domains via authoritative IANA RDAP (zero broker front-running),
  * developer/social handles, Apple/Google app stores, and USPTO federal trademarks.
  * Supports terminal, JSON, GitHub Actions Step Summary (--markdown), and CI exit gates.
  *
- * Need 500-name batch CSV/JSON scanning, USPTO Nice Class conflict scoring,
- * 60+ collision-free name variations, and white-label client reports?
- * Get BrandShield Pro ($19 Solo / $39 Agency):
- *   https://agentarenastudi.gumroad.com/l/omniforge-brandshield
+ * BrandShield Web App (78+ TLDs, 28-variant /typos DNSTwist scanner, 60-idea AI Namer,
+ * 50-brand batch CSV & printable A4 PDF) is 100% Free Forever:
+ *   https://brand.shipbastion.com
+ *
+ * Pre-launch Security, Email DNS & AI Search Fix Suite ($5 one-time, reg. $29):
+ *   https://api.shipbastion.com/go/gumroad/launch-stack
  */
 
 import fs from "node:fs";
 
 const DIAGNOSTIC_API = "https://brand.shipbastion.com";
-const PRO_URL = "https://agentarenastudi.gumroad.com/l/omniforge-brandshield";
-const DIRECT_URL = "https://api.shipbastion.com/checkout/brandshield";
+const TYPOS_URL = "https://brand.shipbastion.com/typos";
+const TLDS_URL = "https://brand.shipbastion.com/tlds";
+const NAMER_URL = "https://brand.shipbastion.com/namer";
 const STACK_URL = "https://api.shipbastion.com/go/gumroad/launch-stack";
 const STACK_DIRECT_URL = "https://api.shipbastion.com/checkout/launch-stack";
 const COMPARE_URL = "https://zcoldwater.github.io/brandshield-cli/compare.html";
@@ -79,7 +82,7 @@ function parseArgs(argv) {
 
 function printHelp() {
   console.log(`
-${C.bold}${C.cyan}BrandShield CLI (Lite v1.1.0)${C.reset} — Startup Naming, Domain & USPTO Conflict Scanner
+${C.bold}${C.cyan}BrandShield CLI (v1.2.0)${C.reset} — Startup Naming, Domain & USPTO Conflict Scanner
 
 ${C.bold}USAGE${C.reset}
   npx github:zColdWater/brandshield-cli check <BrandName> [options]
@@ -101,15 +104,17 @@ ${C.bold}OPTIONS${C.reset}
   --ci                  Write outputs to $GITHUB_OUTPUT (when running in GitHub Actions)
   -h, --help            Show this help screen
 
-${C.bold}FREE WEB SCANNER & COMPARISON${C.reset}
-  Live Scanner: ${DIAGNOSTIC_API}
-  Comparison:   ${COMPARE_URL}
+${C.bold}100% FREE WEB SCANNER & SUITE (NO LOGIN, NO PAYWALL)${C.reset}
+  Live 78-TLD Scanner: ${DIAGNOSTIC_API}
+  28-Variant /typos:   ${TYPOS_URL}
+  78-TLD Price Matrix: ${TLDS_URL}
+  60-Idea AI Namer:    ${NAMER_URL}
+  Comparison:          ${COMPARE_URL}
 
-${C.bold}UPGRADE TO BRANDSHIELD PRO ($19 Solo / $39 Agency)${C.reset}
-  500-name batch CSV/JSON CLI, USPTO Nice Class phonetic/fuzzy risk scoring,
-  60-name collision-free variation engine, offline HTML workbench & white-label reports:
-  Gumroad: ${C.cyan}${PRO_URL}${C.reset}
-  Direct:  ${C.cyan}${DIRECT_URL}${C.reset}
+${C.bold}SHIPBASTION 4-IN-1 LAUNCH AUDIT SUITE ($5 Once — 83% OFF, reg. $29)${C.reset}
+  Unlocks VibeShield (JS Secrets/CSP/RLS) + InboxShield (SPF/DKIM/DMARC) + CiteReady (AI SEO):
+  Gumroad: ${C.cyan}${STACK_URL}${C.reset}
+  Direct:  ${C.cyan}${STACK_DIRECT_URL}${C.reset}
 `);
 }
 
@@ -360,7 +365,8 @@ function renderMarkdown(report) {
     ``,
     `---`,
     `> ⚖️ *Trademark results are an informational starting point, not legal advice. Read-only lookup — searched names are never logged or registered.*`,
-    `> 🚀 **Need 500-name batch screening, 60+ verified variations & white-label HTML reports?** Get **[BrandShield Pro ($19 Solo / $39 Agency)](${PRO_URL})** ([Instant Direct Checkout](${DIRECT_URL})) · [Free Web Scanner](${DIAGNOSTIC_API}) · [Compare Tools](${COMPARE_URL})`
+    `> **100% Free Web Suite:** [78-TLD Instant Scanner](${DIAGNOSTIC_API}) · [28-Variant Typosquatting Shield](${TYPOS_URL}) · [60-Idea AI Namer](${NAMER_URL}) · [Compare Tools](${COMPARE_URL})`,
+    `> **Pre-Launch Security, Email DNS & AI Search Fix Packs:** **[ShipBastion 4-in-1 Launch Suite ($5 Once, reg. $29)](${STACK_URL})** ([Direct / USDC Checkout](${STACK_DIRECT_URL}))`
   );
   return lines.join("\n");
 }
@@ -393,9 +399,9 @@ async function main() {
   if (opts.name.includes(",")) {
     if (!opts.json && !opts.markdown) {
       console.error(
-        `${C.yellow}Note:${C.reset} BrandShield Lite checks 1 candidate name per run.\n` +
-          `For 500-name batch CSV/JSON scanning & 60+ collision-free variations, get BrandShield Pro:\n` +
-          `  ${C.cyan}${PRO_URL}${C.reset}\n`
+        `${C.yellow}Note:${C.reset} BrandShield CLI checks 1 candidate name per run.\n` +
+          `For 50-brand batch CSV scanning, 60-idea AI naming & A4 PDF reports (100% Free Forever), open:\n` +
+          `  ${C.cyan}${DIAGNOSTIC_API}${C.reset}\n`
       );
     }
     opts.name = opts.name.split(",")[0].trim();
@@ -487,15 +493,14 @@ async function main() {
     console.log(`\n${C.dim}Disclaimer: Trademark results are an informational starting point, not legal advice. Searched names are never logged or registered.${C.reset}`);
     console.log(
       `\n${C.bold}${C.magenta}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${C.reset}\n` +
-        `${C.bold}Need to vet 50–500 candidate names & score phonetic USPTO Nice Class risks?${C.reset}\n` +
-        `Upgrade to ${C.bold}BrandShield Pro${C.reset} ($19 Solo / $39 Agency — 100% offline Node 22 source kit):\n` +
-        `  • Batch CSV/JSON scanner (up to 500 names) + 60-variation collision-free generator\n` +
-        `  • USPTO Nice Class 9/35/42 similarity & phonetic conflict scoring\n` +
-        `  • Local interactive HTML comparison workbench & white-label client reports\n` +
-        `  👉 Gumroad (Card/PayPal):  ${C.bold}${C.cyan}${PRO_URL}${C.reset}\n` +
-        `  ⚡ Instant Direct ZIP:     ${C.cyan}${DIRECT_URL}${C.reset}\n` +
-        `  📦 3-in-1 Launch Stack:    ${C.cyan}${STACK_URL}${C.reset} ${C.dim}(Direct: ${STACK_DIRECT_URL})${C.reset}\n` +
-        `  🌐 Free Web Scanner:       ${C.cyan}${DIAGNOSTIC_API}${C.reset}\n` +
+        `${C.bold}BrandShield v6.5 Web Suite is 100% Free Forever (No Paywall, No Login):${C.reset}\n` +
+        `  • 78+ TLD Instant Search + 50-Brand Batch CSV + A4 PDF:  ${C.cyan}${DIAGNOSTIC_API}${C.reset}\n` +
+        `  • 28-Variant DNSTwist Typosquatting & Lookalike Shield:  ${C.cyan}${TYPOS_URL}${C.reset}\n` +
+        `  • 78-TLD Cross-Registrar Matrix & 60-Idea AI Namer:      ${C.cyan}${TLDS_URL}${C.reset}\n` +
+        `${C.bold}Launching soon? ShipBastion 4-in-1 Launch Audit Suite ($5 Once — 83% OFF, reg. $29):${C.reset}\n` +
+        `  Unlocks VibeShield (JS Secrets/CSP/RLS) + InboxShield (SPF/DKIM/DMARC) + CiteReady Pro:\n` +
+        `  • Gumroad (Card/PayPal):   ${C.bold}${C.cyan}${STACK_URL}${C.reset}\n` +
+        `  • Direct / USDC Checkout:  ${C.cyan}${STACK_DIRECT_URL}${C.reset}\n` +
         `${C.bold}${C.magenta}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${C.reset}\n`
     );
   }

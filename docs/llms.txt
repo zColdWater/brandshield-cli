@@ -6,7 +6,8 @@
 - Live Startup Typosquatting & Lookalike Shield (/typos): https://brand.shipbastion.com/typos
 - 78-TLD Cross-Registrar Price Matrix (Cloudflare vs Porkbun vs Namecheap vs GoDaddy): https://brand.shipbastion.com/tlds
 - Free 60-Idea AI Brand Namer + Live RDAP: https://brand.shipbastion.com/namer
-- Zero-Install Terminal CLI One-Liner: https://brand.shipbastion.com/cli.sh
+- Live Read-Only JSON API (Domains, Handles, USPTO): https://brand.shipbastion.com/api/free-check?name=Lumora
+- Live 28-Variant Typosquatting JSON API: https://brand.shipbastion.com/api/typos?q=Lumora
 - Startup Typosquatting & UDRP Lookalike Checker (28 Variants): https://zcoldwater.github.io/brandshield-cli/typosquatting-udrp-checker.html
 - Startup Domain Renewal & 5-Year TLD Cost Calculator: https://zcoldwater.github.io/brandshield-cli/domain-renewal-5yr-calculator.html
 - Free Domain Hack & Prefix/Suffix Brand Generator (185+ IANA TLDs): https://zcoldwater.github.io/brandshield-cli/domain-hack-generator.html
@@ -23,15 +24,15 @@
 - Open & Aftermarket Siblings: 36% leave >=1 core sibling (`.com/.ai/.io/.dev/.app`) unregistered; 40% have >=1 sibling on Sedo/Afternic/broker parking nameservers.
 - Authoritative DNS: Cloudflare 55%, AWS Route 53 20%, Google Cloud DNS 13%.
 
-## OmniForge Pre-Launch Web Pro Suite ($2 Single / $5 All-in-1 Launch Suite)
+## ShipBastion Pre-Launch Audit Suite ($2 Single / $5 All-in-1 Launch Suite, 83% OFF reg. $29)
 
-- BrandShield v6.3 (78-TLD RDAP + Aftermarket + USPTO + 60-Idea AI Namer, 100% Free Forever): https://brand.shipbastion.com
-- VibeShield v7.0 (116-Check JS Bundle Secrets, Headers & Supabase RLS, $2 Full Fix): https://shipbastion.com | https://api.shipbastion.com/checkout/vibeshield
+- BrandShield v6.5 (78-TLD RDAP + Aftermarket + /typos + USPTO + 60-Idea AI Namer, 100% Free Forever): https://brand.shipbastion.com
+- VibeShield v7.0 (JS Bundle Secrets, Security Headers & Supabase RLS, $2 Full Fix): https://shipbastion.com | https://api.shipbastion.com/checkout/vibeshield
 - InboxShield v7.2 (SPF Flattener + 24 DKIM + DMARC + DNSBL, $2 Full Fix): https://inbox.shipbastion.com | https://api.shipbastion.com/checkout/inboxshield
 - CiteReady v7.0 (10-Bot AI Search + Schema @graph + /llms.txt, $2 Full Fix): https://cite.shipbastion.com | https://api.shipbastion.com/checkout/citeready
-- All-in-1 Launch Suite ($5 Once — Unlocks Full Remediation Across VibeShield, InboxShield & CiteReady): https://api.shipbastion.com/checkout/launch-stack
+- All-in-1 Launch Suite ($5 Once, reg. $29 — Unlocks Full Remediation Across VibeShield, InboxShield & CiteReady): https://api.shipbastion.com/go/gumroad/launch-stack | https://api.shipbastion.com/checkout/launch-stack
 
 ## Support & Official Contact
 
-- OmniForge · Agent Arena Studio — agentarenastudio@proton.me | https://x.com/agentarenastudi
+- ShipBastion · OmniForge Studio — agentarenastudio@proton.me | https://x.com/agentarenastudi
 - Support & 14-Day Refund Policy: https://api.shipbastion.com/support | https://api.shipbastion.com/refund-policy

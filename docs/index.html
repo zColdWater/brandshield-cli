@@ -453,7 +453,7 @@
 
       <div class="cli-bar">
         <span>Zero-Install Terminal Audit:</span>
-        <code id="cliOneLiner">curl -fsSL https://brand.shipbastion.com/cli.sh | sh -s -- Lumora</code>
+        <code id="cliOneLiner">npx -y github:zColdWater/brandshield-cli check Lumora</code>
         <button type="button" class="copy-mini" id="copyCliBtn">Copy</button>
       </div>
     </section>
@@ -542,7 +542,7 @@
               <li>&#10003; Real 17-rule DNS NS aftermarket broker detection</li>
               <li>&#10003; USPTO Class 009/042 + App Store + developer handles</li>
               <li>&#10003; <strong>60-idea Brand Namer</strong> + <strong>50-brand batch CSV</strong> + A4 PDF</li>
-              <li>&#10003; Zero-install <code>curl /cli.sh</code> + MIT GitHub Action</li>
+              <li>&#10003; Zero-dependency <code>npx</code> CLI + MIT GitHub Action</li>
             </ul>
           </div>
           <a class="btn btn-cta" href="https://brand.shipbastion.com" target="_blank" rel="noopener">Launch BrandShield Free &rarr;</a>
@@ -715,7 +715,7 @@
 
       fullLink.href = appUrl;
       fullCta.href = appUrl;
-      document.getElementById("cliOneLiner").textContent = "curl -fsSL https://brand.shipbastion.com/cli.sh | sh -s -- " + slug;
+      document.getElementById("cliOneLiner").textContent = "npx -y github:zColdWater/brandshield-cli check " + slug;
       btn.disabled = true;
       btn.textContent = "Scanning RDAP & USPTO...";
       box.style.display = "block";

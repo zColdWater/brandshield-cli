@@ -366,17 +366,17 @@
     post-summary: "true"</code></pre>
       </div>
       <div class="card" style="margin:0">
-        <h3 style="margin-top:0">Zero-Install CLI (<code>curl /cli.sh</code> or Node 18+)</h3>
+        <h3 style="margin-top:0">Zero-Dependency CLI (<code>npx</code> on Node 18+)</h3>
         <p style="color:var(--muted);font-size:0.9rem">Screen any candidate from your terminal with zero packages installed:</p>
 <pre><code># Instant POSIX shell audit (zero Node or npm required)
-curl -fsSL https://brand.shipbastion.com/cli.sh | sh -s -- Lumora
+npx -y github:zColdWater/brandshield-cli check Lumora
 
 # Or via Node 18+ GitHub CLI with Markdown CI threshold gate
 npx github:zColdWater/brandshield-cli check Lumora \
   --markdown --min-score 75 --fail-on-trademark
 
 # Machine-readable JSON for pipelines
-curl -fsSL https://brand.shipbastion.com/cli.sh | sh -s -- --json Notion</code></pre>
+npx -y github:zColdWater/brandshield-cli check Notion --json</code></pre>
       </div>
     </div>
 

@@ -1,6 +1,6 @@
 {
   "name": "brandshield-cli",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Zero-dependency startup name availability CLI & GitHub Action — verify domains via authoritative RDAP (no registrar front-running), social/dev handles, app stores, and USPTO federal trademarks with clearance scoring.",
   "type": "module",
   "bin": {
